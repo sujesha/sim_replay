@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BT_MAX_PKTS	vmbunching_structs.h	28;"	d
+ERR_ARGS	debugg.h	6;"	d
+ERR_SYSCALL	debugg.h	7;"	d
+HOSTNAME_LEN	vmbunching_structs.h	37;"	d
+MAP_BT_MAX_PKTS	vmbunching_structs.h	30;"	d
+_DEBUGG_H_	debugg.h	2;"	d
+_VMBUNCHING_STRUCTS_H_	vmbunching_structs.h	2;"	d
+_VMFILE_HANDLING_H_	vmfile-handling.h	2;"	d
+_vm_add_input_file	vmfile-handling.c	/^void _vm_add_input_file(char *file_name)$/;"	f
+block	vmbunching_structs.h	/^    __u32 block;$/;"	m	struct:vm_pkt
+block	vmbunching_structs.h	/^    __u32 block;$/;"	m	struct:vm_pkt_frame
+block	vmbunching_structs.h	/^    __u32 block;$/;"	m	struct:vmreq_spec
+bunch_done	vmbunching-generic.c	/^int bunch_done(struct io_stream *stream, struct vmreq_spec *spec)$/;"	f
+bunch_output_hdr	vmbunching-generic.c	/^void bunch_output_hdr(struct io_stream *stream)$/;"	f
+bunch_output_pkts	vmbunching-generic.c	/^void bunch_output_pkts(struct io_stream *stream)$/;"	f
+bunches	vmbunching_structs.h	/^    __u64 start_time, last_time, bunches, pkts;$/;"	m	struct:io_stream
+bytes	vmbunching_structs.h	/^    __u32 bytes;$/;"	m	struct:vmreq_spec
+content	vmbunching_structs.h	/^    __u8 *content;$/;"	m	struct:io_pkt
+content	vmbunching_structs.h	/^    __u8 *content;$/;"	m	struct:vm_pkt
+content	vmbunching_structs.h	/^    __u8 *content;$/;"	m	struct:vmreq_spec
+cur	vmbunching_structs.h	/^    struct vm_bunch *cur;$/;"	m	struct:io_stream	typeref:struct:io_stream::vm_bunch
+fatal	debugg.h	/^static inline void fatal(const char *errstring, const int exitval,$/;"	f
+file_name	vmbunching_structs.h	/^    char *file_name, *vfn;$/;"	m	struct:io_stream
+file_name	vmbunching_structs.h	/^    char *file_name;$/;"	m	struct:ifile_info
+genesis	vmbunching_structs.h	/^	__u64 tpkts, genesis;$/;"	m	struct:ifile_info
+genesis	vmbunching_structs.h	/^    __u64 genesis;$/;"	m	struct:vm_file_hdr
+hdr	vmbunching_structs.h	/^    struct vm_bunch_hdr hdr;$/;"	m	struct:vm_bunch	typeref:struct:vm_bunch::vm_bunch_hdr
+head	vmbunching_structs.h	/^    struct slist_head head;$/;"	m	struct:ifile_info	typeref:struct:ifile_info::slist_head
+ifd	vmbunching_structs.h	/^    int ifd;$/;"	m	struct:ifile_info
+ifile_info	vmbunching_structs.h	/^struct ifile_info {$/;"	s
+ifp	vmbunching_structs.h	/^	FILE *ifp;$/;"	m	struct:ifile_info
+iip	vmbunching_structs.h	/^    struct ifile_info *iip;$/;"	m	struct:io_stream	typeref:struct:io_stream::ifile_info
+io_pkt	vmbunching_structs.h	/^struct io_pkt {$/;"	s
+io_stream	vmbunching_structs.h	/^struct io_stream {$/;"	s
+ioblk	vmbunching_structs.h	/^    __u32 ioblk;$/;"	m	struct:io_pkt
+last_time	vmbunching_structs.h	/^    __u64 start_time, last_time, bunches, pkts;$/;"	m	struct:io_stream
+max_bunch_tm	vmbunching-generic.c	/^__u64 max_bunch_tm = (10 * 1000 * 1000); \/\/ 10 milliseconds$/;"	v
+max_pkts_per_bunch	vmbunching-generic.c	/^__u64 max_pkts_per_bunch = 8;        \/\/ Default # of pkts per bunch$/;"	v
+nbunches	vmbunching_structs.h	/^    __u64 nbunches;$/;"	m	struct:vm_file_hdr
+nbytes	vmbunching_structs.h	/^    __u32 nbytes;$/;"	m	struct:io_pkt
+nbytes	vmbunching_structs.h	/^    __u32 nbytes;$/;"	m	struct:vm_pkt
+nbytes	vmbunching_structs.h	/^    __u32 nbytes;$/;"	m	struct:vm_pkt_frame
+next_io	vmfile-handling.c	/^int next_io(struct vmreq_spec *spec)$/;"	f
+npkts	vmbunching_structs.h	/^    __u64 npkts;$/;"	m	struct:vm_bunch_hdr
+ofp	vmbunching_structs.h	/^    FILE *ofp, *vfp;$/;"	m	struct:io_stream
+pkts	vmbunching_structs.h	/^    __u64 start_time, last_time, bunches, pkts;$/;"	m	struct:io_stream
+pkts	vmbunching_structs.h	/^    struct vm_pkt pkts[BT_MAX_PKTS];$/;"	m	struct:vm_bunch	typeref:struct:vm_bunch::vm_pkt
+process	vmbunching-generic.c	/^void process(struct ifile_info *iip)$/;"	f
+rw	vmbunching_structs.h	/^    __u32 rw;$/;"	m	struct:io_pkt
+rw	vmbunching_structs.h	/^    __u32 rw;$/;"	m	struct:vm_pkt
+rw	vmbunching_structs.h	/^    __u32 rw;$/;"	m	struct:vm_pkt_frame
+rw	vmbunching_structs.h	/^    int rw;$/;"	m	struct:vmreq_spec
+sectorflag	vmfile-handling.c	/^int sectorflag = 0;	\/\/if 0 indicates, blk numbers are present in input trace$/;"	v
+start_time	vmbunching_structs.h	/^    __u64 start_time, last_time, bunches, pkts;$/;"	m	struct:io_stream
+stream_add_io	vmfile-handling.c	/^void stream_add_io(struct io_stream *stream, struct vmreq_spec *spec)$/;"	f
+stream_close	vmfile-handling.c	/^void stream_close(struct io_stream *stream)$/;"	f
+stream_flush	vmfile-handling.c	/^static void stream_flush(struct io_stream *stream)$/;"	f	file:
+stream_open	vmfile-handling.c	/^struct io_stream* stream_open(struct ifile_info *iip)$/;"	f
+time	vmbunching_structs.h	/^    __u64 time;$/;"	m	struct:vmreq_spec
+time_stamp	vmbunching_structs.h	/^    __u64 time_stamp;$/;"	m	struct:vm_bunch_hdr
+total_pkts	vmbunching_structs.h	/^    __u64 total_pkts;$/;"	m	struct:vm_file_hdr
+tpkts	vmbunching_structs.h	/^	__u64 tpkts, genesis;$/;"	m	struct:ifile_info
+verbose	vmbunching-generic.c	/^int verbose;             \/\/ Boolean: output stats$/;"	v
+verify_replayready	vmbunching-generic.c	/^int verify_replayready(struct record_info *r)$/;"	f
+version	vmbunching_structs.h	/^    __u64 version;$/;"	m	struct:vm_file_hdr
+vfn	vmbunching_structs.h	/^    char *file_name, *vfn;$/;"	m	struct:io_stream
+vfp	vmbunching_structs.h	/^    FILE *ofp, *vfp;$/;"	m	struct:io_stream
+vm_add_input_file	vmfile-handling.c	/^void vm_add_input_file(char *ifile)$/;"	f
+vm_bunch	vmbunching_structs.h	/^struct vm_bunch {$/;"	s
+vm_bunch_add	vmbunching-generic.c	/^void vm_bunch_add(struct io_stream *stream, struct vmreq_spec *spec)$/;"	f
+vm_bunch_create	vmbunching-generic.c	/^void vm_bunch_create(struct io_stream *stream, __u64 start_time)$/;"	f
+vm_bunch_hdr	vmbunching_structs.h	/^struct vm_bunch_hdr {$/;"	s
+vm_file_hdr	vmbunching_structs.h	/^struct vm_file_hdr {$/;"	s
+vm_pkt	vmbunching_structs.h	/^struct vm_pkt {$/;"	s
+vm_pkt_frame	vmbunching_structs.h	/^struct vm_pkt_frame {$/;"	s
+vm_rem_input_file	vmfile-handling.c	/^void vm_rem_input_file(void)$/;"	f
+vmname	vmbunching_structs.h	/^	char vmname[HOSTNAME_LEN];$/;"	m	struct:vm_pkt
+vmname	vmbunching_structs.h	/^	char vmname[HOSTNAME_LEN];$/;"	m	struct:vm_pkt_frame
+vmname	vmbunching_structs.h	/^	char vmname[HOSTNAME_LEN];$/;"	m	struct:vmreq_spec
+vmreq_spec	vmbunching_structs.h	/^struct vmreq_spec {$/;"	s
+write_file_hdr	vmbunching-generic.c	/^void write_file_hdr(struct io_stream *stream, struct vm_file_hdr *hdr)$/;"	f

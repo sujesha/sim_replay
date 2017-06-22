@@ -1,0 +1,27 @@
+
+
+
+
+----------------------------------------------------------
+With 2GB RAM-size.....
+
+
+
+----------------------------------------------------------
+With 1GB RAM-size.....
+==> accesstime_output_replay_4K_freplay_rw.txt <==
+#READ=4052176, #WRITE=17110222
+RAM-size = 1024 (MB)
+confided metadata: hits=695747, misses=3356429
+fcollisions=0, fcollisionstp=6039709, fzeros=0
+buffer cache: hits=11557334, misses=9605064
+disk hits=21130111
+disk hits read=4019889, writes=17110222
+
+==> accesstime_output_replay_4K_sreplay_rw.txt <==
+#READ=4052176, #WRITE=17110222
+RAM-size = 1024 (MB)
+buffer cache: hits=11553861, misses=9608537
+disk hits=21143867
+disk hits read=4033645, writes=17110222
+

@@ -1,0 +1,662 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACLOCAL	rabin-tool-master/Makefile	/^ACLOCAL = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run aclocal-1.6$/;"	m
+ACLOCAL	rabin-tool-master/src/Makefile	/^ACLOCAL = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run aclocal-1.6$/;"	m
+ACLOCAL_M4	rabin-tool-master/Makefile	/^ACLOCAL_M4 = $(top_srcdir)\/aclocal.m4$/;"	m
+AFTERBOUND	chunking.h	/^	AFTERBOUND,	  \/* calling fixPrevBlock() after every block boundary *\/$/;"	e	enum:__anon3
+AMTAR	rabin-tool-master/Makefile	/^AMTAR = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run tar$/;"	m
+AMTAR	rabin-tool-master/src/Makefile	/^AMTAR = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run tar$/;"	m
+AR	rabin-tool-master/src/Makefile	/^AR = ar$/;"	m
+AS	rabin-tool-master/Makefile	/^AS = @AS@$/;"	m
+AS	rabin-tool-master/src/Makefile	/^AS = @AS@$/;"	m
+AUTOCONF	rabin-tool-master/Makefile	/^AUTOCONF = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run autoconf$/;"	m
+AUTOCONF	rabin-tool-master/src/Makefile	/^AUTOCONF = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run autoconf$/;"	m
+AUTOHEADER	rabin-tool-master/Makefile	/^AUTOHEADER = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run autoheader$/;"	m
+AUTOHEADER	rabin-tool-master/src/Makefile	/^AUTOHEADER = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run autoheader$/;"	m
+AUTOMAKE	rabin-tool-master/Makefile	/^AUTOMAKE = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run automake-1.6$/;"	m
+AUTOMAKE	rabin-tool-master/src/Makefile	/^AUTOMAKE = ${SHELL} \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/missing --run automake-1.6$/;"	m
+AWK	rabin-tool-master/Makefile	/^AWK = gawk$/;"	m
+AWK	rabin-tool-master/src/Makefile	/^AWK = gawk$/;"	m
+BEFOREBOUND	chunking.h	/^	BEFOREBOUND,  \/* calling fixPrevBlock() when first chunk encountered$/;"	e	enum:__anon3
+BIN	rabin-tool-master/example/Makefile	/^BIN	 = example1$/;"	m
+BITS	rabin-tool-master/src/rabincmd.C	/^    const int BITS;$/;"	m	class:BitwiseChunkBoundaryChecker	file:
+BOOL	rabin-tool-master/src/rabincmd.C	/^typedef unsigned short BOOL;$/;"	t	file:
+BUFSIZE	rabin-tool-master/example/example1.cpp	14;"	d	file:
+BitwiseChunkBoundaryChecker	rabin-tool-master/src/rabincmd.C	/^  BitwiseChunkBoundaryChecker(int numBits)$/;"	f	class:BitwiseChunkBoundaryChecker
+BitwiseChunkBoundaryChecker	rabin-tool-master/src/rabincmd.C	/^class BitwiseChunkBoundaryChecker : public ChunkBoundaryChecker$/;"	c	file:
+C2V_tuple_t	c2pv-map.h	/^typedef struct C2V_tuple_t{$/;"	s
+C2V_tuple_t	c2pv-map.h	/^}C2V_tuple_t;$/;"	t	typeref:struct:C2V_tuple_t
+CC	Makefile	/^CC  = g++$/;"	m
+CC	rabin-tool-master/Makefile	/^CC = gcc$/;"	m
+CC	rabin-tool-master/example/Makefile	/^CC	 = g++$/;"	m
+CC	rabin-tool-master/src/Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -Wall -W -O2 -g$/;"	m
+CFLAGS	rabin-tool-master/src/Makefile	/^CFLAGS = $(CPPFLAGE) $(INCLS)$/;"	m
+CHUNK_BOUNDARY_MASK	rabin-tool-master/src/rabincmd.C	/^    u_int64_t CHUNK_BOUNDARY_MASK;$/;"	m	class:BitwiseChunkBoundaryChecker	file:
+CHUNK_BY_ZEROBLK	chunking.h	/^	CHUNK_BY_ZEROBLK = 128,	\/* chunk by itself because next blk is zero *\/$/;"	e	enum:__anon1
+CLEANFILES	rabin-tool-master/Makefile	/^CLEANFILES = core *.core *~$/;"	m
+CLEANFILES	rabin-tool-master/src/Makefile	/^CLEANFILES = core *.core *~ $/;"	m
+COINCIDE	chunking.h	/^	COINCIDE,$/;"	e	enum:__anon2
+CONFIG_CLEAN_FILES	rabin-tool-master/Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
+CONFIG_CLEAN_FILES	rabin-tool-master/src/Makefile	/^CONFIG_CLEAN_FILES =$/;"	m
+CONFIG_HEADER	rabin-tool-master/Makefile	/^CONFIG_HEADER = config.h$/;"	m
+CONFIG_HEADER	rabin-tool-master/src/Makefile	/^CONFIG_HEADER = $(top_builddir)\/config.h$/;"	m
+CPLUS	rabin-tool-master/src/Makefile	/^CPLUS = g++$/;"	m
+CPP	rabin-tool-master/Makefile	/^CPP = gcc -E$/;"	m
+CPP	rabin-tool-master/src/Makefile	/^CPP = gcc -E$/;"	m
+CPPFLAGE	rabin-tool-master/src/Makefile	/^CPPFLAGE = -I.$/;"	m
+CPPFLAGS	rabin-tool-master/src/Makefile	/^CPPFLAGS = $/;"	m
+CXX	rabin-tool-master/Makefile	/^CXX = g++$/;"	m
+CXX	rabin-tool-master/src/Makefile	/^CXX = g++$/;"	m
+CXXCOMPILE	rabin-tool-master/src/Makefile	/^CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \\$/;"	m
+CXXDEPMODE	rabin-tool-master/src/Makefile	/^CXXDEPMODE = depmode=gcc3$/;"	m
+CXXFLAGS	rabin-tool-master/src/Makefile	/^CXXFLAGS = -g -O2$/;"	m
+CXXLD	rabin-tool-master/src/Makefile	/^CXXLD = $(CXX)$/;"	m
+CXXLINK	rabin-tool-master/src/Makefile	/^CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \\$/;"	m
+ChunkBoundaryChecker	rabin-tool-master/src/rabincmd.C	/^class ChunkBoundaryChecker$/;"	c	file:
+ChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  ChunkProcessor() : size(0) {}$/;"	f	class:ChunkProcessor
+ChunkProcessor	rabin-tool-master/src/rabincmd.C	/^class ChunkProcessor$/;"	c	file:
+CompressChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  CompressChunkProcessor(FILE* outfile, int maxChunkSize)$/;"	f	class:CompressChunkProcessor
+CompressChunkProcessor	rabin-tool-master/src/rabincmd.C	/^class CompressChunkProcessor : public ChunkProcessor$/;"	c	file:
+CreateFileChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  CreateFileChunkProcessor(string chunkDir)$/;"	f	class:CreateFileChunkProcessor
+CreateFileChunkProcessor	rabin-tool-master/src/rabincmd.C	/^class CreateFileChunkProcessor : public ChunkProcessor$/;"	c	file:
+DEBUG	rabin-tool-master/src/rabincmd.C	50;"	d	file:
+DEFAULT_INCLUDES	rabin-tool-master/src/Makefile	/^DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)$/;"	m
+DEFAULT_IRRPOLY	rabin.c	23;"	d	file:
+DEFAULT_WINDOW_SIZE	rabin-tool-master/src/RabinPoly.java	/^  public static final int DEFAULT_WINDOW_SIZE = 16;$/;"	f	class:RabinPoly
+DEFAULT_WINDOW_SIZE	rabin-tool-master/src/rabinpoly.h	31;"	d
+DEFS	rabin-tool-master/src/Makefile	/^DEFS = -DHAVE_CONFIG_H$/;"	m
+DEPDIR	rabin-tool-master/Makefile	/^DEPDIR = .deps$/;"	m
+DEPDIR	rabin-tool-master/src/Makefile	/^DEPDIR = .deps$/;"	m
+DEP_FILES	rabin-tool-master/src/Makefile	/^DEP_FILES = .\/$(DEPDIR)\/msb.Po .\/$(DEPDIR)\/rabinpoly.Po$/;"	m
+DISTCLEANFILES	rabin-tool-master/Makefile	/^DISTCLEANFILES = autoconf.h stamp-auto-h autom4te*.cache$/;"	m
+DISTFILES	rabin-tool-master/Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
+DISTFILES	rabin-tool-master/src/Makefile	/^DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)$/;"	m
+DIST_COMMON	rabin-tool-master/Makefile	/^DIST_COMMON = README AUTHORS COPYING ChangeLog INSTALL Makefile.am \\$/;"	m
+DIST_COMMON	rabin-tool-master/src/Makefile	/^DIST_COMMON = $(include_HEADERS) $(noinst_HEADERS) Makefile.am \\$/;"	m
+DIST_SOURCES	rabin-tool-master/Makefile	/^DIST_SOURCES =$/;"	m
+DIST_SOURCES	rabin-tool-master/src/Makefile	/^DIST_SOURCES = $(librabinpoly_a_SOURCES)$/;"	m
+DIST_SUBDIRS	rabin-tool-master/Makefile	/^DIST_SUBDIRS = $(SUBDIRS)$/;"	m
+DLLTOOL	rabin-tool-master/Makefile	/^DLLTOOL = @DLLTOOL@$/;"	m
+DLLTOOL	rabin-tool-master/src/Makefile	/^DLLTOOL = @DLLTOOL@$/;"	m
+DataSource	rabin-tool-master/src/rabincmd.C	/^class DataSource$/;"	c	file:
+ECHO	rabin-tool-master/Makefile	/^ECHO = echo$/;"	m
+ECHO	rabin-tool-master/src/Makefile	/^ECHO = echo$/;"	m
+ETAGS	rabin-tool-master/Makefile	/^ETAGS = etags$/;"	m
+ETAGS	rabin-tool-master/src/Makefile	/^ETAGS = etags$/;"	m
+ETAGSFLAGS	rabin-tool-master/Makefile	/^ETAGSFLAGS =$/;"	m
+ETAGSFLAGS	rabin-tool-master/src/Makefile	/^ETAGSFLAGS =$/;"	m
+EXEEXT	rabin-tool-master/Makefile	/^EXEEXT = $/;"	m
+EXEEXT	rabin-tool-master/src/Makefile	/^EXEEXT = $/;"	m
+EXTERN_C	rabin-tool-master/src/msb.h	121;"	d
+EXTERN_C	rabin-tool-master/src/msb.h	30;"	d
+EXTERN_C	rabin-tool-master/src/msb.h	32;"	d
+EXTRA_DIST	rabin-tool-master/Makefile	/^EXTRA_DIST = example example\/*$/;"	m
+ExtractChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  ExtractChunkProcessor(int maxChunkSize, ExtractDataSource* dataSource)$/;"	f	class:ExtractChunkProcessor
+ExtractChunkProcessor	rabin-tool-master/src/rabincmd.C	/^class ExtractChunkProcessor : public ChunkProcessor$/;"	c	file:
+ExtractDataSource	rabin-tool-master/src/rabincmd.C	/^  ExtractDataSource(const char* outfileName, FILE* infile)$/;"	f	class:ExtractDataSource
+ExtractDataSource	rabin-tool-master/src/rabincmd.C	/^class ExtractDataSource : public DataSource$/;"	c	file:
+FALSE	rabin-tool-master/src/rabincmd.C	/^const int FALSE = 0;$/;"	v
+FINGERPRINT_PT	rabin-tool-master/example/example1.cpp	11;"	d	file:
+FINGERPRINT_PT	rabin-tool-master/src/rabincmd.C	41;"	d	file:
+FINGERPRINT_PT	rabin-tool-master/src/verboseRabin.C	39;"	d	file:
+FINGERPRINT_PT	rabin.h	11;"	d
+FIRSTBLK	chunking.h	/^	FIRSTBLK = (PRECHUNK_PARTIAL_FIRSTBLK | SCAN_FIRSTBLK | IO_FIRSTBLK),$/;"	e	enum:__anon1
+FORCECOINCIDE	chunking.h	/^	FORCECOINCIDE,$/;"	e	enum:__anon2
+GZIP_ENV	rabin-tool-master/Makefile	/^GZIP_ENV = --best$/;"	m
+HAVE_BZERO	rabin-tool-master/config.h	5;"	d
+HAVE_DLFCN_H	rabin-tool-master/config.h	8;"	d
+HAVE_INTTYPES_H	rabin-tool-master/config.h	11;"	d
+HAVE_MEMORY_H	rabin-tool-master/config.h	14;"	d
+HAVE_STDBOOL_H	rabin-tool-master/config.h	17;"	d
+HAVE_STDINT_H	rabin-tool-master/config.h	20;"	d
+HAVE_STDLIB_H	rabin-tool-master/config.h	23;"	d
+HAVE_STRINGS_H	rabin-tool-master/config.h	26;"	d
+HAVE_STRING_H	rabin-tool-master/config.h	29;"	d
+HAVE_SYS_STAT_H	rabin-tool-master/config.h	32;"	d
+HAVE_SYS_TYPES_H	rabin-tool-master/config.h	35;"	d
+HAVE_UNISTD_H	rabin-tool-master/config.h	38;"	d
+HAVE__BOOL	rabin-tool-master/config.h	41;"	d
+HEADERS	rabin-tool-master/src/Makefile	/^HEADERS = $(include_HEADERS) $(noinst_HEADERS)$/;"	m
+INCS	Makefile	/^INCS    = -I. -I.. -I..\/pdd_replay$/;"	m
+INCS	rabin-tool-master/example/Makefile	/^INCS     = -I..\/src $/;"	m
+INSTALL	rabin-tool-master/Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
+INSTALL	rabin-tool-master/src/Makefile	/^INSTALL = \/usr\/bin\/install -c$/;"	m
+INSTALL_DATA	rabin-tool-master/Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
+INSTALL_DATA	rabin-tool-master/src/Makefile	/^INSTALL_DATA = ${INSTALL} -m 644$/;"	m
+INSTALL_HEADER	rabin-tool-master/Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
+INSTALL_HEADER	rabin-tool-master/src/Makefile	/^INSTALL_HEADER = $(INSTALL_DATA)$/;"	m
+INSTALL_PROGRAM	rabin-tool-master/Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
+INSTALL_PROGRAM	rabin-tool-master/src/Makefile	/^INSTALL_PROGRAM = ${INSTALL}$/;"	m
+INSTALL_SCRIPT	rabin-tool-master/Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
+INSTALL_SCRIPT	rabin-tool-master/src/Makefile	/^INSTALL_SCRIPT = ${INSTALL}$/;"	m
+INSTALL_STRIP_PROGRAM	rabin-tool-master/Makefile	/^INSTALL_STRIP_PROGRAM = ${SHELL} $(install_sh) -c -s$/;"	m
+INSTALL_STRIP_PROGRAM	rabin-tool-master/src/Makefile	/^INSTALL_STRIP_PROGRAM = ${SHELL} $(install_sh) -c -s$/;"	m
+INT64	rabin-tool-master/src/rabincmd.C	39;"	d	file:
+INT64	rabin-tool-master/src/rabinpoly.C	27;"	d	file:
+INT64	rabin-tool-master/src/verboseRabin.C	37;"	d	file:
+IO_FIRSTBLK	chunking.h	/^	IO_FIRSTBLK = 64,$/;"	e	enum:__anon1
+JUST_UPDATE_NEXT_CHUNKOFFSETS	chunking.h	/^	JUST_UPDATE_NEXT_CHUNKOFFSETS = 256$/;"	e	enum:__anon1
+LDCC	rabin-tool-master/example/Makefile	/^LDCC	 = $(CC)$/;"	m
+LDFLAGS	rabin-tool-master/example/Makefile	/^LDFLAGS  = -lrabinpoly$/;"	m
+LDFLAGS	rabin-tool-master/src/Makefile	/^LDFLAGS = $/;"	m
+LIBRARIES	rabin-tool-master/src/Makefile	/^LIBRARIES = $(lib_LIBRARIES)$/;"	m
+LIBS	Makefile	/^LIBS    = -laio -lrt -lpthread$/;"	m
+LIBS	rabin-tool-master/example/Makefile	/^LIBS	 = -L..\/src $/;"	m
+LIBS	rabin-tool-master/src/Makefile	/^LIBS = $/;"	m
+LIBTOOL	rabin-tool-master/Makefile	/^LIBTOOL = $(SHELL) $(top_builddir)\/libtool$/;"	m
+LIBTOOL	rabin-tool-master/src/Makefile	/^LIBTOOL = $(SHELL) $(top_builddir)\/libtool$/;"	m
+LN_S	rabin-tool-master/Makefile	/^LN_S = ln -s$/;"	m
+LN_S	rabin-tool-master/src/Makefile	/^LN_S = ln -s$/;"	m
+LTCXXCOMPILE	rabin-tool-master/src/Makefile	/^LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \\$/;"	m
+LoggerDummy	rabin-tool-master/src/RabinPoly.java	/^class LoggerDummy$/;"	c
+MAINTAINERCLEANFILES	rabin-tool-master/Makefile	/^MAINTAINERCLEANFILES = \\$/;"	m
+MAINTAINERCLEANFILES	rabin-tool-master/src/Makefile	/^MAINTAINERCLEANFILES = Makefile.in$/;"	m
+MAX_SIZE	rabin-tool-master/src/rabincmd.C	/^    const int MAX_SIZE;$/;"	m	class:BitwiseChunkBoundaryChecker	file:
+MIN_SIZE	rabin-tool-master/src/rabincmd.C	/^    const int MIN_SIZE;$/;"	m	class:BitwiseChunkBoundaryChecker	file:
+MSB64	rabin-tool-master/src/RabinPoly.java	/^  public static final \/*unsigned*\/ long MSB64 = 0x8000000000000000l;$/;"	f	class:RabinPoly
+MSB64	rabin-tool-master/src/rabincmd.C	40;"	d	file:
+MSB64	rabin-tool-master/src/rabinpoly.C	28;"	d	file:
+MSB64	rabin-tool-master/src/verboseRabin.C	38;"	d	file:
+MaxSegment	rabin.h	/^	MaxSegment  = MAXCHUNKSIZE,$/;"	e	enum:__anon5
+MinSegment	rabin.h	/^	MinSegment  = MINCHUNKSIZE,$/;"	e	enum:__anon5
+MostSignificantBitUtil	rabin-tool-master/src/MostSignificantBitUtil.java	/^public class MostSignificantBitUtil$/;"	c
+NOCOINCIDE	chunking.h	/^	NOCOINCIDE = 130,$/;"	e	enum:__anon2
+NOCOINCIDEFIRST	chunking.h	/^	NOCOINCIDEFIRST,$/;"	e	enum:__anon2
+NOCOINCIDESECOND	chunking.h	/^	NOCOINCIDESECOND,$/;"	e	enum:__anon2
+NOPOSTCHUNK_LASTBLK	chunking.h	/^    NOPOSTCHUNK_LASTBLK = 2,		\/* last iter but no postchunk, can$/;"	e	enum:__anon1
+NORMAL_INSTALL	rabin-tool-master/Makefile	/^NORMAL_INSTALL = :$/;"	m
+NORMAL_INSTALL	rabin-tool-master/src/Makefile	/^NORMAL_INSTALL = :$/;"	m
+NORMAL_UNINSTALL	rabin-tool-master/Makefile	/^NORMAL_UNINSTALL = :$/;"	m
+NORMAL_UNINSTALL	rabin-tool-master/src/Makefile	/^NORMAL_UNINSTALL = :$/;"	m
+NOT_LASTBLK	chunking.h	/^    NOT_LASTBLK = 1,			\/* not last iter *\/$/;"	e	enum:__anon1
+NOT_PRESENT	chunking.h	/^	NOT_PRESENT,$/;"	e	enum:__anon4
+NWINDOW	rabin.h	/^	NWINDOW   = 32,$/;"	e	enum:__anon5
+OBJDUMP	rabin-tool-master/Makefile	/^OBJDUMP = @OBJDUMP@$/;"	m
+OBJDUMP	rabin-tool-master/src/Makefile	/^OBJDUMP = @OBJDUMP@$/;"	m
+OBJEXT	rabin-tool-master/Makefile	/^OBJEXT = o$/;"	m
+OBJEXT	rabin-tool-master/src/Makefile	/^OBJEXT = o$/;"	m
+OBJS	rabin-tool-master/example/Makefile	/^OBJS 	 = $(SRCS:.cpp=.o)$/;"	m
+OCFLAGS	Makefile	/^OCFLAGS = -UCOUNT_IOS -UDEBUG -DNDEBUG$/;"	m
+Options	rabin-tool-master/src/rabincmd.C	/^  Options(int argc, char** argv)$/;"	f	class:Options
+Options	rabin-tool-master/src/rabincmd.C	/^class Options$/;"	c	file:
+OptionsChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  OptionsChunkProcessor(Options opts, int maxChunkSize)$/;"	f	class:OptionsChunkProcessor
+OptionsChunkProcessor	rabin-tool-master/src/rabincmd.C	/^class OptionsChunkProcessor : public ChunkProcessor$/;"	c	file:
+PACKAGE	rabin-tool-master/Makefile	/^PACKAGE = rabinpoly$/;"	m
+PACKAGE	rabin-tool-master/src/Makefile	/^PACKAGE = rabinpoly$/;"	m
+PACKAGE_BUGREPORT	rabin-tool-master/config.h	44;"	d
+PACKAGE_NAME	rabin-tool-master/config.h	47;"	d
+PACKAGE_STRING	rabin-tool-master/config.h	50;"	d
+PACKAGE_TARNAME	rabin-tool-master/config.h	53;"	d
+PACKAGE_VERSION	rabin-tool-master/config.h	56;"	d
+PATH_SEPARATOR	rabin-tool-master/Makefile	/^PATH_SEPARATOR = :$/;"	m
+PATH_SEPARATOR	rabin-tool-master/src/Makefile	/^PATH_SEPARATOR = :$/;"	m
+POSTCHUNK_FULL_LASTBLK	chunking.h	/^    POSTCHUNK_FULL_LASTBLK = 8,		\/* last iter and full postchunk *\/$/;"	e	enum:__anon1
+POSTCHUNK_PARTIAL_LASTBLK	chunking.h	/^    POSTCHUNK_PARTIAL_LASTBLK = 4,	\/* last iter and partial postchunk *\/$/;"	e	enum:__anon1
+POST_INSTALL	rabin-tool-master/Makefile	/^POST_INSTALL = :$/;"	m
+POST_INSTALL	rabin-tool-master/src/Makefile	/^POST_INSTALL = :$/;"	m
+POST_UNINSTALL	rabin-tool-master/Makefile	/^POST_UNINSTALL = :$/;"	m
+POST_UNINSTALL	rabin-tool-master/src/Makefile	/^POST_UNINSTALL = :$/;"	m
+PRECHUNK_PARTIAL_FIRSTBLK	chunking.h	/^	PRECHUNK_PARTIAL_FIRSTBLK = 16,	\/* first iter, partial blk *\/$/;"	e	enum:__anon1
+PRESENT	chunking.h	/^	PRESENT = 150,$/;"	e	enum:__anon4
+PRE_INSTALL	rabin-tool-master/Makefile	/^PRE_INSTALL = :$/;"	m
+PRE_INSTALL	rabin-tool-master/src/Makefile	/^PRE_INSTALL = :$/;"	m
+PRE_UNINSTALL	rabin-tool-master/Makefile	/^PRE_UNINSTALL = :$/;"	m
+PRE_UNINSTALL	rabin-tool-master/src/Makefile	/^PRE_UNINSTALL = :$/;"	m
+PROGS	Makefile	/^PROGS   = $/;"	m
+PrintChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  PrintChunkProcessor()$/;"	f	class:PrintChunkProcessor
+PrintChunkProcessor	rabin-tool-master/src/rabincmd.C	/^class PrintChunkProcessor : public ChunkProcessor$/;"	c	file:
+RANLIB	rabin-tool-master/Makefile	/^RANLIB = ranlib$/;"	m
+RANLIB	rabin-tool-master/src/Makefile	/^RANLIB = ranlib$/;"	m
+RECURSIVE_TARGETS	rabin-tool-master/Makefile	/^RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \\$/;"	m
+RabinMask	rabin.h	/^	RabinMask = 0xfff,  \/\/ must be less than <= 0x7fff $/;"	e	enum:__anon5
+RabinPoly	rabin-tool-master/src/RabinPoly.java	/^  public RabinPoly (\/*unsigned*\/ long p)$/;"	m	class:RabinPoly
+RabinPoly	rabin-tool-master/src/RabinPoly.java	/^public class RabinPoly$/;"	c
+RabinPrint	rabin.h	/^	RabinPrint = HEXPRINT12bits,$/;"	e	enum:__anon5
+RabinWindow	rabin-tool-master/src/RabinWindow.java	/^  public RabinWindow (\/*unsigned*\/ long poly)$/;"	m	class:RabinWindow
+RabinWindow	rabin-tool-master/src/RabinWindow.java	/^  public RabinWindow (\/*unsigned*\/ long poly, \/*unsigned*\/ int winsz)$/;"	m	class:RabinWindow
+RabinWindow	rabin-tool-master/src/RabinWindow.java	/^public class RabinWindow extends RabinPoly$/;"	c
+RawFileDataSource	rabin-tool-master/src/rabincmd.C	/^  RawFileDataSource(FILE* is) : is(is) {}$/;"	f	class:RawFileDataSource
+RawFileDataSource	rabin-tool-master/src/rabincmd.C	/^class RawFileDataSource : public DataSource$/;"	c	file:
+SCAN_FIRSTBLK	chunking.h	/^	SCAN_FIRSTBLK = 32,$/;"	e	enum:__anon1
+SHELL	rabin-tool-master/Makefile	/^SHELL = \/bin\/bash$/;"	m
+SHELL	rabin-tool-master/src/Makefile	/^SHELL = \/bin\/bash$/;"	m
+SOURCES	rabin-tool-master/src/Makefile	/^SOURCES = $(librabinpoly_a_SOURCES)$/;"	m
+SRCS	rabin-tool-master/example/Makefile	/^SRCS	 = example1.cpp$/;"	m
+STDC_HEADERS	rabin-tool-master/config.h	59;"	d
+STRIP	rabin-tool-master/Makefile	/^STRIP = strip$/;"	m
+STRIP	rabin-tool-master/src/Makefile	/^STRIP = strip$/;"	m
+SUBDIRS	rabin-tool-master/Makefile	/^SUBDIRS = src $/;"	m
+T	rabin-tool-master/src/RabinPoly.java	/^  private \/*unsigned*\/ long T[] = new \/*unsigned*\/ long[256];		\/\/ Lookup table for mod$/;"	f	class:RabinPoly	file:
+T	rabin-tool-master/src/rabinpoly.h	/^  u_int64_t T[256];		\/\/ Lookup table for mod$/;"	m	class:rabinpoly
+TRUE	rabin-tool-master/src/rabincmd.C	/^const int TRUE  = 1;$/;"	v
+U	rabin-tool-master/src/RabinWindow.java	/^  private \/*unsigned*\/ long U[] = new long[256];$/;"	f	class:RabinWindow	file:
+U	rabin-tool-master/src/rabinpoly.h	/^  u_int64_t U[256];$/;"	m	class:window
+USED	rabin.h	9;"	d
+V2C_t	v2c-map.h	/^typedef struct V2C_t{$/;"	s
+V2C_t	v2c-map.h	/^}V2C_t;$/;"	t	typeref:struct:V2C_t
+VERSION	rabin-tool-master/Makefile	/^VERSION = 1.0a$/;"	m
+VERSION	rabin-tool-master/src/Makefile	/^VERSION = 1.0a$/;"	m
+WASNOTREADY	chunking.h	/^	WASNOTREADY,$/;"	e	enum:__anon3
+WASREADY	chunking.h	/^	WASREADY = 140,$/;"	e	enum:__anon3
+XCFLAGS	Makefile	/^XCFLAGS = -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64$/;"	m
+_C2PV_MAP_H_	c2pv-map.h	3;"	d
+_CHUNKING_H_	chunking.h	2;"	d
+_CHUNKTAB_H_	chunktab.h	12;"	d
+_MAPDUMP_H_	mapdump.h	2;"	d
+_MSB_H_	rabin-tool-master/src/msb.h	25;"	d
+_RABINPOLY_H_	rabin-tool-master/src/rabinpoly.h	25;"	d
+_RABINSSS_H_	rabin.h	2;"	d
+_SERVEIO_H_	serveio.h	2;"	d
+_V2C_MAP_H_	v2c-map.h	3;"	d
+addChunkIDtoPrev2c	v2c-map.c	/^void addChunkIDtoPrev2c(chunk_id_t chunkID, __u16 volID, __u32 bID)$/;"	f
+add_c2v_tuple_to_map	c2pv-map.c	/^void add_c2v_tuple_to_map(C2V_tuple_t *c2vt, c2pv_datum *c2pv)$/;"	f
+add_chunkID_to_recyclelist	serveio.c	/^void add_chunkID_to_recyclelist(chunk_id_t chunkID)$/;"	f
+add_new_to_old_recyclelist	serveio.c	/^static int add_new_to_old_recyclelist()$/;"	f	file:
+alloc_chunk_t	rabin.c	/^struct chunk_t* alloc_chunk_t(__u16 size)$/;"	f
+am__CONFIG_DISTCLEAN_FILES	rabin-tool-master/Makefile	/^am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \\$/;"	m
+am__cd	rabin-tool-master/Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
+am__cd	rabin-tool-master/src/Makefile	/^am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd$/;"	m
+am__depfiles_maybe	rabin-tool-master/src/Makefile	/^am__depfiles_maybe = depfiles$/;"	m
+am__include	rabin-tool-master/Makefile	/^am__include = include$/;"	m
+am__include	rabin-tool-master/src/Makefile	/^am__include = include$/;"	m
+am__quote	rabin-tool-master/Makefile	/^am__quote = $/;"	m
+am__quote	rabin-tool-master/src/Makefile	/^am__quote = $/;"	m
+am__remove_distdir	rabin-tool-master/Makefile	/^am__remove_distdir = \\$/;"	m
+am_librabinpoly_a_OBJECTS	rabin-tool-master/src/Makefile	/^am_librabinpoly_a_OBJECTS = rabinpoly.$(OBJEXT) msb.$(OBJEXT)$/;"	m
+append8	rabin-tool-master/src/RabinPoly.java	/^  public \/*unsigned*\/ long append8 (\/*unsigned*\/ long p, \/*unsigned*\/ byte m)$/;"	m	class:RabinPoly
+append8	rabin-tool-master/src/rabinpoly.h	/^  u_int64_t append8 (u_int64_t p, u_char m) const$/;"	f	class:rabinpoly
+bindir	rabin-tool-master/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
+bindir	rabin-tool-master/src/Makefile	/^bindir = ${exec_prefix}\/bin$/;"	m
+bits	rabin-tool-master/src/rabincmd.C	/^  int    bits;$/;"	m	class:Options	file:
+buf	rabin-tool-master/src/RabinWindow.java	/^  private \/*unsigned*\/ byte buf[];$/;"	f	class:RabinWindow	file:
+buf	rabin-tool-master/src/rabinpoly.h	/^  u_char *buf;$/;"	m	class:window
+buffer	rabin-tool-master/src/rabincmd.C	/^  unsigned char*     buffer;$/;"	m	class:ExtractChunkProcessor	file:
+buffer	rabin-tool-master/src/rabincmd.C	/^  unsigned char*   buffer;$/;"	m	class:CompressChunkProcessor	file:
+bufpos	rabin-tool-master/src/RabinWindow.java	/^  private int bufpos;$/;"	f	class:RabinWindow	file:
+bufpos	rabin-tool-master/src/rabinpoly.h	/^  int bufpos;$/;"	m	class:window
+buildInitialPrint	rabin.c	/^static uint32_t buildInitialPrint(mbuffer_t *m, __u16 *iter)$/;"	f	file:
+bytelsb	rabin-tool-master/src/MostSignificantBitUtil.java	/^  private static byte bytelsb[] = {$/;"	f	class:MostSignificantBitUtil	file:
+bytelsb	rabin-tool-master/src/msb.C	/^const char bytelsb[0x100] = {$/;"	v
+bytelsb	rabin-tool-master/src/msb.h	/^EXTERN_C const char bytelsb[];$/;"	v
+bytemsb	rabin-tool-master/src/MostSignificantBitUtil.java	/^  private static byte bytemsb[] = {$/;"	f	class:MostSignificantBitUtil	file:
+bytemsb	rabin-tool-master/src/msb.C	/^const char bytemsb[0x100] = {$/;"	v
+bytemsb	rabin-tool-master/src/msb.h	/^EXTERN_C const char bytemsb[];$/;"	v
+c2pv_datum	c2pv-map.h	/^typedef chunkmap_t c2pv_datum;$/;"	t
+c2pvdump	mapdump.c	/^char c2pvdump[MAXPATHLEN];$/;"	v
+c2pvfp	mapdump.c	/^FILE *c2pvfp=NULL;$/;"	v
+c2vmaps	c2pv-map.h	/^    struct slist_head c2vmaps;$/;"	m	struct:chunkmap_t	typeref:struct:chunkmap_t::slist_head
+calcT	rabin-tool-master/src/RabinPoly.java	/^  calcT ()$/;"	m	class:RabinPoly
+calcT	rabin-tool-master/src/rabinpoly.C	/^rabinpoly::calcT ()$/;"	f	class:rabinpoly
+cdirty	v2c-map.h	/^	unsigned char cdirty:1;$/;"	m	struct:V2C_t
+cforced	c2pv-map.h	/^    unsigned char cforced:1;$/;"	m	struct:chunkmap_t
+chashkey	c2pv-map.h	/^    unsigned char chashkey[HASHLEN + MAGIC_SIZE];$/;"	m	struct:chunkmap_t
+chunkDir	rabin-tool-master/src/rabincmd.C	/^  string      chunkDir;$/;"	m	class:CreateFileChunkProcessor	file:
+chunkDir	rabin-tool-master/src/rabincmd.C	/^  string chunkDir;$/;"	m	class:Options	file:
+chunkID	c2pv-map.h	/^    chunk_id_t chunkID;$/;"	m	struct:chunkmap_t
+chunkIDUList	chunking.c	/^Node * chunkIDUList = NULL;$/;"	v
+chunkIDUList	v2c-map.h	/^    Node *chunkIDUList;$/;"	m	struct:V2C_t
+chunkLocations	rabin-tool-master/src/rabincmd.C	/^  map<u_int64_t, long> chunkLocations;$/;"	m	class:CompressChunkProcessor	file:
+chunkLocations	rabin-tool-master/src/rabincmd.C	/^  vector<fpos_t>     chunkLocations;$/;"	m	class:ExtractChunkProcessor	file:
+chunkNum	c2pv-map.c	/^chunk_id_t chunkNum = 0;$/;"	v
+chunkNum	rabin-tool-master/src/rabincmd.C	/^  long    chunkNum;$/;"	m	class:CompressChunkProcessor	file:
+chunk_dirty	v2c-map.c	/^int chunk_dirty(v2c_datum *v2c)$/;"	f
+chunk_id_t	c2pv-map.h	/^typedef __u32 chunk_id_t;$/;"	t
+chunk_lastoffsetminus1_t	c2pv-map.h	/^typedef __u16 chunk_lastoffsetminus1_t;$/;"	t
+chunk_realloc	rabin.c	/^struct chunk_t* chunk_realloc(struct chunk_t *c, __u16 offset)$/;"	f
+chunk_size_t	c2pv-map.h	/^typedef chunk_lastoffsetminus1_t chunk_size_t;$/;"	t
+chunk_t	rabin.h	/^struct chunk_t$/;"	s
+chunkcmp	chunktab.c	/^static int chunkcmp(struct hashtab *h, const void *key1, const void *key2)$/;"	f	file:
+chunkend_coincides	c2pv-map.c	/^int chunkend_coincides(chunkmap_t *c2pv, C2V_tuple_t *c2v)$/;"	f
+chunkhash	chunktab.c	/^__u32 chunkhash(struct hashtab *h, const void *key)$/;"	f
+chunkingInitDone	rabin.c	/^int chunkingInitDone = 0;$/;"	v
+chunking_blkread	serveio.c	/^	unsigned long chunking_blkread = 0;	\/*Blk read for write chunking*\/$/;"	v
+chunkmap_alive	c2pv-map.c	/^int chunkmap_alive = 0;$/;"	v
+chunkmap_by_cid	c2pv-map.c	/^vector32 * chunkmap_by_cid = NULL;$/;"	v
+chunkmap_t	c2pv-map.h	/^typedef struct chunkmap_t{$/;"	s
+chunkmap_t	c2pv-map.h	/^}chunkmap_t;$/;"	t	typeref:struct:chunkmap_t
+chunktab	chunktab.c	/^struct chunktab chunktab;$/;"	v	typeref:struct:chunktab
+chunktab	chunktab.h	/^struct chunktab {$/;"	s
+chunktab_alive	chunktab.c	/^static int chunktab_alive;$/;"	v	file:
+chunktab_exit	chunktab.c	/^void chunktab_exit(struct chunktab *l)$/;"	f
+chunktab_init	chunktab.c	/^int chunktab_init(struct chunktab *c, unsigned int s)$/;"	f
+clen	c2pv-map.h	/^    chunk_size_t clen;  \/* useful for both chunk-to-virt & chunk-to-phys *\/$/;"	m	struct:chunkmap_t
+close	rabin-tool-master/src/rabincmd.C	/^  void close()$/;"	f	class:ExtractDataSource
+coinciding_end_boundary	serveio.c	/^int coinciding_end_boundary(v2c_datum *v2c, chunkmap_t *c2pv)$/;"	f
+coinciding_start_boundary	serveio.c	/^int coinciding_start_boundary(v2c_datum *v2c, chunkmap_t *c2pv)$/;"	f
+completeChunk	rabin-tool-master/src/rabincmd.C	/^  void completeChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:ChunkProcessor
+compress	rabin-tool-master/src/rabincmd.C	/^  BOOL   compress;$/;"	m	class:Options	file:
+createInitialChunkBuf	chunking.c	/^int createInitialChunkBuf(struct chunk_t **chunk, unsigned char *buf, __u16 len, $/;"	f
+createPrePostchunkBufs	serveio.c	/^void createPrePostchunkBufs(struct chunk_t **prechunkp, $/;"	f
+create_chunkmap_mapping_space	c2pv-map.c	/^void create_chunkmap_mapping_space(void)$/;"	f
+create_v2c_mapping_space	v2c-map.c	/^void create_v2c_mapping_space()$/;"	f
+currChunkBegin	rabin-tool-master/src/rabincmd.C	/^  fpos_t             currChunkBegin;$/;"	m	class:ExtractChunkProcessor	file:
+currChunkNum	rabin-tool-master/src/rabincmd.C	/^  long               currChunkNum;$/;"	m	class:ExtractChunkProcessor	file:
+currReadFile	rabin-tool-master/src/rabincmd.C	/^  FILE*  currReadFile;$/;"	m	class:ExtractDataSource	file:
+currReusableChunkIDUList	c2pv-map.c	/^Node * currReusableChunkIDUList = NULL;$/;"	v
+dataSource	rabin-tool-master/src/rabincmd.C	/^  DataSource*             dataSource;$/;"	m	class:OptionsChunkProcessor	file:
+datadir	rabin-tool-master/Makefile	/^datadir = ${prefix}\/share$/;"	m
+datadir	rabin-tool-master/src/Makefile	/^datadir = ${prefix}\/share$/;"	m
+dc_install_base	rabin-tool-master/Makefile	/^	dc_install_base=`$(am__cd) $(distdir)\/=inst && pwd` \\$/;"	m
+debug	rabin-tool-master/src/RabinPoly.java	/^  public void debug(Object... obj)$/;"	m	class:LoggerDummy
+debug	rabin-tool-master/src/rabincmd.C	/^void debug(const char* msg, ...)$/;"	f
+dec_chunkoffset	chunking.c	/^chunk_size_t dec_chunkoffset(chunk_size_t val)$/;"	f
+dedupfetch	c2pv-map.h	/^    unsigned char dedupfetch:1; \/* Signifies this dedup tuple to be fetched *\/$/;"	m	struct:C2V_tuple_t
+default_c2pvdump	mapdump.c	/^char *default_c2pvdump = "c2pvdump.txt";$/;"	v
+default_v2cdump	mapdump.c	/^char *default_v2cdump = "v2cdump.txt";$/;"	v
+del_c2v_from_c2vmaps	serveio.c	/^int del_c2v_from_c2vmaps(chunkmap_t *c2pv, __u16 volID, __u32 vBlkID)$/;"	f
+depcomp	rabin-tool-master/src/Makefile	/^depcomp = $(SHELL) $(top_srcdir)\/depcomp$/;"	m
+distcleancheck_listfiles	rabin-tool-master/Makefile	/^distcleancheck_listfiles = find . -type f -print$/;"	m
+distdir	rabin-tool-master/Makefile	/^distdir = $(PACKAGE)-$(VERSION)$/;"	m
+distdir	rabin-tool-master/src/Makefile	/^distdir = $(top_distdir)\/$(PACKAGE)-$(VERSION)$/;"	m
+dld_link	rabin-tool-master/configure	/^dld_link ();$/;"	f
+dld_link	rabin-tool-master/data/configure.v1	/^dld_link ();$/;"	f
+dld_link	rabin-tool-master/data/configure.v2	/^dld_link ();$/;"	f
+dld_link	rabin-tool-master/data/configure.v3	/^dld_link ();$/;"	f
+dlopen	rabin-tool-master/configure	/^dlopen ();$/;"	f
+dlopen	rabin-tool-master/data/configure.v1	/^dlopen ();$/;"	f
+dlopen	rabin-tool-master/data/configure.v2	/^dlopen ();$/;"	f
+dlopen	rabin-tool-master/data/configure.v3	/^dlopen ();$/;"	f
+dump_c2pv	mapdump.c	/^int dump_c2pv(void)$/;"	f
+dump_v2c	mapdump.c	/^int dump_v2c(void)$/;"	f
+eds	rabin-tool-master/src/rabincmd.C	/^  ExtractDataSource* eds;$/;"	m	class:ExtractChunkProcessor	file:
+end_offset_into_chunk	v2c-map.h	/^    chunk_size_t end_offset_into_chunk;$/;"	m	struct:V2C_t
+exec_prefix	rabin-tool-master/Makefile	/^exec_prefix = ${prefix}$/;"	m
+exec_prefix	rabin-tool-master/src/Makefile	/^exec_prefix = ${prefix}$/;"	m
+exitRabin	rabin.c	/^void exitRabin(void)$/;"	f
+extract	rabin-tool-master/src/rabincmd.C	/^  BOOL   extract;$/;"	m	class:Options	file:
+fetchdata_pblk	serveio.c	/^int fetchdata_pblk(struct preq_spec *preql)$/;"	f
+ffs	rabin-tool-master/src/MostSignificantBitUtil.java	/^  ffs (\/*unsigned*\/ int v)$/;"	m	class:MostSignificantBitUtil
+ffs	rabin-tool-master/src/MostSignificantBitUtil.java	/^  ffs (\/*unsigned*\/ long v)$/;"	m	class:MostSignificantBitUtil
+ffs	rabin-tool-master/src/msb.h	119;"	d
+ffs32	rabin-tool-master/src/msb.h	/^ffs32 (u_int32_t v)$/;"	f
+ffs64	rabin-tool-master/src/msb.h	/^ffs64 (u_int64_t v)$/;"	f
+fileExists	rabin-tool-master/src/rabincmd.C	/^BOOL fileExists(const char* fname)$/;"	f
+filename	rabin-tool-master/src/rabincmd.C	/^  string filename;$/;"	m	class:Options	file:
+fingerprint	rabin-tool-master/src/RabinWindow.java	/^  private \/*unsigned*\/ long fingerprint;$/;"	f	class:RabinWindow	file:
+fingerprint	rabin-tool-master/src/rabinpoly.h	/^  u_int64_t fingerprint;$/;"	m	class:window
+fixPrevBlock	v2c-map.c	/^int fixPrevBlock(int initflag, chunk_id_t chunkID, __u32 currblockID,$/;"	f
+fls	rabin-tool-master/src/MostSignificantBitUtil.java	/^  public static \/*unsigned*\/ short fls (\/*unsigned*\/ int v)$/;"	m	class:MostSignificantBitUtil
+fls	rabin-tool-master/src/MostSignificantBitUtil.java	/^  public static byte fls (\/*unsigned*\/ long v)$/;"	m	class:MostSignificantBitUtil
+fls	rabin-tool-master/src/msb.h	80;"	d
+fls32	rabin-tool-master/src/msb.h	/^static inline u_int fls32 (u_int32_t v)$/;"	f
+fls64	rabin-tool-master/src/msb.h	/^static inline char fls64 (u_int64_t v)$/;"	f
+form_postchunk	serveio.c	/^int form_postchunk(struct chunk_t **postchunkp, v2c_datum *v2c, $/;"	f
+form_prechunk	serveio.c	/^int form_prechunk(struct chunk_t **prechunkp,$/;"	f
+fpmkredtab	rabin.c	/^static void fpmkredtab(uint32_t irr, int s) $/;"	f	file:
+fpmkwinredtab	rabin.c	/^static void fpmkwinredtab(uint32_t irr \/* , int winlen, *\/)$/;"	f	file:
+fpreduce	rabin.c	/^static uint32_t fpreduce(uint32_t x, uint32_t irr) $/;"	f	file:
+fpwinreduce	rabin.c	/^static uint32_t fpwinreduce(uint32_t irr, $/;"	f	file:
+freeRabin	rabin.c	/^void freeRabin(void)$/;"	f
+free_chunk_t	rabin.c	/^struct chunk_t* free_chunk_t(struct chunk_t **chunk)$/;"	f
+free_chunkmap	c2pv-map.c	/^void free_chunkmap(void)$/;"	f
+free_v2cmaps	v2c-map.c	/^void free_v2cmaps(void)$/;"	f
+getByte	rabin-tool-master/src/rabincmd.C	/^  virtual int getByte()$/;"	f	class:ExtractDataSource
+getByte	rabin-tool-master/src/rabincmd.C	/^  virtual int getByte()$/;"	f	class:RawFileDataSource
+getChunkMap	c2pv-map.c	/^struct chunkmap_t* getChunkMap(chunk_id_t chunkID)$/;"	f
+getChunkMapFirstofnext	serveio.c	/^struct chunkmap_t* getChunkMapFirstofnext(__u16 volID, __u32 blkID, $/;"	f
+getChunkMapLastofprev	serveio.c	/^chunkmap_t* getChunkMapLastofprev(__u16 volID, __u32 blkID, $/;"	f
+getChunkMapSecondofcurr	serveio.c	/^struct chunkmap_t* getChunkMapSecondofcurr(__u16 volID, __u32 blkID)$/;"	f
+getDataSource	rabin-tool-master/src/rabincmd.C	/^  DataSource* getDataSource()$/;"	f	class:OptionsChunkProcessor
+getDataSource	rabin-tool-master/src/rabincmd.C	/^  ExtractDataSource* getDataSource() { return eds; }$/;"	f	class:ExtractChunkProcessor
+getFreshRabinOffset	rabin.c	/^static __u16 getFreshRabinOffset(mbuffer_t *m, __u16 *n, uint32_t *finalh$/;"	f	file:
+getMaxChunkSize	rabin-tool-master/src/rabincmd.C	/^  int getMaxChunkSize() { return MAX_SIZE; }$/;"	f	class:BitwiseChunkBoundaryChecker
+getNextChunkNum	c2pv-map.c	/^chunk_id_t getNextChunkNum(int initflag)$/;"	f
+getSize	rabin-tool-master/src/rabincmd.C	/^  virtual int getSize()$/;"	f	class:ChunkProcessor
+getTmpChunkFile	rabin-tool-master/src/rabincmd.C	/^  FILE* getTmpChunkFile()$/;"	f	class:CreateFileChunkProcessor
+getTmpChunkFileName	rabin-tool-master/src/rabincmd.C	/^  string getTmpChunkFileName()$/;"	f	class:CreateFileChunkProcessor
+getVirttoChunkMap	v2c-map.c	/^int getVirttoChunkMap(__u16 volID, __u32 vBlkID, __u16 count, $/;"	f
+get_deduped_c2v	serveio.c	/^C2V_tuple_t * get_deduped_c2v(chunkmap_t *c2pv)$/;"	f
+get_fullchunk	c2pv-map.c	/^int get_fullchunk(chunkmap_t* c2pv, $/;"	f
+get_idx_into_vblklist	serveio.c	/^int get_idx_into_vblklist(chunk_size_t pos_into_chunk, chunkmap_t *c2pv,$/;"	f
+get_nondeduped_c2v	serveio.c	/^C2V_tuple_t* get_nondeduped_c2v(chunkmap_t *c2pv, __u16 volID, $/;"	f
+get_partchunk	serveio.c	/^int get_partchunk(struct preq_spec **preql, int *nreq,$/;"	f
+get_partvblk	serveio.c	/^chunk_size_t get_partvblk(struct preq_spec **preql, int *nreq,$/;"	f
+get_vblk_idx_offset	serveio.c	/^void get_vblk_idx_offset(C2V_tuple_t *dc2v, chunk_size_t pos, $/;"	f
+head	c2pv-map.h	/^    struct slist_head head;  \/* To add in list c2vmaps *\/$/;"	m	struct:C2V_tuple_t	typeref:struct:C2V_tuple_t::slist_head
+head	v2c-map.h	/^    struct slist_head head;  \/* To add in list pointed by v2clistp *\/$/;"	m	struct:V2C_t	typeref:struct:V2C_t::slist_head
+host_alias	rabin-tool-master/Makefile	/^host_alias = $/;"	m
+host_alias	rabin-tool-master/src/Makefile	/^host_alias = $/;"	m
+host_triplet	rabin-tool-master/Makefile	/^host_triplet = i686-pc-linux-gnu$/;"	m
+host_triplet	rabin-tool-master/src/Makefile	/^host_triplet = i686-pc-linux-gnu$/;"	m
+inFilename	rabin-tool-master/src/rabincmd.C	/^  string inFilename;$/;"	m	class:Options	file:
+inPlaceChunk	rabin-tool-master/src/rabincmd.C	/^  BOOL   inPlaceChunk;$/;"	m	class:ExtractDataSource	file:
+inc_chunkoffset	chunking.c	/^chunk_size_t inc_chunkoffset(chunk_size_t val)$/;"	f
+includeHEADERS_INSTALL	rabin-tool-master/src/Makefile	/^includeHEADERS_INSTALL = $(INSTALL_HEADER)$/;"	m
+include_HEADERS	rabin-tool-master/src/Makefile	/^include_HEADERS = rabinpoly.h$/;"	m
+includedir	rabin-tool-master/Makefile	/^includedir = ${prefix}\/include$/;"	m
+includedir	rabin-tool-master/src/Makefile	/^includedir = ${prefix}\/include$/;"	m
+infile	rabin-tool-master/src/rabincmd.C	/^  FILE*  infile;$/;"	m	class:ExtractDataSource	file:
+infodir	rabin-tool-master/Makefile	/^infodir = ${prefix}\/info$/;"	m
+infodir	rabin-tool-master/src/Makefile	/^infodir = ${prefix}\/info$/;"	m
+initAndRecoverChunkIDs	serveio.c	/^static int initAndRecoverChunkIDs(Node ** IDUListp, int nozero_flag,$/;"	f	file:
+initRabin	rabin.c	/^void initRabin(void\/*int winlen*\/)$/;"	f
+initialize_globals_for_writechunking	chunking.c	/^int initialize_globals_for_writechunking(int pre_len, $/;"	f
+install_sh	rabin-tool-master/Makefile	/^install_sh = \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/install-sh$/;"	m
+install_sh	rabin-tool-master/src/Makefile	/^install_sh = \/home\/sujesha\/Documents\/APS\/provided-eval\/datadumping\/sim_replay\/provided\/rabin-tool-master\/install-sh$/;"	m
+install_sh_DATA	rabin-tool-master/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
+install_sh_DATA	rabin-tool-master/src/Makefile	/^install_sh_DATA = $(install_sh) -c -m 644$/;"	m
+install_sh_PROGRAM	rabin-tool-master/Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
+install_sh_PROGRAM	rabin-tool-master/src/Makefile	/^install_sh_PROGRAM = $(install_sh) -c$/;"	m
+install_sh_SCRIPT	rabin-tool-master/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
+install_sh_SCRIPT	rabin-tool-master/src/Makefile	/^install_sh_SCRIPT = $(install_sh) -c$/;"	m
+internalCompleteChunk	rabin-tool-master/src/rabincmd.C	/^  virtual void internalCompleteChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:ChunkProcessor
+internalCompleteChunk	rabin-tool-master/src/rabincmd.C	/^  virtual void internalCompleteChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:CompressChunkProcessor
+internalCompleteChunk	rabin-tool-master/src/rabincmd.C	/^  virtual void internalCompleteChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:CreateFileChunkProcessor
+internalCompleteChunk	rabin-tool-master/src/rabincmd.C	/^  virtual void internalCompleteChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:ExtractChunkProcessor
+internalCompleteChunk	rabin-tool-master/src/rabincmd.C	/^  virtual void internalCompleteChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:OptionsChunkProcessor
+internalCompleteChunk	rabin-tool-master/src/rabincmd.C	/^  virtual void internalCompleteChunk(u_int64_t hash, u_int64_t fingerprint)$/;"	f	class:PrintChunkProcessor
+internalProcessByte	rabin-tool-master/src/rabincmd.C	/^  virtual void internalProcessByte(unsigned char c)$/;"	f	class:ChunkProcessor
+internalProcessByte	rabin-tool-master/src/rabincmd.C	/^  virtual void internalProcessByte(unsigned char c)$/;"	f	class:CompressChunkProcessor
+internalProcessByte	rabin-tool-master/src/rabincmd.C	/^  virtual void internalProcessByte(unsigned char c)$/;"	f	class:CreateFileChunkProcessor
+internalProcessByte	rabin-tool-master/src/rabincmd.C	/^  virtual void internalProcessByte(unsigned char c)$/;"	f	class:ExtractChunkProcessor
+internalProcessByte	rabin-tool-master/src/rabincmd.C	/^  virtual void internalProcessByte(unsigned char c)$/;"	f	class:OptionsChunkProcessor
+invokeRabin	rabin.c	/^int invokeRabin(struct chunk_t *chunk, __u16 *len, __u16 *bytes_left, $/;"	f
+iochunkIDUList	chunking.c	/^Node * iochunkIDUList = NULL;$/;"	v
+iolastBlkOffsetminus1	c2pv-map.c	/^__u16 iolastBlkOffsetminus1 = 0;        \/* can not be -1 *\/$/;"	v
+ioprevBoundaryBlkNum	c2pv-map.c	/^__u32 ioprevBoundaryBlkNum = 0;$/;"	v
+irrpoly	rabin.c	/^uint32_t irrpoly; $/;"	v
+is	rabin-tool-master/src/rabincmd.C	/^  FILE* is;$/;"	m	class:RawFileDataSource	file:
+isBoundary	rabin-tool-master/src/rabincmd.C	/^  virtual BOOL isBoundary(u_int64_t fingerprint, int size)$/;"	f	class:BitwiseChunkBoundaryChecker
+isDebugEnabled	rabin-tool-master/src/RabinPoly.java	/^  boolean isDebugEnabled() { return false; }$/;"	m	class:LoggerDummy
+isInPlaceChunk	rabin-tool-master/src/rabincmd.C	/^  BOOL isInPlaceChunk() { return inPlaceChunk; }$/;"	f	class:ExtractDataSource
+libLIBRARIES_INSTALL	rabin-tool-master/src/Makefile	/^libLIBRARIES_INSTALL = $(INSTALL_DATA)$/;"	m
+lib_LIBRARIES	rabin-tool-master/src/Makefile	/^lib_LIBRARIES = librabinpoly.a$/;"	m
+libdir	rabin-tool-master/Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
+libdir	rabin-tool-master/src/Makefile	/^libdir = ${exec_prefix}\/lib$/;"	m
+libexecdir	rabin-tool-master/Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
+libexecdir	rabin-tool-master/src/Makefile	/^libexecdir = ${exec_prefix}\/libexec$/;"	m
+librabinpoly_a_AR	rabin-tool-master/src/Makefile	/^librabinpoly_a_AR = $(AR) cru$/;"	m
+librabinpoly_a_LIBADD	rabin-tool-master/src/Makefile	/^librabinpoly_a_LIBADD =$/;"	m
+librabinpoly_a_OBJECTS	rabin-tool-master/src/Makefile	/^librabinpoly_a_OBJECTS = $(am_librabinpoly_a_OBJECTS)$/;"	m
+librabinpoly_a_SOURCES	rabin-tool-master/src/Makefile	/^librabinpoly_a_SOURCES = rabinpoly.C msb.C$/;"	m
+linkChunkIDUList	v2c-map.c	/^int linkChunkIDUList(v2c_datum *v2c)$/;"	f
+list	rabin-tool-master/Makefile	/^	list='$(SUBDIRS)'; for subdir in $$list; do \\$/;"	m
+localstatedir	rabin-tool-master/Makefile	/^localstatedir = ${prefix}\/var$/;"	m
+localstatedir	rabin-tool-master/src/Makefile	/^localstatedir = ${prefix}\/var$/;"	m
+log2c	rabin-tool-master/src/MostSignificantBitUtil.java	/^  log2c (\/*unsigned*\/ long v)$/;"	m	class:MostSignificantBitUtil
+log2c	rabin-tool-master/src/msb.h	81;"	d
+log2c64	rabin-tool-master/src/msb.h	/^log2c64 (u_int64_t v)$/;"	f
+loop_and_fetchdata_pblks	serveio.c	/^int loop_and_fetchdata_pblks(struct chunk_t **chunkp, __u16 volID,$/;"	f
+mLogger	rabin-tool-master/src/RabinPoly.java	/^  public static final LoggerDummy mLogger = new LoggerDummy();$/;"	f	class:RabinPoly
+main	rabin-tool-master/config.guess	/^		main()$/;"	f
+main	rabin-tool-master/config.guess	/^	main ()$/;"	f
+main	rabin-tool-master/config.guess	/^main ()$/;"	f
+main	rabin-tool-master/data/configure.v1	/^main ()$/;"	f
+main	rabin-tool-master/data/configure.v2	/^main ()$/;"	f
+main	rabin-tool-master/data/configure.v3	/^main ()$/;"	f
+main	rabin-tool-master/example/example1.cpp	/^int main(int argc, char *argv[]) {$/;"	f
+main	rabin-tool-master/src/RabinWindow.java	/^  public static void main(String[] args) throws Exception$/;"	m	class:RabinWindow
+main	rabin-tool-master/src/rabincmd.C	/^  int main(int argc, char **argv)$/;"	f
+main	rabin-tool-master/src/verboseRabin.C	/^int main(int argc, char **argv)$/;"	f
+makeBitMask	rabin-tool-master/src/rabincmd.C	/^u_int64_t makeBitMask(int maskSize)$/;"	f
+mandir	rabin-tool-master/Makefile	/^mandir = ${prefix}\/man$/;"	m
+mandir	rabin-tool-master/src/Makefile	/^mandir = ${prefix}\/man$/;"	m
+mapdump_routine	mapdump.c	/^int mapdump_routine(void)$/;"	f
+mappingTrimScan	serveio.c	/^static int mappingTrimScan(struct vm_pkt *blkReq)$/;"	f	file:
+mapreadup_routine	mapdump.c	/^void* mapreadup_routine(void *arg)$/;"	f
+mark_another_dedupfetch	serveio.c	/^void mark_another_dedupfetch(chunkmap_t *c2pv)$/;"	f
+maxChunkSize	rabin-tool-master/src/rabincmd.C	/^  int                maxChunkSize;$/;"	m	class:ExtractChunkProcessor	file:
+maxChunkSize	rabin-tool-master/src/rabincmd.C	/^  int     maxChunkSize;$/;"	m	class:CompressChunkProcessor	file:
+mergeLeftovers	rabin.c	/^void mergeLeftovers(struct chunk_t **chunk, struct chunk_t **leftover,$/;"	f
+mkinstalldirs	rabin-tool-master/Makefile	/^mkinstalldirs = $(SHELL) $(top_srcdir)\/mkinstalldirs$/;"	m
+mkinstalldirs	rabin-tool-master/src/Makefile	/^mkinstalldirs = $(SHELL) $(top_srcdir)\/mkinstalldirs$/;"	m
+multichunk_vblk	v2c-map.c	/^int multichunk_vblk(v2c_datum *v2c)$/;"	f
+newReusableChunkIDUList	serveio.c	/^Node * newReusableChunkIDUList = NULL;$/;"	v
+noinst_HEADERS	rabin-tool-master/src/Makefile	/^noinst_HEADERS = msb.h$/;"	m
+note_c2v_tuple	c2pv-map.c	/^void note_c2v_tuple(C2V_tuple_t *c2vp, __u16 volID,$/;"	f
+note_chunk_attrs	c2pv-map.c	/^void note_chunk_attrs(c2pv_datum *c2pv, struct chunk_t *chunk,$/;"	f
+note_postchunk_values	chunking.c	/^void note_postchunk_values(struct chunk_t *postchunk, __u16 *post_len, $/;"	f
+note_prechunk_values	chunking.c	/^static void note_prechunk_values(struct chunk_t *prechunk, __u16 *pre_len, $/;"	f	file:
+note_v2c_map	v2c-map.c	/^int note_v2c_map(v2c_datum *v2c, chunk_size_t *lastoffsetminus1,$/;"	f
+notzero_chunk	c2pv-map.c	/^int notzero_chunk(chunkmap_t *c2pv)$/;"	f
+notzero_vblk	v2c-map.c	/^int notzero_vblk(v2c_datum *v2c)$/;"	f
+nprim	chunktab.h	/^        __u32 nprim;              \/* number of primary names in table *\/$/;"	m	struct:chunktab
+oldincludedir	rabin-tool-master/Makefile	/^oldincludedir = \/usr\/include$/;"	m
+oldincludedir	rabin-tool-master/src/Makefile	/^oldincludedir = \/usr\/include$/;"	m
+outFilename	rabin-tool-master/src/rabincmd.C	/^  string outFilename;$/;"	m	class:Options	file:
+outfile	rabin-tool-master/src/rabincmd.C	/^  FILE*   outfile;$/;"	m	class:CompressChunkProcessor	file:
+p_mapupdate_sub	serveio.c	/^void* p_mapupdate_sub(void *arg)$/;"	f
+pcollisions	c2pv-map.c	/^__u32 pcollisions = 0;$/;"	v
+pcollisionsdiffclen	c2pv-map.c	/^__u32 pcollisionsdiffclen = 0;$/;"	v
+pcollisionstp	c2pv-map.c	/^__u32 pcollisionstp = 0;$/;"	v
+peekByte	rabin-tool-master/src/rabincmd.C	/^  virtual int peekByte()$/;"	f	class:ExtractDataSource
+perfWriteChunking	chunking.c	/^int perfWriteChunking(unsigned char *buf, __u16 len, __u16 volID, __u32 blockID,$/;"	f
+pkgdatadir	rabin-tool-master/Makefile	/^pkgdatadir = $(datadir)\/rabinpoly$/;"	m
+pkgdatadir	rabin-tool-master/src/Makefile	/^pkgdatadir = $(datadir)\/rabinpoly$/;"	m
+pkgincludedir	rabin-tool-master/Makefile	/^pkgincludedir = $(includedir)\/rabinpoly$/;"	m
+pkgincludedir	rabin-tool-master/src/Makefile	/^pkgincludedir = $(includedir)\/rabinpoly$/;"	m
+pkglibdir	rabin-tool-master/Makefile	/^pkglibdir = $(libdir)\/rabinpoly$/;"	m
+pkglibdir	rabin-tool-master/src/Makefile	/^pkglibdir = $(libdir)\/rabinpoly$/;"	m
+poly	rabin-tool-master/src/RabinPoly.java	/^  public final \/*unsigned*\/ long poly;		\/\/ Actual polynomial$/;"	f	class:RabinPoly
+poly	rabin-tool-master/src/rabinpoly.h	/^  const u_int64_t poly;		\/\/ Actual polynomial$/;"	m	class:rabinpoly
+polygcd	rabin-tool-master/src/RabinPoly.java	/^  polygcd (\/*unsigned*\/ long x, \/*unsigned*\/ long y)$/;"	m	class:RabinPoly	file:
+polygcd	rabin-tool-master/src/rabinpoly.C	/^polygcd (u_int64_t x, u_int64_t y)$/;"	f
+polyirreducible	rabin-tool-master/src/RabinPoly.java	/^  polyirreducible (\/*unsigned*\/ long f)$/;"	m	class:RabinPoly
+polyirreducible	rabin-tool-master/src/rabinpoly.C	/^polyirreducible (u_int64_t f)$/;"	f
+polymmult	rabin-tool-master/src/RabinPoly.java	/^  polymmult (\/*unsigned*\/ long x, \/*unsigned*\/ long y, \/*unsigned*\/ long d)$/;"	m	class:RabinPoly
+polymmult	rabin-tool-master/src/rabinpoly.C	/^polymmult (u_int64_t x, u_int64_t y, u_int64_t d)$/;"	f
+polymod	rabin-tool-master/src/RabinPoly.java	/^  polymod (\/*unsigned*\/ long nh, \/*unsigned*\/ long nl, \/*unsigned*\/ long d)$/;"	m	class:RabinPoly	file:
+polymod	rabin-tool-master/src/rabinpoly.C	/^polymod (u_int64_t nh, u_int64_t nl, u_int64_t d)$/;"	f
+polymult	rabin-tool-master/src/RabinPoly.java	/^  polymult (\/*unsigned*\/ long x, \/*unsigned*\/ long y)$/;"	m	class:RabinPoly
+polymult	rabin-tool-master/src/rabinpoly.C	/^polymult (u_int64_t *php, u_int64_t *plp, u_int64_t x, u_int64_t y)$/;"	f
+porigblkread	serveio.c	/^	unsigned long porigblkread = 0;	\/* Original blks-to-be-read *\/$/;"	v
+porigblkwrite	serveio.c	/^	unsigned long porigblkwrite = 0;	\/* Original blks-to-be-written *\/$/;"	v
+prefix	rabin-tool-master/Makefile	/^prefix = \/usr\/local$/;"	m
+prefix	rabin-tool-master/src/Makefile	/^prefix = \/usr\/local$/;"	m
+print	rabin-tool-master/src/rabincmd.C	/^  BOOL   print;$/;"	m	class:Options	file:
+printChunkContents	rabin-tool-master/src/rabincmd.C	/^void printChunkContents($/;"	f
+printChunkData	rabin-tool-master/src/rabincmd.C	/^void printChunkData($/;"	f
+pro_blkread	serveio.c	/^	unsigned long pro_blkread = 0;	\/* Blk read on PROVIDED success *\/$/;"	v
+pro_fallback_blkread	serveio.c	/^	unsigned long pro_fallback_blkread = 0;	\/* Blk read on PROVIDED fail *\/$/;"	v
+pro_zeroblksread	serveio.c	/^	unsigned long pro_zeroblksread = 0;	\/* Count of zeroblks so-not-to-be-read*\/$/;"	v
+processBlock	v2c-map.c	/^int processBlock(unsigned char *buf, __u32 blockID, __u16 volID,$/;"	f
+processByte	rabin-tool-master/src/rabincmd.C	/^  void processByte(unsigned char c) $/;"	f	class:ChunkProcessor
+processChunk	c2pv-map.c	/^chunk_id_t processChunk($/;"	f
+processChunks	rabin-tool-master/src/rabincmd.C	/^void processChunks(DataSource* ds,$/;"	f
+processors	rabin-tool-master/src/rabincmd.C	/^  vector<ChunkProcessor*> processors;$/;"	m	class:OptionsChunkProcessor	file:
+progname	rabin-tool-master/example/example1.cpp	/^char* progname;$/;"	v
+prototypes	rabin-tool-master/configure	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
+prototypes	rabin-tool-master/data/configure.v1	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
+prototypes	rabin-tool-master/data/configure.v2	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
+provideReadRequest	serveio.c	/^int provideReadRequest(struct vm_pkt *blkReq, $/;"	f
+provideWriteRequest	serveio.c	/^int provideWriteRequest(struct vm_pkt *blkReq, $/;"	f
+ptotalblk	serveio.c	/^	unsigned long ptotalblk = 0;	\/* Including read\/write blks *\/$/;"	v
+ptotalblkread	serveio.c	/^	unsigned long ptotalblkread = 0;	\/* Count of blks to-be-read *\/$/;"	v
+ptotalblkwrite	serveio.c	/^	unsigned long ptotalblkwrite = 0;	\/* Count of blks to-be-written *\/$/;"	v
+ptotalreadreq	serveio.c	/^	unsigned long ptotalreadreq = 0;	\/* Read req received *\/$/;"	v
+ptotalreq	serveio.c	/^	unsigned long ptotalreq = 0;	\/* Including read\/write reqs *\/$/;"	v
+ptotalwritereq	serveio.c	/^	unsigned long ptotalwritereq = 0;	\/* Write req received *\/$/;"	v
+pzerocollisions	c2pv-map.c	/^__u32 pzerocollisions = 0;$/;"	v
+rabinpoly	rabin-tool-master/src/rabinpoly.C	/^rabinpoly::rabinpoly (u_int64_t p)$/;"	f	class:rabinpoly
+rabinpoly	rabin-tool-master/src/rabinpoly.h	/^class rabinpoly {$/;"	c
+rabintab	rabin.c	/^uint32_t * rabintab;$/;"	v
+rabinwintab	rabin.c	/^uint32_t * rabinwintab;$/;"	v
+raf	rabin-tool-master/src/rabincmd.C	/^  FILE*  raf;$/;"	m	class:ExtractDataSource	file:
+readExistingChunk	rabin-tool-master/src/rabincmd.C	/^  void readExistingChunk(fpos_t loc, fpos_t* currChunkBegin)$/;"	f	class:ExtractDataSource
+readinput_map_filenames	mapdump.c	/^void readinput_map_filenames()$/;"	f
+readup_c2pvdump	mapdump.c	/^int readup_c2pvdump(void)$/;"	f
+readup_v2cdump	mapdump.c	/^int readup_v2cdump(void)$/;"	f
+reconstruct	rabin-tool-master/src/rabincmd.C	/^  BOOL   reconstruct;$/;"	m	class:Options	file:
+recyclechunkID	serveio.c	/^int recyclechunkID(chunk_id_t chunkID, int nozero_flag,$/;"	f
+remove_c2v_tuple_from_map	c2pv-map.c	/^void remove_c2v_tuple_from_map(C2V_tuple_t *c2v, c2pv_datum *c2pv)$/;"	f
+replaceChunkID	v2c-map.c	/^int replaceChunkID(__u16 volID, __u32 blockID, int pos, v2c_datum **v2c,$/;"	f
+requireInt	rabin-tool-master/src/rabincmd.C	/^int requireInt(char* str)$/;"	f
+reset	rabin-tool-master/src/RabinWindow.java	/^    void reset () { $/;"	m	class:RabinWindow
+reset	rabin-tool-master/src/rabinpoly.h	/^  void reset () { $/;"	f	class:window
+resetMappings	serveio.c	/^int resetMappings(v2c_datum *v2c, __u16 volID, __u32 vBlkID)$/;"	f
+restoreLocation	rabin-tool-master/src/rabincmd.C	/^  void restoreLocation()$/;"	f	class:ExtractDataSource
+resumeChunking	chunking.c	/^int resumeChunking(unsigned char *buf, __u16 len, __u16 volID, $/;"	f
+resumeDynChunking	chunking.c	/^int resumeDynChunking(unsigned char *buf, __u16 len, __u16 volID, $/;"	f
+resumePrintBuilding	rabin.c	/^static __u16 resumePrintBuilding(mbuffer_t *m, __u16 n, \/*, int winlen*\/$/;"	f	file:
+run_task	rabin-tool-master/example/example1.cpp	/^int run_task(char* filename, int windowsize) {$/;"	f
+sbindir	rabin-tool-master/Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
+sbindir	rabin-tool-master/src/Makefile	/^sbindir = ${exec_prefix}\/sbin$/;"	m
+setChunkMap	c2pv-map.c	/^void setChunkMap(chunk_id_t chunkID, c2pv_datum *c2pv)$/;"	f
+setOptionsFromArguments	rabin-tool-master/src/rabincmd.C	/^  void setOptionsFromArguments(int argc, char** argv)$/;"	f	class:Options
+sharedstatedir	rabin-tool-master/Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
+sharedstatedir	rabin-tool-master/src/Makefile	/^sharedstatedir = ${prefix}\/com$/;"	m
+shift	rabin-tool-master/src/RabinPoly.java	/^  private int shift;$/;"	f	class:RabinPoly	file:
+shift	rabin-tool-master/src/rabinpoly.h	/^  int shift;$/;"	m	class:rabinpoly
+shl_load	rabin-tool-master/configure	/^shl_load ();$/;"	f
+shl_load	rabin-tool-master/data/configure.v1	/^shl_load ();$/;"	f
+shl_load	rabin-tool-master/data/configure.v2	/^shl_load ();$/;"	f
+shl_load	rabin-tool-master/data/configure.v3	/^shl_load ();$/;"	f
+size	rabin-tool-master/src/RabinWindow.java	/^  public int size;$/;"	f	class:RabinWindow
+size	rabin-tool-master/src/rabincmd.C	/^  int size;$/;"	m	class:ChunkProcessor	file:
+size	rabin-tool-master/src/rabinpoly.h	/^  int size;$/;"	m	class:window
+slide8	rabin-tool-master/src/RabinWindow.java	/^    \/*unsigned*\/ long slide8 (\/*unsigned*\/ byte m) {$/;"	m	class:RabinWindow
+slide8	rabin-tool-master/src/rabinpoly.h	/^  u_int64_t slide8 (u_char m) {$/;"	f	class:window
+splitChunkBuffer	rabin.c	/^void splitChunkBuffer(struct chunk_t **chunk, $/;"	f
+srcdir	rabin-tool-master/Makefile	/^srcdir = .$/;"	m
+srcdir	rabin-tool-master/src/Makefile	/^srcdir = .$/;"	m
+startInPlaceChunk	rabin-tool-master/src/rabincmd.C	/^  void startInPlaceChunk(fpos_t* currChunkBegin)$/;"	f	class:ExtractDataSource
+start_offset_into_chunk	v2c-map.h	/^    chunk_size_t start_offset_into_chunk;$/;"	m	struct:V2C_t
+start_offset_into_vblk	c2pv-map.h	/^    __u16 start_offset_into_vblk;           \/* vblks are sequential *\/$/;"	m	struct:C2V_tuple_t
+start_vblk_id	c2pv-map.h	/^    __u32 start_vblk_id;$/;"	m	struct:C2V_tuple_t
+storedLoc	rabin-tool-master/src/rabincmd.C	/^  fpos_t storedLoc;$/;"	m	class:ExtractDataSource	file:
+subChunkIDUList	v2c-map.c	/^int subChunkIDUList(__u16 volID, __u32 blockID, v2c_datum **v2c, $/;"	f
+subdir	rabin-tool-master/Makefile	/^subdir = .$/;"	m
+subdir	rabin-tool-master/src/Makefile	/^subdir = src$/;"	m
+sysconfdir	rabin-tool-master/Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
+sysconfdir	rabin-tool-master/src/Makefile	/^sysconfdir = ${prefix}\/etc$/;"	m
+table	chunktab.h	/^        struct hashtab *table;  \/* hash table (keyed on a string) *\/$/;"	m	struct:chunktab	typeref:struct:chunktab::hashtab
+tmpChunkFile	rabin-tool-master/src/rabincmd.C	/^  FILE*       tmpChunkFile;$/;"	m	class:CreateFileChunkProcessor	file:
+toString	rabin-tool-master/src/rabincmd.C	/^string toString(u_int64_t num)$/;"	f
+top_builddir	rabin-tool-master/Makefile	/^top_builddir = .$/;"	m
+top_builddir	rabin-tool-master/src/Makefile	/^top_builddir = ..$/;"	m
+top_distdir	rabin-tool-master/Makefile	/^top_distdir = .$/;"	m
+top_distdir	rabin-tool-master/src/Makefile	/^top_distdir = ..$/;"	m
+top_srcdir	rabin-tool-master/Makefile	/^top_srcdir = .$/;"	m
+top_srcdir	rabin-tool-master/src/Makefile	/^top_srcdir = ..$/;"	m
+transform	rabin-tool-master/Makefile	/^transform = s,x,x,$/;"	m
+transform	rabin-tool-master/src/Makefile	/^transform = s,x,x,$/;"	m
+uncompressed_data	rabin.h	/^  mbuffer_t uncompressed_data;$/;"	m	struct:chunk_t
+unsupported	rabin-tool-master/src/rabincmd.C	/^  void unsupported(string s)$/;"	f	class:Options
+updateBegChunkMap	c2pv-map.c	/^int updateBegChunkMap(struct chunkmap_t **seqnextp, struct chunk_t **cdp,$/;"	f
+updateBlock	v2c-map.c	/^int updateBlock(unsigned char *buf, __u32 blockID, __u16 volID,$/;"	f
+usage	rabin-tool-master/example/example1.cpp	/^void usage() {$/;"	f
+usage	rabin-tool-master/src/rabincmd.C	/^  void usage()$/;"	f	class:Options
+v2c_datum	v2c-map.h	/^typedef V2C_t v2c_datum;$/;"	t
+v2cdump	mapdump.c	/^char v2cdump[MAXPATHLEN];$/;"	v
+v2cfp	mapdump.c	/^FILE *v2cfp=NULL;$/;"	v
+v2cmaps	v2c-map.c	/^vector16 * v2cmaps = NULL;$/;"	v
+v2cmaps_alive	v2c-map.c	/^int v2cmaps_alive = 0;$/;"	v
+v2cmaps_get	v2c-map.c	/^void *v2cmaps_get(vector16 *v2cmaps, __u16 x, __u32 y)$/;"	f
+v2cmaps_set	v2c-map.c	/^void v2cmaps_set(vector16 *v2cmaps, __u16 x, __u32 y, void *e)$/;"	f
+vBlkFound	serveio.c	/^int vBlkFound(struct slist_head *p, __u16 volID, __u32 vBlkID, chunk_size_t clen)$/;"	f
+validateOptionCombination	rabin-tool-master/src/rabincmd.C	/^  void validateOptionCombination()$/;"	f	class:Options
+volID	c2pv-map.h	/^    __u16 volID;$/;"	m	struct:C2V_tuple_t
+window	rabin-tool-master/src/rabinpoly.C	/^window::window (u_int64_t poly, unsigned int winsz)$/;"	f	class:window
+window	rabin-tool-master/src/rabinpoly.h	/^class window : public rabinpoly {$/;"	c
+write	rabin-tool-master/src/rabincmd.C	/^  void write(void* buffer, int size)$/;"	f	class:ExtractDataSource
+~CompressChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  ~CompressChunkProcessor()$/;"	f	class:CompressChunkProcessor
+~CreateFileChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  ~CreateFileChunkProcessor()$/;"	f	class:CreateFileChunkProcessor
+~ExtractChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  ~ExtractChunkProcessor()$/;"	f	class:ExtractChunkProcessor
+~OptionsChunkProcessor	rabin-tool-master/src/rabincmd.C	/^  ~OptionsChunkProcessor()$/;"	f	class:OptionsChunkProcessor
+~RawFileDataSource	rabin-tool-master/src/rabincmd.C	/^  ~RawFileDataSource()$/;"	f	class:RawFileDataSource
+~window	rabin-tool-master/src/rabinpoly.C	/^window::~window() $/;"	f	class:window

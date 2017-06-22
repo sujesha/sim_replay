@@ -1,0 +1,91 @@
+
+==> accesstime-O1024-o100-webvm-iodedup-ioreplay_rw.txt <==
+iodedmap-map-updateblk-component-vector32_set time: 30
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 100 (MB)
+buffer cache: hits=11185632, misses=3108526
+content metadata: hits=2223457, misses=316045
+content cache: hits=127157, misses=8035550
+content cache: dedup hits=127154, nondedup hits=3
+disk hits=13590047
+disk hits read=2412345, writes=11177702
+
+==> accesstime-O1024-o200-webvm-iodedup-ioreplay_rw.txt <==
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 200 (MB)
+buffer cache: hits=10551911, misses=3742247
+content metadata: hits=2426568, misses=316045
+content cache: hits=256144, misses=8103359
+content cache: dedup hits=256137, nondedup hits=7
+disk hits=13664171
+disk hits read=2486469, writes=11177702
+
+==> accesstime-O1024-o300-webvm-iodedup-ioreplay_rw.txt <==
+iodedmap-map-updateblk-component-vector32_set time: 29
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 300 (MB)
+buffer cache: hits=10221656, misses=4072502
+content metadata: hits=2457871, misses=316045
+content cache: hits=431684, misses=7955377
+content cache: dedup hits=430711, nondedup hits=973
+disk hits=13519934
+disk hits read=2342232, writes=11177702
+
+==> accesstime-O1024-o500-webvm-iodedup-ioreplay_rw.txt <==
+iodedmap-map-updateblk-component-vector32_set time: 30
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 500 (MB)
+buffer cache: hits=9813824, misses=4480334
+content metadata: hits=2657516, misses=316045
+content cache: hits=862288, misses=7719560
+content cache: dedup hits=843097, nondedup hits=19191
+disk hits=13288975
+disk hits read=2111273, writes=11177702
+
+==> accesstime-O1024-o700-webvm-iodedup-ioreplay_rw.txt <==
+iodedmap-map-updateblk-component-vector32_set time: 30
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 700 (MB)
+buffer cache: hits=8488960, misses=5805198
+content metadata: hits=2766536, misses=316045
+content cache: hits=958090, misses=7730079
+content cache: dedup hits=867624, nondedup hits=90466
+disk hits=13302193
+disk hits read=2124491, writes=11177702
+
+==> accesstime-O1024-o900-webvm-iodedup-ioreplay_rw.txt <==
+iodedmap-map-updateblk-component-vector32_set time: 31
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 900 (MB)
+buffer cache: hits=5007646, misses=9286512
+content metadata: hits=2784497, misses=316045
+content cache: hits=1157712, misses=7547092
+content cache: dedup hits=910838, nondedup hits=246874
+disk hits=13120532
+disk hits read=1942830, writes=11177702
+
+---------------------------------------------------------------------------
+
+
+==> accesstime-O1024-webvm-iodedup-freplay_rw.txt <==
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+confided metadata: hits=2800411, misses=316045
+fcollisions=0, fcollisionstp=3237260, fzeros=0
+buffer cache: hits=13615156, misses=679002
+disk hits=11590027
+disk hits read=412325, writes=11177702
+
+==> accesstime-O1024-webvm-iodedup-sreplay_rw.txt <==
+sector-write-upon-read/write time: 803 0
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+buffer cache: hits=12303451, misses=1990707
+disk hits=12823046
+disk hits read=1645344, writes=11177702

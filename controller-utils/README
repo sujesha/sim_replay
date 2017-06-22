@@ -1,0 +1,29 @@
+Q: Why do we have 2 tables --- v2pmaps (vector16) and voltab (hashtable) ?
+
+A: v2pmaps stores the default 1:1 V2P mapping => (volID, vblkID) maps to pblkID
+	whereas
+   voltab stores mapping between vmname and volID
+
+Firstly, If we want to lookup V2P mapping by (volID, vblkID) tuple, then we 
+	need these 2 mappings to be maintained separately.
+
+Secondly, even though in our implementation, we just lookup based on volID
+	and retrieve entry from 1D vector, and it might seem that instead of
+	volID into 1D vector, why dont we just use vmname into hash-table lookup,
+	this is not a satisfactory way because a typical disk-controller would
+	not receive a lookup request based on vmname. It is more likely that
+	a lookup request based on volID (or some number) would be received.
+	Based on this, we could even decide to use hash-table instead of
+	vector16 for v2pmaps as well, but we still can not eliminate the 
+	requirement of 2 lookup tables in our implementation. In any case,
+	the access time for both arrays (vectors) and hash-tables is constant.
+
+Note that the vmname => volID lookup is only done during initialization
+of V2P maps. Once this is over, all traces will only mention volID and
+all PROVIDED-based lookups would also use the v2pmaps only, not voltab.
+
+
+==============================================================================
+
+Synchronous block read/writes accomplished via "dd" command. Note that dd.c
+has no role in this.

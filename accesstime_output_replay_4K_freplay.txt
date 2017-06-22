@@ -1,0 +1,26 @@
+V2P/dedup-mapping-lookup time: 15645 z1 1 rw(1)
+sector-lookup-fail time: 2891 0
+iodedmap-map-updateblk-component-vector32_set time: 239
+iodedmap-map-updateblk-component-vector32_set time: 16883801
+confided-map-update-for-read time: 16926257 0
+sector-write-upon-read/write time: 14653 0
+V2P/dedup-mapping-lookup time: 7556 z1 1 rw(1)
+sector-lookup-success time: 3558 0
+confided-map-update-for-read time: 254 0
+iodedmap-map-updateblk-component-vector32_set time: 73
+confided-invalidate time: 4925 1 rw(0)
+V2P/dedup-mapping-lookup time: 11496 z1 1 rw(0)
+sector-write-upon-read/write time: 2586 0
+iodedmap-map-updateblk-component-vector32_set time: 100
+iodedmap-map-updateblk-component-vector32_set time: 61
+confided-map-update-for-write time: 30941 0
+V2P/dedup-mapping-lookup time: 2245 z1 1 rw(1)
+sector-lookup-success time: 1530 0
+confided-map-update-for-read time: 187 0
+#READ=3, #WRITE=1
+RAM-size = 1024 (MB)
+confided metadata: hits=2, misses=1
+fcollisions=0, fcollisionstp=0, fzeros=0
+buffer cache: hits=3, misses=1
+disk hits=2
+disk hits read=1, writes=1

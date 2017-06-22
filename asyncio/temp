@@ -1,0 +1,5 @@
+#define BT_MAX_PKTS 512     /* VMPkts in a bunch to be processed */
+#define MAP_BT_MAX_PKTS 128 /* VMPkts in a bunch to be mapped, then processed.
+                               Mapping may result in a greater number of io_pkt
+                               Hence, the reduced number here. */
+

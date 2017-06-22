@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CCACHE_HASHTAB_COUNT	contentcache.c	/^__u32 CCACHE_HASHTAB_COUNT = 0;	\/* Value is set via contentcache_init *\/$/;"	v
+CCACHEsize_MB	contentcache.c	/^int CCACHEsize_MB = 100;	\/* Default content-cache size is 100MB - Mar 4 *\/$/;"	v
+MAX_CCACHE_SIZE	contentcache.c	/^__u32 MAX_CCACHE_SIZE = 0;		\/* Value is set via contentcache_init *\/$/;"	v
+_CONTENTCACHE_H_	contentcache.h	2;"	d
+__cop_compare	contentcache.c	/^static int __cop_compare(struct __arc_object *e, const void *key)$/;"	f	file:
+__cop_create	contentcache.c	/^static struct __arc_object *__cop_create(const void *dhashkey, $/;"	f	file:
+__cop_destroy	contentcache.c	/^static void __cop_destroy(struct __arc_object *e)$/;"	f	file:
+__cop_evict	contentcache.c	/^static void __cop_evict(struct __arc_object *e)$/;"	f	file:
+__cop_fetch	contentcache.c	/^static int __cop_fetch(struct __arc_object *e, const void *content,$/;"	f	file:
+__cop_hash	contentcache.c	/^static __u32 __cop_hash(const void *key)$/;"	f	file:
+ccache	contentcache.c	/^struct __arc *ccache = NULL;$/;"	v	typeref:struct:__arc
+ccache_dedup_hits	contentcache.c	/^__u64 ccache_dedup_hits = 0;$/;"	v
+ccache_dedup_misses	contentcache.c	/^__u64 ccache_dedup_misses = 0;$/;"	v
+ccache_hits	contentcache.c	/^__u64 ccache_hits = 0;$/;"	v
+ccache_hits_r	contentcache.c	/^__u64 ccache_hits_r = 0;$/;"	v
+ccache_hits_w	contentcache.c	/^__u64 ccache_hits_w = 0;$/;"	v
+ccache_misses	contentcache.c	/^__u64 ccache_misses = 0;$/;"	v
+ccache_misses_r	contentcache.c	/^__u64 ccache_misses_r = 0;$/;"	v
+ccache_misses_w	contentcache.c	/^__u64 ccache_misses_w = 0;$/;"	v
+ccache_nondedup_hits	contentcache.c	/^__u64 ccache_nondedup_hits = 0;$/;"	v
+ccache_nondedup_misses	contentcache.c	/^__u64 ccache_nondedup_misses = 0;$/;"	v
+cmap_dirties	contentcache.c	/^__u64 cmap_dirties = 0;$/;"	v
+cmap_hits	contentcache.c	/^__u64 cmap_hits = 0;$/;"	v
+cmap_misses	contentcache.c	/^__u64 cmap_misses = 0;$/;"	v
+cmap_self_is_leader	contentcache.c	/^__u64 cmap_self_is_leader = 0;$/;"	v
+cmap_self_is_not_leader	contentcache.c	/^__u64 cmap_self_is_not_leader = 0;$/;"	v
+content	contentcache.h	/^    void *content; $/;"	m	struct:object
+contentcache_add	contentcache.c	/^void contentcache_add(__u8* dhashkey, __u8* content, unsigned int datalen,$/;"	f
+contentcache_exit	contentcache.c	/^void contentcache_exit()$/;"	f
+contentcache_init	contentcache.c	/^void contentcache_init()$/;"	f
+contentcache_lookup	contentcache.c	/^__u8* contentcache_lookup(__u8* dhashkey, unsigned int len, __u32 ioblkID,$/;"	f
+dhashkey	contentcache.h	/^    unsigned char dhashkey[HASHLEN];$/;"	m	struct:object
+entry	contentcache.h	/^    struct __arc_object entry;$/;"	m	struct:object	typeref:struct:object::__arc_object
+ioblkID	contentcache.h	/^    __u32 ioblkID;  \/\/to count dedup hits in content-cache only$/;"	m	struct:object
+object	contentcache.h	/^struct object {$/;"	s
+objname	contentcache.c	/^unsigned char objname(struct __arc_object *entry)$/;"	f
+ops	contentcache.c	/^static struct __arc_ops ops = {$/;"	v	typeref:struct:__arc_ops	file:
+overwrite_in_contentcache	contentcache.c	/^int overwrite_in_contentcache(struct preq_spec *preq, int updatehits) $/;"	f

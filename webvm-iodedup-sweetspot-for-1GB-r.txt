@@ -1,0 +1,89 @@
+==> accesstime-O1024-o100-webvm-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 100 (MB)
+buffer cache: hits=2623754, misses=492702
+content metadata: hits=138960, misses=353742
+content cache: hits=43175, misses=95785
+content cache: dedup hits=30931, nondedup hits=12244
+disk hits=449527
+disk hits read=449527, writes=0
+
+==> accesstime-O1024-o200-webvm-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 200 (MB)
+buffer cache: hits=2179041, misses=937415
+content metadata: hits=583673, misses=353742
+content cache: hits=104213, misses=479460
+content cache: dedup hits=71749, nondedup hits=32464
+disk hits=833202
+disk hits read=833202, writes=0
+
+==> accesstime-O1024-o300-webvm-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 300 (MB)
+buffer cache: hits=1444830, misses=1671626
+content metadata: hits=1317884, misses=353742
+content cache: hits=284055, misses=1033829
+content cache: dedup hits=165244, nondedup hits=118811
+disk hits=1387571
+disk hits read=1387571, writes=0
+
+==> accesstime-O1024-o500-webvm-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 500 (MB)
+buffer cache: hits=323810, misses=2792646
+content metadata: hits=2438904, misses=353742
+content cache: hits=1375040, misses=1063864
+content cache: dedup hits=785889, nondedup hits=589151
+disk hits=1417606
+disk hits read=1417606, writes=0
+
+==> accesstime-O1024-o700-webvm-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 700 (MB)
+buffer cache: hits=239999, misses=2876457
+content metadata: hits=2522715, misses=353742
+content cache: hits=2103694, misses=419021
+content cache: dedup hits=867128, nondedup hits=1236566
+disk hits=772763
+disk hits read=772763, writes=0
+
+==> accesstime-O1024-o900-webvm-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 900 (MB)
+buffer cache: hits=10322, misses=3106134
+content metadata: hits=2752392, misses=353742
+content cache: hits=2661014, misses=91378
+content cache: dedup hits=935199, nondedup hits=1725815
+disk hits=445120
+disk hits read=445120, writes=0
+
+-----------------------------------------------------------------------------
+==> accesstime_output_replay_4K_freplay_r.txt <==
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+confided metadata: hits=2762714, misses=353742
+fcollisions=0, fcollisionstp=90815, fzeros=0
+buffer cache: hits=2762319, misses=354137
+disk hits=354137
+disk hits read=354137, writes=0
+
+==> accesstime_output_replay_4K_sreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=3116456, #WRITE=0
+RAM-size = 1024 (MB)
+buffer cache: hits=2745062, misses=371394
+disk hits=371394
+disk hits read=371394, writes=0

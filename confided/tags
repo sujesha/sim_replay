@@ -1,0 +1,123 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC  = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -Wall -W -O2 -g$/;"	m
+F2V_tuple_t	f2pv-map.h	/^typedef struct F2V_tuple_t{$/;"	s
+F2V_tuple_t	f2pv-map.h	/^}F2V_tuple_t;$/;"	t	typeref:struct:F2V_tuple_t
+INCS	Makefile	/^INCS    = -I. -I.. -I..\/pdd_replay$/;"	m
+LIBS	Makefile	/^LIBS    = -laio -lrt -lpthread$/;"	m
+OCFLAGS	Makefile	/^OCFLAGS = -UCOUNT_IOS -UDEBUG -DNDEBUG$/;"	m
+PROGS	Makefile	/^PROGS   = $/;"	m
+V2F_t	v2f-map.h	/^typedef struct V2F_t{$/;"	s
+V2F_t	v2f-map.h	/^}V2F_t;$/;"	t	typeref:struct:V2F_t
+XCFLAGS	Makefile	/^XCFLAGS = -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64$/;"	m
+_F2PV_MAP_H_	f2pv-map.h	3;"	d
+_FIXEDTAB_H_	fixedtab.h	12;"	d
+_FIXING_H_	fixing.h	2;"	d
+_FMAPDUMP_H_	fmapdump.h	2;"	d
+_FSERVEIO_H_	fserveio.h	2;"	d
+_V2F_MAP_H_	v2f-map.h	3;"	d
+add_f2v_tuple_to_map	f2pv-map.c	/^void add_f2v_tuple_to_map(F2V_tuple_t *f2vt, f2pv_datum *f2pv)$/;"	f
+add_fixedID_to_recyclelist	fserveio.c	/^void add_fixedID_to_recyclelist(fixed_id_t fixedID)$/;"	f
+add_new_to_old_recyclelistF	fserveio.c	/^static int add_new_to_old_recyclelistF()$/;"	f	file:
+blockID	f2pv-map.h	/^    __u32 blockID;$/;"	m	struct:F2V_tuple_t
+con_blkread	fserveio.c	/^	unsigned long con_blkread = 0;	\/* Blk read on CONFIDED success *\/$/;"	v
+con_fallback_blkread	fserveio.c	/^	unsigned long con_fallback_blkread = 0;	\/* Blk read on CONFIDED fail *\/$/;"	v
+con_zeroblksread	fserveio.c	/^	unsigned long con_zeroblksread = 0;	\/* Count of zeroblks so-not-to-be-read*\/$/;"	v
+confideReadRequest	fserveio.c	/^int confideReadRequest(struct vm_pkt *blkReq, $/;"	f
+confideWriteRequest	fserveio.c	/^int confideWriteRequest(struct vm_pkt *blkReq, $/;"	f
+corigblkread	fserveio.c	/^	unsigned long corigblkread = 0;	\/* Original blks-to-be-read *\/$/;"	v
+corigblkwrite	fserveio.c	/^	unsigned long corigblkwrite = 0;	\/* Original blks-to-be-written *\/$/;"	v
+create_fixedmap_mapping_space	f2pv-map.c	/^void create_fixedmap_mapping_space(void)$/;"	f
+create_v2f_mapping_space	v2f-map.c	/^void create_v2f_mapping_space()$/;"	f
+ctotalblk	fserveio.c	/^	unsigned long ctotalblk = 0;	\/* Including read\/write blks *\/$/;"	v
+ctotalblkread	fserveio.c	/^	unsigned long ctotalblkread = 0;	\/* Count of blks to-be-read *\/$/;"	v
+ctotalblkwrite	fserveio.c	/^	unsigned long ctotalblkwrite = 0;	\/* Count of blks to-be-written *\/$/;"	v
+ctotalreadreq	fserveio.c	/^	unsigned long ctotalreadreq = 0;	\/* Read req received *\/$/;"	v
+ctotalreq	fserveio.c	/^	unsigned long ctotalreq = 0;	\/* Including read\/write reqs *\/$/;"	v
+ctotalwritereq	fserveio.c	/^	unsigned long ctotalwritereq = 0;	\/* Write req received *\/$/;"	v
+currReusableFixedIDUList	f2pv-map.c	/^Node * currReusableFixedIDUList = NULL;$/;"	v
+dedupfetch	f2pv-map.h	/^    unsigned char dedupfetch:1; \/* Signifies this dedup tuple to be fetched *\/$/;"	m	struct:F2V_tuple_t
+default_f2pvdump	fmapdump.c	/^char *default_f2pvdump = "f2pvdump.txt";$/;"	v
+default_v2fdump	fmapdump.c	/^char *default_v2fdump = "v2fdump.txt";$/;"	v
+del_f2v_from_f2vmaps	fserveio.c	/^int del_f2v_from_f2vmaps(fixedmap_t *f2pv, __u16 volID, __u32 vBlkID,$/;"	f
+dump_f2pv	fmapdump.c	/^int dump_f2pv(void)$/;"	f
+dump_v2f	fmapdump.c	/^int dump_v2f(void)$/;"	f
+f2pv_datum	f2pv-map.h	/^typedef fixedmap_t f2pv_datum;$/;"	t
+f2pvdump	fmapdump.c	/^char f2pvdump[MAXPATHLEN];$/;"	v
+f2pvfp	fmapdump.c	/^FILE *f2pvfp=NULL;$/;"	v
+f2vmaps	f2pv-map.h	/^    struct slist_head f2vmaps;$/;"	m	struct:fixedmap_t	typeref:struct:fixedmap_t::slist_head
+f_mapupdate_sub	fserveio.c	/^void* f_mapupdate_sub(void *arg)$/;"	f
+fcollisions	fixing.c	/^__u32 fcollisions = 0;$/;"	v
+fcollisionstp	fixing.c	/^__u32 fcollisionstp = 0;$/;"	v
+fdirty	v2f-map.h	/^	unsigned char fdirty:1;$/;"	m	struct:V2F_t
+fhashkey	f2pv-map.h	/^    unsigned char fhashkey[HASHLEN + MAGIC_SIZE];$/;"	m	struct:fixedmap_t
+fixedID	f2pv-map.h	/^    fixed_id_t fixedID;$/;"	m	struct:fixedmap_t
+fixedID	v2f-map.h	/^	__u32 fixedID;$/;"	m	struct:V2F_t
+fixedNum	f2pv-map.c	/^fixed_id_t fixedNum = 0;$/;"	v
+fixed_dirty	v2f-map.c	/^int fixed_dirty(v2f_datum* v2f)$/;"	f
+fixed_id_t	f2pv-map.h	/^typedef __u32 fixed_id_t;$/;"	t
+fixed_t	f2pv-map.h	/^struct fixed_t$/;"	s
+fixedcmp	fixedtab.c	/^static int fixedcmp(struct hashtab *h, const void *key1, const void *key2)$/;"	f	file:
+fixedhash	fixedtab.c	/^__u32 fixedhash(struct hashtab *h, const void *key)$/;"	f
+fixedmap_alive	f2pv-map.c	/^int fixedmap_alive = 0;$/;"	v
+fixedmap_by_fid	f2pv-map.c	/^vector32 * fixedmap_by_fid = NULL;$/;"	v
+fixedmap_t	f2pv-map.h	/^typedef struct fixedmap_t{$/;"	s
+fixedmap_t	f2pv-map.h	/^}fixedmap_t;$/;"	t	typeref:struct:fixedmap_t
+fixedtab	fixedtab.c	/^struct fixedtab fixedtab;$/;"	v	typeref:struct:fixedtab
+fixedtab	fixedtab.h	/^struct fixedtab{$/;"	s
+fixedtab_alive	fixedtab.c	/^static int fixedtab_alive;$/;"	v	file:
+fixedtab_exit	fixedtab.c	/^void fixedtab_exit(struct fixedtab *l)$/;"	f
+fixedtab_init	fixedtab.c	/^int fixedtab_init(struct fixedtab *c, unsigned int s)$/;"	f
+fmap_hits	fserveio.c	/^__u64 fmap_hits = 0;$/;"	v
+fmap_misses	fserveio.c	/^__u64 fmap_misses = 0;$/;"	v
+free_fixedmap	f2pv-map.c	/^void free_fixedmap(void)$/;"	f
+free_v2fmaps	v2f-map.c	/^void free_v2fmaps(void)$/;"	f
+getFixedMap	f2pv-map.c	/^struct fixedmap_t* getFixedMap(fixed_id_t fixedID)$/;"	f
+getNextFixedNum	f2pv-map.c	/^fixed_id_t getNextFixedNum(int initflag)$/;"	f
+getVirttoFixedMap	v2f-map.c	/^int getVirttoFixedMap(__u16 volID, __u32 vBlkID, __u16 count, $/;"	f
+get_deduped_f2v	fserveio.c	/^F2V_tuple_t * get_deduped_f2v(fixedmap_t *f2pv)$/;"	f
+get_fullfixed	f2pv-map.c	/^int get_fullfixed(fixedmap_t* f2pv, unsigned char **buf, __u8 *content)$/;"	f
+get_fullvblkF	fserveio.c	/^__u16 get_fullvblkF(struct preq_spec **preql, int *nreq, v2f_datum *v2f,$/;"	f
+get_nondeduped_f2v	fserveio.c	/^F2V_tuple_t* get_nondeduped_f2v(fixedmap_t *f2pv, __u16 volID, $/;"	f
+head	f2pv-map.h	/^    struct slist_head head;  \/* To add in list f2vmaps *\/$/;"	m	struct:F2V_tuple_t	typeref:struct:F2V_tuple_t::slist_head
+head	f2pv-map.h	/^    struct slist_head head;  \/* to allow these f2pv to form part of f2pvCList *\/$/;"	m	struct:fixedmap_t	typeref:struct:fixedmap_t::slist_head
+head	v2f-map.h	/^    struct slist_head head;  \/* To add in list pointed by v2flistp *\/$/;"	m	struct:V2F_t	typeref:struct:V2F_t::slist_head
+mapdump_routineF	fmapdump.c	/^int mapdump_routineF(void)$/;"	f
+mappingTrimScanF	fserveio.c	/^static int mappingTrimScanF(struct vm_pkt *blkReq, Node * leader_volIDUList, $/;"	f	file:
+mapreadup_routineF	fmapdump.c	/^void* mapreadup_routineF(void *arg)$/;"	f
+mark_another_dedupfetchF	fserveio.c	/^void mark_another_dedupfetchF(fixedmap_t *f2pv,$/;"	f
+mark_new_dedupfetchF	fserveio.c	/^void mark_new_dedupfetchF(fixedmap_t *f2pv, F2V_tuple_t *f2v)$/;"	f
+newReusableFixedIDUList	fserveio.c	/^Node * newReusableFixedIDUList = NULL;$/;"	v
+note_f2v_tuple	f2pv-map.c	/^void note_f2v_tuple(F2V_tuple_t *f2vp, __u16 volID, __u32 blockID)$/;"	f
+note_fixed_attrs	f2pv-map.c	/^void note_fixed_attrs(f2pv_datum *f2pv,$/;"	f
+note_v2f_map	v2f-map.c	/^int note_v2f_map(v2f_datum *v2f, __u32 fixedID,$/;"	f
+notzeroF_vblk	v2f-map.c	/^int notzeroF_vblk(v2f_datum *v2f)$/;"	f
+notzero_fixed	f2pv-map.c	/^int notzero_fixed(fixedmap_t *f2pv)$/;"	f
+nprim	fixedtab.h	/^    __u32 nprim;              \/* number of primary names in table *\/$/;"	m	struct:fixedtab
+processBlockf	v2f-map.c	/^int processBlockf(__u32 blockID, __u16 volID,$/;"	f
+readinput_map_filenamesF	fmapdump.c	/^void readinput_map_filenamesF()$/;"	f
+readup_f2pvdump	fmapdump.c	/^int readup_f2pvdump(void)$/;"	f
+readup_v2fdump	fmapdump.c	/^int readup_v2fdump(void)$/;"	f
+recyclefixedID	fserveio.c	/^int recyclefixedID(fixed_id_t fixedID, int nozero_flag,$/;"	f
+remove_f2v_tuple_from_map	f2pv-map.c	/^void remove_f2v_tuple_from_map(F2V_tuple_t *f2v, f2pv_datum *f2pv)$/;"	f
+resetMappingsF	fserveio.c	/^int resetMappingsF(v2f_datum *v2f, __u16 volID, __u32 blockID, $/;"	f
+resumeFixing	fixing.c	/^int resumeFixing(unsigned char *buf, __u16 len, __u16 volID, $/;"	f
+setFixedMap	f2pv-map.c	/^void setFixedMap(fixed_id_t fixedID, f2pv_datum *f2pv)$/;"	f
+table	fixedtab.h	/^	struct hashtab *table;  \/* hash table (keyed on a string) *\/$/;"	m	struct:fixedtab	typeref:struct:fixedtab::hashtab
+uncompressed_data	f2pv-map.h	/^  mbuffer_t uncompressed_data;$/;"	m	struct:fixed_t
+updateBlockf	v2f-map.c	/^int updateBlockf(__u32 blockID, __u16 volID,$/;"	f
+v2f_datum	v2f-map.h	/^typedef V2F_t v2f_datum;$/;"	t
+v2fdump	fmapdump.c	/^char v2fdump[MAXPATHLEN];$/;"	v
+v2ffp	fmapdump.c	/^FILE *v2ffp=NULL;$/;"	v
+v2fmaps	v2f-map.c	/^vector16 * v2fmaps = NULL;$/;"	v
+v2fmaps_alive	v2f-map.c	/^int v2fmaps_alive = 0;$/;"	v
+v2fmaps_get	v2f-map.c	/^void *v2fmaps_get(vector16 *v2fmaps, __u16 x, __u32 y)$/;"	f
+v2fmaps_set	v2f-map.c	/^void v2fmaps_set(vector16 *v2fmaps, __u16 x, __u32 y, void *e)$/;"	f
+v2pdump	fmapdump.c	/^char v2pdump[MAXPATHLEN];$/;"	v
+volID	f2pv-map.h	/^    __u16 volID;$/;"	m	struct:F2V_tuple_t
+voltabdump	fmapdump.c	/^char voltabdump[MAXPATHLEN];$/;"	v

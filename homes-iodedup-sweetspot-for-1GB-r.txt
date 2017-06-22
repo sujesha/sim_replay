@@ -1,0 +1,92 @@
+==> accesstime-O1024-o100-homes-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 100 (MB)
+buffer cache: hits=137041, misses=3915135
+content metadata: hits=429833, misses=3485302
+content cache: hits=15278, misses=414555
+content cache: dedup hits=12303, nondedup hits=2975
+disk hits=3899857
+disk hits read=3899857, writes=0
+
+==> accesstime-O1024-o200-homes-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 200 (MB)
+buffer cache: hits=135272, misses=3916904
+content metadata: hits=431602, misses=3485302
+content cache: hits=41868, misses=389734
+content cache: dedup hits=31389, nondedup hits=10479
+disk hits=3875036
+disk hits read=3875036, writes=0
+
+==> accesstime-O1024-o300-homes-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 300 (MB)
+buffer cache: hits=125825, misses=3926351
+content metadata: hits=441049, misses=3485302
+content cache: hits=54007, misses=387042
+content cache: dedup hits=29827, nondedup hits=24180
+disk hits=3872344
+disk hits read=3872344, writes=0
+
+==> accesstime-O1024-o500-homes-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 500 (MB)
+buffer cache: hits=98288, misses=3953888
+content metadata: hits=468586, misses=3485302
+content cache: hits=100694, misses=367892
+content cache: dedup hits=80459, nondedup hits=20235
+disk hits=3853194
+disk hits read=3853194, writes=0
+
+==> accesstime-O1024-o700-homes-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 700 (MB)
+buffer cache: hits=12920, misses=4039256
+content metadata: hits=553954, misses=3485302
+content cache: hits=239692, misses=314262
+content cache: dedup hits=97911, nondedup hits=141781
+disk hits=3799564
+disk hits read=3799564, writes=0
+
+==> accesstime-O1024-o900-homes-iodedup-ioreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 900 (MB)
+buffer cache: hits=3295, misses=4048881
+content metadata: hits=563579, misses=3485302
+content cache: hits=275369, misses=288210
+content cache: dedup hits=112541, nondedup hits=162828
+disk hits=3773512
+disk hits read=3773512, writes=0
+
+---------------------------------------------------------------
+
+==> accesstime_output_replay_4K_freplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+confided metadata: hits=566874, misses=3485302
+fcollisions=0, fcollisionstp=592720, fzeros=0
+buffer cache: hits=145919, misses=3906257
+disk hits=3906257
+disk hits read=3906257, writes=0
+
+==> accesstime_output_replay_4K_sreplay_r.txt <==
+Note that write_enable was NOT set now.
+#READ=4052176, #WRITE=0
+RAM-size = 1024 (MB)
+buffer cache: hits=141211, misses=3910965
+disk hits=3910965
+disk hits read=3910965, writes=0
+

@@ -1,0 +1,98 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BLKSIZE	common.h	16;"	d
+CHECK_MAGIC	trace-struct.h	9;"	d
+ENDIAN_MAGIC	trace-struct.h	6;"	d
+ENDIAN_VERSION	trace-struct.h	7;"	d
+EXIT_TRACE	debug.h	13;"	d
+FILE_EOF	trace-struct.h	11;"	d
+LOG_ERR	debug.h	7;"	d
+PRINT_HEADER	parse-generic.h	6;"	d
+PRI_SECT	common.h	11;"	d
+PRI_SECT	common.h	13;"	d
+RET_ERR	debug.h	31;"	d
+TRACE	debug.h	9;"	d
+VOID_ERR	debug.h	19;"	d
+WHERE	debug.h	25;"	d
+_COMMON_H_	common.h	2;"	d
+_DEBUG_H_	debug.h	2;"	d
+_ENDIANNESS_H_	endianness.h	2;"	d
+_PARSE_GENERIC_H_	parse-generic.h	2;"	d
+_TRACE_STRUCT_H_	trace-struct.h	2;"	d
+as_is_flag	parse-generic.c	/^int as_is_flag = 0;$/;"	v
+be16_to_cpu	endianness.h	16;"	d
+be16_to_cpu	endianness.h	9;"	d
+be32_to_cpu	endianness.h	10;"	d
+be32_to_cpu	endianness.h	17;"	d
+be64_to_cpu	endianness.h	11;"	d
+be64_to_cpu	endianness.h	18;"	d
+blockID	trace-struct.h	/^    unsigned int blockID;$/;"	m	struct:record_info
+check_data_endianness	endianness.c	/^int check_data_endianness(struct trace_event_element *t)$/;"	f
+contentflag	trace-struct.h	/^    int contentflag;$/;"	m	struct:record_info
+count	parse-generic.c	/^int count;$/;"	v
+cpu_to_be16	endianness.h	12;"	d
+cpu_to_be16	endianness.h	19;"	d
+cpu_to_be32	endianness.h	13;"	d
+cpu_to_be32	endianness.h	20;"	d
+cpu_to_be64	endianness.h	14;"	d
+cpu_to_be64	endianness.h	21;"	d
+data_is_native	endianness.c	/^int data_is_native = -1;$/;"	v
+dataorkey	trace-struct.h	/^    char *dataorkey;$/;"	m	struct:record_info
+digstr	trace-struct.h	/^    char *digstr;$/;"	m	struct:record_info
+done	parse-generic.c	/^volatile int done = 0;$/;"	v
+elt_len	trace-struct.h	/^    __u32 elt_len;  \/* length of data in next trace element *\/$/;"	m	struct:trace_event_element
+elt_len	trace-struct.h	/^    __u32 elt_len;  \/* length of data in next trace element - for temp *\/$/;"	m	struct:record_info
+event	trace-struct.h	/^	char *event;$/;"	m	struct:record_info
+fix_event	parse-generic.c	/^void fix_event(char *buf, __u32 bytes_done, struct record_info *r)$/;"	f
+fixdata	pdd_tokens.c	/^void fixdata(char **dataorkey, char *buf, __u32 bytes_done, __u32 len)$/;"	f
+get_len	parse-generic.c	/^inline __u32 get_len(struct trace_event_element *tee)$/;"	f
+get_magic	parse-generic.c	/^inline __u32 get_magic(struct trace_event_element *tee)$/;"	f
+getblockID	pdd_tokens.c	/^unsigned int getblockID(char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getcontentflag	pdd_tokens.c	/^int getcontentflag(char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getdata	pdd_tokens.c	/^void getdata(char **dataorkey, char **ptr, __u32 bytes_left)$/;"	f
+getdigstr	pdd_tokens.c	/^void getdigstr(char **digstr, char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+gethostname	pdd_tokens.c	/^void gethostname(char **hostname, char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getmajor	pdd_tokens.c	/^int getmajor(char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getminor	pdd_tokens.c	/^int getminor(char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getnbytes	pdd_tokens.c	/^__u32 getnbytes(char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getnexttoken	parse_pdd_events.c	/^void getnexttoken(char **ptr, char *sep, char **rest, $/;"	f
+getpid	pdd_tokens.c	/^int getpid(char **ptr, char **rest, __u32 *bytes_leftp, struct record_info *r)$/;"	f
+getprocessname	pdd_tokens.c	/^void getprocessname(char *processname, char **ptr, char **rest, __u32 *bytes_leftp)$/;"	f
+getptime	pdd_tokens.c	/^void getptime(struct record_info *r, char **ptr, char **rest, $/;"	f
+handle_sigint	parse_pdd_events.c	/^void handle_sigint(__attribute__((__unused__)) int sig)$/;"	f
+hostname	trace-struct.h	/^    char *hostname;$/;"	m	struct:record_info
+ifd	parse-generic.c	/^int ifd;$/;"	v
+input_dir	parse-generic.c	/^char *input_dir = NULL;$/;"	v
+interpret_event	parse-generic.c	/^int interpret_event(char *buf, __u32 elt_len, struct record_info *r)$/;"	f
+is_done	parse-generic.h	8;"	d
+magic	trace-struct.h	/^	__u32 magic;$/;"	m	struct:trace_event_element
+major	trace-struct.h	/^    int major;$/;"	m	struct:record_info
+minor	trace-struct.h	/^    int minor;$/;"	m	struct:record_info
+nbytes	trace-struct.h	/^	unsigned int nbytes;$/;"	m	struct:record_info
+next_record	parse-generic.c	/^int next_record(int ifd, struct record_info **record)$/;"	f
+ofp	parse-generic.c	/^FILE *ofp = NULL;$/;"	v
+output_name	parse-generic.c	/^char *output_name = NULL;$/;"	v
+parseCFR	parse_pdd_events.c	/^void parseCFR(char *event, __u32 elt_len, char **ptr, char **rest, $/;"	f
+parseCFW	parse_pdd_events.c	/^int parseCFW(char *event, __u32 elt_len, char **ptr, char **rest, $/;"	f
+parseOFR	parse_pdd_events.c	/^void parseOFR(char *event, __u32 elt_len, char **ptr, char **rest, $/;"	f
+parseOFW	parse_pdd_events.c	/^int parseOFW(char *event, __u32 elt_len, char **ptr, char **rest, $/;"	f
+parseSF	parse_pdd_events.c	/^int parseSF(char *event, __u32 elt_len, char **ptr, char **rest, $/;"	f
+parseSZ	parse_pdd_events.c	/^void parseSZ(char *event, __u32 elt_len, char **ptr, char **rest, $/;"	f
+pdd_trace_to_cpu	parse_pdd_events.c	/^void pdd_trace_to_cpu(struct trace_event_element *t)$/;"	f
+pid	trace-struct.h	/^    int pid;$/;"	m	struct:record_info
+processname	trace-struct.h	/^    char processname[30];$/;"	m	struct:record_info
+ptime	trace-struct.h	/^    unsigned long long ptime;$/;"	m	struct:record_info
+read_data	parse-generic.c	/^int read_data(int fd, void *buffer, int bytes)$/;"	f
+record_dump	parse-generic.c	/^int record_dump(struct record_info *r, int processed)$/;"	f
+record_info	trace-struct.h	/^struct record_info$/;"	s
+record_print	parse-generic.c	/^void record_print(struct record_info *r)$/;"	f
+rfree	parse-generic.c	/^void rfree(struct record_info *r)$/;"	f
+rinternal_free	parse-generic.c	/^void rinternal_free(struct record_info *rec, int num)$/;"	f
+tee_alloc	parse_pdd_events.c	/^struct trace_event_element* tee_alloc()$/;"	f
+tee_free	parse_pdd_events.c	/^void tee_free(struct trace_event_element *tee)$/;"	f
+trace_event_element	trace-struct.h	/^struct trace_event_element$/;"	s
+verify_trace	endianness.c	/^int verify_trace(__u32 magic)$/;"	f

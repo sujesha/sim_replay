@@ -1,0 +1,360 @@
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-fedora-18-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-centos-6-4-boot-fedora-18-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-fedora-18-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-centos-6-4-boot-fedora-18-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-fedora-18-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-centos-6-4-boot-fedora-18-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-fedora-18-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-centos-6-4-boot-fedora-18-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-opensuse-12.3-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-centos-6-4-boot-opensuse-12.3-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-opensuse-12.3-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-centos-6-4-boot-opensuse-12.3-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-opensuse-12.3-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-centos-6-4-boot-opensuse-12.3-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-opensuse-12.3-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-centos-6-4-boot-opensuse-12.3-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-10-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-centos-6-4-boot-ubunt-10-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-10-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-centos-6-4-boot-ubunt-10-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-10-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-centos-6-4-boot-ubunt-10-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-10-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-centos-6-4-boot-ubunt-10-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-10-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-10-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-10-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-10-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-10-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-10-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubunt-12-10-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-centos-6-4-boot-ubunt-12-10-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-centos-6-4-boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-centos-6-4-boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-centos-6-4-boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-centos-6-4-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-centos-6-4-boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-centos-6-4-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-fedora-18-boot-centos-6-4-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-centos-6-4-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-fedora-18-boot-centos-6-4-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-centos-6-4-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-fedora-18-boot-centos-6-4-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-centos-6-4-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-fedora-18-boot-centos-6-4-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-opensuse-12.3-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-fedora-18-boot-opensuse-12.3-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-opensuse-12.3-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-fedora-18-boot-opensuse-12.3-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-opensuse-12.3-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-fedora-18-boot-opensuse-12.3-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-opensuse-12.3-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-fedora-18-boot-opensuse-12.3-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-10-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-fedora-18-boot-ubunt-10-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-10-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-fedora-18-boot-ubunt-10-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-10-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-fedora-18-boot-ubunt-10-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-10-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-fedora-18-boot-ubunt-10-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-fedora-18-boot-ubunt-12-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-fedora-18-boot-ubunt-12-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-fedora-18-boot-ubunt-12-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-fedora-18-boot-ubunt-12-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-10-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-fedora-18-boot-ubunt-12-10-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-10-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-fedora-18-boot-ubunt-12-10-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-10-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-fedora-18-boot-ubunt-12-10-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubunt-12-10-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-fedora-18-boot-ubunt-12-10-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-fedora-18-boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-fedora-18-boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-fedora-18-boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-fedora-18-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-fedora-18-boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-centos-6-4-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-opensuse-12.3-boot-centos-6-4-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-centos-6-4-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-opensuse-12.3-boot-centos-6-4-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-centos-6-4-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-opensuse-12.3-boot-centos-6-4-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-centos-6-4-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-opensuse-12.3-boot-centos-6-4-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-fedora-18-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-opensuse-12.3-boot-fedora-18-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-fedora-18-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-opensuse-12.3-boot-fedora-18-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-fedora-18-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-opensuse-12.3-boot-fedora-18-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-fedora-18-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-opensuse-12.3-boot-fedora-18-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-10-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-10-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-10-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-10-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-10-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-10-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-10-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-10-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-10-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-10-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-10-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-10-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-10-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-10-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubunt-12-10-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-opensuse-12.3-boot-ubunt-12-10-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-opensuse-12.3-boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-opensuse-12.3-boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-opensuse-12.3-boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-opensuse-12.3-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-opensuse-12.3-boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-centos-6-4-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-10-04-boot-centos-6-4-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-centos-6-4-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-10-04-boot-centos-6-4-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-centos-6-4-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-10-04-boot-centos-6-4-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-centos-6-4-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-10-04-boot-centos-6-4-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-fedora-18-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-10-04-boot-fedora-18-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-fedora-18-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-10-04-boot-fedora-18-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-fedora-18-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-10-04-boot-fedora-18-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-fedora-18-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-10-04-boot-fedora-18-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-10-04-boot-opensuse-12.3-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-opensuse-12.3-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-10-04-boot-opensuse-12.3-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-10-04-boot-opensuse-12.3-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-10-04-boot-opensuse-12.3-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-10-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-10-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-10-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-10-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-10-04-boot-ubunt-12-10-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-10-04-boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-10-04-boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-10-04-boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-10-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-10-04-boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-centos-6-4-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-04-boot-centos-6-4-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-centos-6-4-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-04-boot-centos-6-4-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-centos-6-4-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-04-boot-centos-6-4-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-centos-6-4-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-04-boot-centos-6-4-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-fedora-18-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-04-boot-fedora-18-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-fedora-18-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-04-boot-fedora-18-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-fedora-18-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-04-boot-fedora-18-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-fedora-18-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-04-boot-fedora-18-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-04-boot-opensuse-12.3-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-opensuse-12.3-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-04-boot-opensuse-12.3-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-04-boot-opensuse-12.3-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-04-boot-opensuse-12.3-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-10-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-10-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-10-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-10-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-10-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-10-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-10-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-10-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-12-10-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-12-10-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-12-10-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-12-10-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-04-boot-ubunt-12-10-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-04-boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-04-boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-04-boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-04-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-04-boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-centos-6-4-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-10-boot-centos-6-4-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-centos-6-4-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-10-boot-centos-6-4-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-centos-6-4-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-10-boot-centos-6-4-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-centos-6-4-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-10-boot-centos-6-4-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-fedora-18-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-10-boot-fedora-18-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-fedora-18-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-10-boot-fedora-18-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-fedora-18-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-10-boot-fedora-18-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-fedora-18-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-10-boot-fedora-18-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-opensuse-12.3-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-10-boot-opensuse-12.3-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-opensuse-12.3-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-10-boot-opensuse-12.3-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-opensuse-12.3-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-10-boot-opensuse-12.3-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-opensuse-12.3-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-10-boot-opensuse-12.3-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-10-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-10-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-10-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-10-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-10-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-10-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-10-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-10-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-12-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-12-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-12-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-12-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-12-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-12-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubunt-12-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-10-boot-ubunt-12-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubunt-12-10-boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubunt-12-10-boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubunt-12-10-boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubunt-12-10-boot-ubuntu-13-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubunt-12-10-boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-centos-6-4-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubuntu-13-04-boot-centos-6-4-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-centos-6-4-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubuntu-13-04-boot-centos-6-4-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-centos-6-4-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubuntu-13-04-boot-centos-6-4-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-centos-6-4-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubuntu-13-04-boot-centos-6-4-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-fedora-18-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubuntu-13-04-boot-fedora-18-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-fedora-18-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubuntu-13-04-boot-fedora-18-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-fedora-18-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubuntu-13-04-boot-fedora-18-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-fedora-18-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubuntu-13-04-boot-fedora-18-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubuntu-13-04-boot-opensuse-12.3-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-opensuse-12.3-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubuntu-13-04-boot-opensuse-12.3-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubuntu-13-04-boot-opensuse-12.3-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-opensuse-12.3-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubuntu-13-04-boot-opensuse-12.3-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-10-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-10-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-10-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-10-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-10-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-10-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-10-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-10-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-04-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-04-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-10-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-10-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-10-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-10-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f boot-ubuntu-13-04-boot-ubunt-12-10-merged.iotrace.vmbunch -s -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-boot-ubuntu-13-04-boot-ubunt-12-10-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-merged.iotrace.vmbunch -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-merged.iotrace.vmbunch -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-ioreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -s -P -e
+mv accesstime_output_replay_4K_preplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-preplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -Q -e
+mv accesstime_output_replay_4K_sreplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-sreplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -R -e
+mv accesstime_output_replay_4K_freplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-freplay.txt
+./simreplay -c -d /home/sujesha/psiphon-logs/provided/traces/boot-vmbunched-files/ -f _boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-merged.iotrace.vmbunch -T -e
+mv accesstime_output_replay_4K_ioreplay.txt accesstime-_boot-centos-6-4_boot-fedora-18_boot-opensuse-12.3_boot-ubunt-10-04_boot-ubunt-12-04_boot-ubunt-12-10_boot-ubuntu-13-04-booting-ioreplay.txt

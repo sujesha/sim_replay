@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+_FSCANDISK_H_	fscandisk.h	2;"	d
+_IOSCANDISK_H_	ioscandisk.h	2;"	d
+con_scan_and_process	fscandisk.c	/^int con_scan_and_process(void)$/;"	f
+con_scandisk_routine	fscandisk.c	/^void* con_scandisk_routine(void *arg)$/;"	f
+finitmapfromfile	fscandisk.c	/^int finitmapfromfile = 0;$/;"	v
+finitmapfromfile	ioscandisk.c	/^int finitmapfromfile = 0;$/;"	v
+fmap_thread	fscandisk.c	/^pthread_t fmap_thread;$/;"	v
+fscan_VM_image	fscandisk.c	/^int fscan_VM_image(__u16 volID, char *devname)$/;"	f
+fscan_thread	fscandisk.c	/^pthread_t fscan_thread;	\/* Thread for scandisk_routine *\/$/;"	v
+fscanharddiskp	fscandisk.c	/^int fscanharddiskp = 0;		\/* Scanning in parallel with replay *\/$/;"	v
+fscanharddisks	fscandisk.c	/^int fscanharddisks = 0;		\/* Scanning sequentially before replay *\/$/;"	v
+fscanning	fscandisk.c	/^int fscanning = 0;	\/\/TODO: use this$/;"	v
+fzeros	fscandisk.c	/^__u32 fzeros = 0;$/;"	v
+io_scan_and_process	ioscandisk.c	/^int io_scan_and_process(void)$/;"	f
+io_scandisk_routine	ioscandisk.c	/^void* io_scandisk_routine(void *arg)$/;"	f
+iomap_thread	ioscandisk.c	/^pthread_t iomap_thread;$/;"	v
+ioscan_VM_image	ioscandisk.c	/^int ioscan_VM_image(__u16 volID, char *devname)$/;"	f
+ioscan_thread	ioscandisk.c	/^pthread_t ioscan_thread;	\/* Thread for scandisk_routine *\/$/;"	v
+ioscanharddiskp	ioscandisk.c	/^int ioscanharddiskp = 0;		\/* Scanning in parallel with replay *\/$/;"	v
+ioscanharddisks	ioscandisk.c	/^int ioscanharddisks = 0;		\/* Scanning sequentially before replay *\/$/;"	v
+ioscanning	ioscandisk.c	/^int ioscanning = 0;	\/\/TODO: use this$/;"	v
+iozeros	ioscandisk.c	/^__u32 iozeros = 0;$/;"	v

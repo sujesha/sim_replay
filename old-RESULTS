@@ -1,0 +1,134 @@
+iodedup-traces replay (webvm)
+=============================
+
+sreplay
+=======
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+buffer cache: hits=9655200, misses=4638958
+disk hits=14194126
+disk hits read=3016424, writes=11177702
+
+ioreplay
+========
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 200 (MB)
+buffer cache: hits=8720395, misses=5573763
+content metadata: hits=2748140, misses=316045
+content cache: hits=315437, misses=8364469
+content cache: dedup hits=315101, nondedup hits=336
+disk hits=13926450
+disk hits read=2748748, writes=11177702
+
+freplay
+=======
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+confided metadata: hits=2800411, misses=316045
+fcollisions=0, fcollisionstp=5030862, fzeros=0
+buffer cache: hits=10509546, misses=3784612
+disk hits=13372660
+disk hits read=2194958, writes=11177702
+
+
+booting replay (diff distributions)
+===================================
+
+sreplay
+=======
+#READ=250773, #WRITE=0
+buffer cache: hits=0, misses=250773
+disk hits=250773
+disk hits read=250773, writes=0
+
+ioreplay 
+========
+#READ=250773, #WRITE=0
+buffer cache: hits=0, misses=250773
+content metadata: hits=247221, misses=0, zeros=3552
+content cache: hits=0, misses=247221
+content cache: dedup hits=0, nondedup hits=0
+disk hits=247221
+disk hits read=247221, writes=0
+
+freplay
+=======
+#READ=250773, #WRITE=0
+fcollisions=0, fcollisionstp=3362, fzeros=3552
+buffer cache: hits=3362, misses=243859
+disk hits=243859
+disk hits read=243859, writes=0
+
+preplay
+=======
+#READ=250773, #WRITE=0
+pcollisions = 0,pcollisionstp = 8963,pzerocollisions = 0,pcollisionsdiffclen=0
+buffer cache: hits=340791, misses=242076
+disk hits=242076
+disk hits read=242076, writes=0
+
+
+-------------------------------------------------------------------------------------
+
+BOTH READS & WRITES
+========================================================
+
+sreplay
+=======
+#READ=180723, #WRITE=495415
+buffer cache: hits=34225, misses=146498
+disk hits=146498
+
+freplay
+=======
+#READ=180723, #WRITE=495415
+fcollisions=0, fcollisionstp=261102, fzeros=0
+buffer cache: hits=34225, misses=146498
+disk hits=641913
+disk hits read=146498, writes=495415
+
+ioreplay
+========
+#READ=180723, #WRITE=495415
+buffer cache: hits=32725, misses=147998
+content metadata: hits=7634, misses=140364
+content cache: hits=270, misses=7364
+content cache: dedup hits=270, nondedup hits=0
+disk hits=643143
+disk hits read=147728, writes=495415
+
+
+ONLY READS
+=========================================================
+
+freplay
+=======
+#READ=180723, #WRITE=0
+fcollisions=0, fcollisionstp=29502, fzeros=0
+buffer cache: hits=18003, misses=162720
+disk hits=162720
+disk hits read=162720, writes=0
+
+ioreplay
+========
+#READ=180723, #WRITE=0
+buffer cache: hits=18003, misses=162720
+content metadata: hits=0, misses=162720
+content cache: hits=0, misses=0
+content cache: dedup hits=0, nondedup hits=0
+disk hits=162720
+disk hits read=162720, writes=0
+
+
+ONLY WRITES
+=========================================================
+
+sreplay
+=======
+
+freplay
+=======
+
+ioreplay
+========

@@ -1,0 +1,6 @@
+Proof that failing of asserts is not our problem! The trace itself may be having missing records!
+
+root@kmathew-PM5:/NFSDIR3/iodedup-online-traces/web# ./simreplay -b -c -C -d /NFSDIR3/iodedup-online-traces/web -e -E -f webvm-iodedup-appended-21.pioevents.vmbunch -r -T | grep key=4745530
+...........Buffer lookup: key=4745530, content=114f32fd24983fcf733f6cbc9f055be5, preq->content=114f32fd24983fcf733f6cbc9f055be5
+.simreplay: sector-cache/sectorcache.c:129: sectorcache_lookup: Assertion `memcmp(preq->content, content, ((16)*2 + 1)-1)==0' failed.
+Buffer lookup: key=4745530, content=114f32fd24983fcf733f6cbc9f055be5, preq->content=443ef4b41af25f6d736219a792e5203e

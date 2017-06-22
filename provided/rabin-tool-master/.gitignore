@@ -1,0 +1,9 @@
+*.rabin
+*.o
+*.a
+src/rabin
+*.bak
+*.tmp
+src/verboseRabin
+out
+*.tmp.gz

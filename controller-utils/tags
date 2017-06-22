@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+V2PmapFile	v2p-map.c	/^char V2PmapFile[MAXPATHLEN];$/;"	v
+VOLTAB_SIZE	v2p-map.h	8;"	d
+_V2P_MAP_H_	v2p-map.h	2;"	d
+_VOLTAB_H_	voltab.h	10;"	d
+capVolumes	v2p-map.c	/^__u16 capVolumes(void)$/;"	f
+default_V2PmapFile	v2p-map.c	/^char *default_V2PmapFile = "pro_v2p_map.txt"$/;"	v
+free_v2pmaps	v2p-map.c	/^void free_v2pmaps(void)$/;"	f
+getFirstvBlk	v2p-map.c	/^void getFirstvBlk(__u16 volID, __u64 *start)$/;"	f
+getLastvBlk	v2p-map.c	/^int getLastvBlk(__u16 volID, __u64 *start)$/;"	f
+getVirttoPhysMap	v2p-map.c	/^int getVirttoPhysMap(__u16 volID, __u64 vBlkID, __u64 *pBlkID)$/;"	f
+interpret_one_v2p_map	v2p-map.c	/^int interpret_one_v2p_map(char **ptr, char **rest, struct vm_info *v)$/;"	f
+nprim	voltab.h	/^        u32 nprim;              \/* number of primary names in table *\/$/;"	m	struct:voltab
+numVolID	v2p-map.c	/^static __u26 numVolID = 0;$/;"	v	file:
+pBlkID_base	v2p-map.h	/^	__u64 pBlkID_base;	\/* Phys base\/start address for this volume *\/$/;"	m	struct:vm_info
+read_default_input_v2p_mapping	v2p-map.c	/^int read_default_input_v2p_mapping(FILE *mapp)$/;"	f
+read_input_v2p_mapping	v2p-map.c	/^int read_input_v2p_mapping(FILE *mapp)$/;"	f
+read_pBlkID_base	v2p-map.c	/^int read_pBlkID_base(struct vm_info *v, char **ptr, char **rest)$/;"	f
+read_vBlkID_cap	v2p-map.c	/^int read_vBlkID_cap(struct vm_info *v, char **ptr, char **rest)$/;"	f
+read_vmname	v2p-map.c	/^int read_vmname(struct vm_info *v, char **ptr, char **rest)$/;"	f
+readnexttoken	v2p-map.c	/^int readnexttoken(char **ptr, char *sep, char **rest, char **token)$/;"	f
+table	voltab.h	/^        struct hashtab *table;  \/* hash table (keyed on a string) *\/$/;"	m	struct:voltab	typeref:struct:voltab::hashtab
+testOverlap	v2p-map.c	/^int testOverlap(__u64 x1, __u64 x2, __u64 y1, __u64 y2)$/;"	f
+testOverlapVM	v2p-map.c	/^int testOverlapVM(struct vm_info *ptri, struct vm_info *v)$/;"	f
+vBlkID_cap	v2p-map.h	/^	__u64 vBlkID_cap;	\/* Num of lba\/sectors in a single volume *\/$/;"	m	struct:vm_info
+verify_vm_info	v2p-map.c	/^int verify_vm_info(struct vm_info *v)$/;"	f
+vm_info	v2p-map.h	/^struct vm_info {$/;"	s
+vmname	v2p-map.h	/^	char vmname[HOSTNAME_LEN];$/;"	m	struct:vm_info
+vmname	voltab.h	/^		char vmname[HOSTNAME_LEN];$/;"	m	struct:vol_datum
+volID	v2p-map.h	/^	__u16 volID;		\/* Every VM image is in a single volume *\/$/;"	m	struct:vm_info
+volID	voltab.h	/^		__u16 volID;$/;"	m	struct:vol_datum
+volIDexists	v2p-map.c	/^int volIDexists(__u16 volidx)$/;"	f
+vol_datum	voltab.h	/^typedef struct vol_datum {$/;"	s
+volcmp	voltab.c	/^static int volcmp(struct hashtab *h, const void *key1, const void *key2)$/;"	f	file:
+volhash	voltab.c	/^static int volhash(struct hashtab *h, const void *key)$/;"	f	file:
+voltab	voltab.c	/^struct voltab voltab;$/;"	v	typeref:struct:voltab
+voltab	voltab.h	/^struct voltab {$/;"	s
+voltab_alive	voltab.c	/^static int voltab_alive = 0;$/;"	v	file:
+voltab_exit	voltab.c	/^void voltab_exit(struct voltab *c)$/;"	f
+voltab_init	voltab.c	/^int voltab_init(struct voltab *c, unsigned int size)$/;"	f

@@ -1,0 +1,86 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+D2P_tuple_t	d2pv-map.h	/^typedef struct D2P_tuple_t{$/;"	s
+D2P_tuple_t	d2pv-map.h	/^}D2P_tuple_t;$/;"	t	typeref:struct:D2P_tuple_t
+P2D_t	p2d-map.h	/^typedef struct P2D_t{$/;"	s
+P2D_t	p2d-map.h	/^}P2D_t;$/;"	t	typeref:struct:P2D_t
+_D2PV_MAP_H_	d2pv-map.h	3;"	d
+_DEDUPTAB_H_	deduptab.h	11;"	d
+_IODEDUPING_H_	iodeduping.h	2;"	d
+_IOSERVEIO_H_	ioserveio.h	2;"	d
+_P2D_MAP_H_	p2d-map.h	3;"	d
+add_d2p_tuple_to_map	d2pv-map.c	/^void add_d2p_tuple_to_map(D2P_tuple_t *d2pt, d2pv_datum *d2pv)$/;"	f
+add_iodedupID_to_recyclelist	ioserveio.c	/^void add_iodedupID_to_recyclelist(dedup_id_t iodedupID)$/;"	f
+add_new_to_old_recyclelistIO	ioserveio.c	/^static int add_new_to_old_recyclelistIO()$/;"	f	file:
+create_dedupmap_mapping_space	d2pv-map.c	/^void create_dedupmap_mapping_space(void)$/;"	f
+create_p2d_mapping_space	p2d-map.c	/^void create_p2d_mapping_space()$/;"	f
+currReusableDedupIDUList	d2pv-map.c	/^Node * currReusableDedupIDUList = NULL;$/;"	v
+currReusableIO_mutex	d2pv-map.c	/^pthread_mutex_t currReusableIO_mutex;$/;"	v
+d2pmaps	d2pv-map.h	/^    struct slist_head d2pmaps;$/;"	m	struct:dedupmap_t	typeref:struct:dedupmap_t::slist_head
+d2pv_datum	d2pv-map.h	/^typedef dedupmap_t d2pv_datum;$/;"	t
+ddirty	d2pv-map.h	/^	unsigned char ddirty:1;$/;"	m	struct:dedupmap_t
+dedupNum	d2pv-map.c	/^dedup_id_t dedupNum = 0;$/;"	v
+dedup_dirty	d2pv-map.c	/^int dedup_dirty(dedupmap_t* d2pv)$/;"	f
+dedup_id_t	d2pv-map.h	/^typedef __u32 dedup_id_t;$/;"	t
+dedup_t	d2pv-map.h	/^struct dedup_t$/;"	s
+dedupcmp	deduptab.c	/^static int dedupcmp(struct hashtab *h, const void *key1, const void *key2)$/;"	f	file:
+deduphash	deduptab.c	/^__u32 deduphash(struct hashtab *h, const void *key)$/;"	f
+dedupmap_alive	d2pv-map.c	/^int dedupmap_alive = 0;$/;"	v
+dedupmap_by_did	d2pv-map.c	/^vector32 * dedupmap_by_did = NULL;$/;"	v
+dedupmap_t	d2pv-map.h	/^typedef struct dedupmap_t{$/;"	s
+dedupmap_t	d2pv-map.h	/^}dedupmap_t;$/;"	t	typeref:struct:dedupmap_t
+deduptab	deduptab.c	/^struct deduptab deduptab;$/;"	v	typeref:struct:deduptab
+deduptab	deduptab.h	/^struct deduptab{$/;"	s
+deduptab_alive	deduptab.c	/^static int deduptab_alive;$/;"	v	file:
+deduptab_exit	deduptab.c	/^void deduptab_exit(struct deduptab *l)$/;"	f
+deduptab_init	deduptab.c	/^int deduptab_init(struct deduptab *c, unsigned int s)$/;"	f
+del_d2p_from_d2pmaps	ioserveio.c	/^int del_d2p_from_d2pmaps(dedupmap_t *d2pv, __u32 ioblkID)$/;"	f
+dhashkey	d2pv-map.h	/^    unsigned char dhashkey[HASHLEN + MAGIC_SIZE];	\/\/hex or non-hex $/;"	m	struct:dedupmap_t
+free_dedupmap	d2pv-map.c	/^void free_dedupmap(void)$/;"	f
+free_p2dmaps	p2d-map.c	/^void free_p2dmaps(void)$/;"	f
+getDedupMap	d2pv-map.c	/^struct dedupmap_t* getDedupMap(dedup_id_t iodedupID)$/;"	f
+getNextDedupNum	d2pv-map.c	/^dedup_id_t getNextDedupNum(int initflag)$/;"	f
+getVirttoDedupMap	p2d-map.c	/^int getVirttoDedupMap(__u32 ioblkID, __u16 count, $/;"	f
+get_deduped_d2p	ioserveio.c	/^D2P_tuple_t* get_deduped_d2p(dedupmap_t *d2pv)$/;"	f
+get_fulldedup	d2pv-map.c	/^int get_fulldedup(dedupmap_t* d2pv, unsigned char **buf)$/;"	f
+get_fullvblkIO	ioserveio.c	/^__u16 get_fullvblkIO(struct preq_spec **preql, int *nreq, p2d_datum *p2d)$/;"	f
+get_nondeduped_d2p	ioserveio.c	/^D2P_tuple_t* get_nondeduped_d2p(dedupmap_t *d2pv, __u32 ioblkID)$/;"	f
+head	d2pv-map.h	/^    struct slist_head head;  \/* To add in list d2pmaps *\/$/;"	m	struct:D2P_tuple_t	typeref:struct:D2P_tuple_t::slist_head
+head	d2pv-map.h	/^    struct slist_head head;  \/* to allow these d2pv to form part of d2pvCList *\/$/;"	m	struct:dedupmap_t	typeref:struct:dedupmap_t::slist_head
+head	p2d-map.h	/^    struct slist_head head;  \/* To add in list pointed by p2dlistp *\/$/;"	m	struct:P2D_t	typeref:struct:P2D_t::slist_head
+io_mapupdate_sub	ioserveio.c	/^void* io_mapupdate_sub(void *arg)$/;"	f
+ioblkID	d2pv-map.h	/^    __u32 ioblkID;$/;"	m	struct:D2P_tuple_t
+iocollisions	iodeduping.c	/^__u32 iocollisions = 0;$/;"	v
+iocollisionstp	iodeduping.c	/^__u32 iocollisionstp = 0;$/;"	v
+iodedupID	d2pv-map.h	/^    dedup_id_t iodedupID;$/;"	m	struct:dedupmap_t
+iodedupID	p2d-map.h	/^	__u32 iodedupID;$/;"	m	struct:P2D_t
+iodedupReadRequest	ioserveio.c	/^int iodedupReadRequest(struct preq_spec *preq)$/;"	f
+iodedupWriteRequest	ioserveio.c	/^int iodedupWriteRequest(struct preq_spec *preq)$/;"	f
+mappingTrimScanIO	ioserveio.c	/^int mappingTrimScanIO(struct preq_spec **preql, int vop_iter)$/;"	f
+newReusableDedupIDUList	ioserveio.c	/^Node * newReusableDedupIDUList = NULL;$/;"	v
+newReusableIO_mutex	ioserveio.c	/^static pthread_mutex_t newReusableIO_mutex;$/;"	v	file:
+note_d2p_tuple	d2pv-map.c	/^void note_d2p_tuple(D2P_tuple_t *d2pp, __u32 ioblkID)$/;"	f
+note_dedup_attrs	d2pv-map.c	/^void note_dedup_attrs(d2pv_datum *d2pv,$/;"	f
+note_p2d_map	p2d-map.c	/^int note_p2d_map(p2d_datum *p2d, __u32 iodedupID,$/;"	f
+notzeroIO_vblk	p2d-map.c	/^int notzeroIO_vblk(p2d_datum *p2d)$/;"	f
+notzero_dedup	d2pv-map.c	/^int notzero_dedup(dedupmap_t *d2pv)$/;"	f
+nprim	deduptab.h	/^    __u32 nprim;              \/* number of primary names in table *\/$/;"	m	struct:deduptab
+p2d_datum	p2d-map.h	/^typedef P2D_t p2d_datum;$/;"	t
+p2dmaps	p2d-map.c	/^vector32 * p2dmaps = NULL;$/;"	v
+p2dmaps_alive	p2d-map.c	/^int p2dmaps_alive = 0;$/;"	v
+p2dmaps_get	p2d-map.c	/^void *p2dmaps_get(vector32 *p2dmaps, __u32 x)$/;"	f
+p2dmaps_set	p2d-map.c	/^void p2dmaps_set(vector32 *p2dmaps, __u32 x, void *e)$/;"	f
+pdirty	p2d-map.h	/^    unsigned char pdirty:1;$/;"	m	struct:P2D_t
+processBlockio	p2d-map.c	/^int processBlockio(__u32 ioblkID,$/;"	f
+recycleiodedupID	ioserveio.c	/^int recycleiodedupID(dedup_id_t iodedupID, int nozero_flag,$/;"	f
+remove_d2p_tuple_from_map	d2pv-map.c	/^void remove_d2p_tuple_from_map(D2P_tuple_t *d2p, d2pv_datum *d2pv)$/;"	f
+resetMappingsIO	ioserveio.c	/^int resetMappingsIO(p2d_datum *p2d, __u32 ioblkID)$/;"	f
+resumeDeduping	iodeduping.c	/^int resumeDeduping(unsigned char *buf, __u16 len,$/;"	f
+setDedupMap	d2pv-map.c	/^void setDedupMap(dedup_id_t iodedupID, d2pv_datum *d2pv)$/;"	f
+table	deduptab.h	/^	struct hashtab *table;  \/* hash table (keyed on a string) *\/$/;"	m	struct:deduptab	typeref:struct:deduptab::hashtab
+uncompressed_data	d2pv-map.h	/^  mbuffer_t uncompressed_data;$/;"	m	struct:dedup_t
+updateBlockio	p2d-map.c	/^int updateBlockio(__u32 ioblkID,$/;"	f

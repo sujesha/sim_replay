@@ -1,0 +1,16 @@
+Note:-
+1. Needs rabin.* because chunking is to be done here, from rabin-test. DONE.
+2. Needs MD5c.* because hashing has to be done here also. DONE.
+3. pddp_config.h needed? Yes
+4. hashtab.c/hashtab.h, being generic, can be used as-is from rabin-test. DONE.
+5. chunktab.c/chunktab.h needed
+6. mbuffer.*, generic for chunk_t, can be used as-is from rabin-test. DONE.
+7. pddp_mapping.* is extra here
+8. lblktab.c may not be needed here, but may be needed for simulating I/O
+    dedup paper's work by ioreplay?
+9. pddp_remap.* has code modified from btreplay
+10. pddp_input.* reads up input trace file, interprets record type and calls
+	corresponding functions from pddp_actions.c
+11. main_pdd_preplay.c accepts filename input, device mappings, etc similar
+	to what btreplay does
+

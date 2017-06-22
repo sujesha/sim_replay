@@ -1,0 +1,253 @@
+#include <string.h>
+#include <asm/types.h>
+#include <assert.h>
+#include <stdio.h>
+#include "uthash.h"
+#include "pdd_config.h"
+#include "debug.h"
+#include "md5.h"
+#include "debugg.h"
+
+extern unsigned long gtotalwritereq;
+extern __u64 bcache_hits;
+extern __u64 bcache_misses;
+
+// this is an example of how to do a LRU cache in C using uthash
+// http://uthash.sourceforge.net/
+// by Jehiah Czebotar 2011 - jehiah@gmail.com
+// this code is in the public domain http://unlicense.org/
+
+//#define MAX_CACHE_COUNT 100000
+__u32 MAX_CACHE_COUNT = 0;	/* Value is set via sectorcache_init */
+
+struct CacheEntry {
+    char *key;
+    char *value;
+    UT_hash_handle hh;
+};
+struct CacheEntry *cache = NULL;
+
+char* find_in_cache(char *key)
+{
+    struct CacheEntry *entry;
+    HASH_FIND_STR(cache, key, entry);
+    if (entry) {
+	    // remove it (so subsequent add will throw it on front of the list)
+	    HASH_DELETE(hh, cache, entry);
+    	HASH_ADD_KEYPTR(hh, cache, entry->key, strlen(entry->key), entry);
+        return entry->value;
+    }
+    return NULL;
+}
+
+/* Proceeding to add content to cache, if the key (here blockID) already
+ * exists in cache, then retrieve it, update cache hits, and delete it. Add
+ * new content with the key value.
+ */
+void add_to_cache(char *key, char *value, int len, int updatehits,
+					char *newleaderkey)
+{
+    struct CacheEntry *entry, *tmp_entry;
+	//struct CacheEntry *findentry=NULL, *newentry=NULL;
+	struct CacheEntry *findentry=NULL, *newentry=NULL, *findnewleaderentry=NULL;
+
+    entry = malloc(sizeof(struct CacheEntry));
+if (!strcmp(key, "37444687"))
+	printf("add_to_cache for key=37444687\n");
+else if (gtotalwritereq == 1408504)
+	printf("add_to_cache for key=%s when gtotalwritereq == 1408504\n", key);
+//else if (1)
+//	printf("add_to_cache for key=%s\n", key);
+    entry->key = strdup(key);
+	entry->value = malloc(len);
+	memcpy(entry->value, value, len);
+
+	if (!updatehits)	/* Read request has no "new leader key" */
+		assert(strcmp(newleaderkey, "") == 0);
+	else
+		assert(strcmp(newleaderkey, "") != 0);
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+WHERE
+
+	/* Find whether key/blockID already exists in sectorcache */
+    HASH_FIND_STR(cache, key, findentry);
+    if (updatehits)
+        HASH_FIND_STR(cache, newleaderkey, findnewleaderentry);
+    else
+        findnewleaderentry = NULL;
+
+    //if (findentry)
+    if (findentry && !findnewleaderentry)
+	{
+if (gtotalwritereq == 1408504)
+	printf("%s already exists in cache when gtotalwritereq == 1408504\n", key);
+if (!strcmp(key, "37444687"))
+	printf("already exists in cache for 37444687, so HASH_DELETE\n");
+//else if (1)
+//	printf("%s already exists in cache, so HASH_DELETE\n", key);
+		//If entry exists, remove it so that it can be newly added next.
+		HASH_DELETE(hh, cache, findentry);
+
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+{
+WHERE
+printf("newleaderkey = %s\n", newleaderkey);
+printf("findentry->key = %s\n", findentry->key);
+printf("key = %s\n", key);
+}
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+WHERE
+		if (updatehits && strcmp(key, newleaderkey)) /*write request dedup hit*/
+		{
+if (gtotalwritereq == 1408504)
+	printf("wbove was write request dedup hit for %s when gtotalwritereq == 1408504\n", key);
+if (!strcmp(key, "37444687"))
+	printf("above was write request dedup hit for 37444687\n");
+//else if (1)
+//	printf("wbove was write request dedup hit for %s\n", key);
+			bcache_hits++; /* Count cache hit here itself, for write path. */
+    		newentry = malloc(sizeof(struct CacheEntry));
+    		newentry->key = strdup(newleaderkey);
+			newentry->value = malloc(len);
+			memcpy(newentry->value, findentry->value, len);
+			free(findentry->key);
+			free(findentry->value);
+			free(findentry);
+
+			HASH_ADD_KEYPTR(hh, cache, newentry->key, // Update metadata
+					strlen(newentry->key), newentry);	   // of existing entry
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+WHERE
+		}
+		else /* read request cache hit or write request non-dedup hit */
+		{
+			if (updatehits)	/* write request, non-dedup hit */
+			{
+if (gtotalwritereq == 1408504)
+	printf("wbove was write request non-dedup hit for %s when gtotalwritereq == 1408504\n", key);
+if (!strcmp(key, "37444687"))
+	printf("above was write request non-dedup hit for 37444687\n");
+//else if (1)
+//	printf("wbove was write request non-dedup hit for %s\n", key);
+				bcache_hits++;
+			}
+			else
+			{
+if (gtotalwritereq == 1408504)
+	printf("wbove was read hit for %s when gtotalwritereq == 1408504\n", key);
+if (!strcmp(key, "37444687"))
+	printf("above was read hit for 37444687\n");
+//else if (1)
+//	printf("wbove was read hit for %s\n", key);
+			}
+            free(findentry->key);
+            free(findentry->value);
+            free(findentry);
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+WHERE
+		}
+	}
+    else if (findentry && findnewleaderentry)
+    {
+        bcache_hits++;
+        /* Since newleader already in cache, nothing else to do here. This
+         * also ensures that its order in LRU list is untouched.
+         */
+    }
+	else if (updatehits) /* Entry doesnt exist, but this is write path */
+{
+		bcache_misses++;
+if (gtotalwritereq == 1408504)
+	printf("above was cache miss for %s when gtotalwritereq == 1408504\n", key);
+if (!strcmp(key, "37444687"))
+	printf("cache miss for 37444687\n");
+//else if (1)
+//	printf("wbove was write cache miss for %s\n", key);
+}
+#if 0
+else
+{
+	printf("read cache miss for %s\n", key);
+}
+#endif
+
+	/* Add the new entry */
+    HASH_ADD_KEYPTR(hh, cache, entry->key, strlen(entry->key), entry);
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+WHERE
+    
+    // prune the cache to MAX_CACHE_COUNT
+    if (HASH_COUNT(cache) > (unsigned int)MAX_CACHE_COUNT) 
+	{
+if (gtotalwritereq == 1408504)
+	printf("pruning cache for %s when gtotalwritereq == 1408504\n", key);
+if (!strcmp(key, "37444687"))
+	printf("pruning cache for 37444687\n");
+		if (MAX_CACHE_COUNT <= 0)
+			fatal(NULL, ERR_USERCALL, "Initialize MAX_CACHE_COUNT by " \
+				"sectorcache_init()\n");
+
+        HASH_ITER(hh, cache, entry, tmp_entry) {
+            // prune the first entry (loop is based on insertion order so this deletes the oldest item)
+if (gtotalwritereq == 1408504)
+WHERE
+            HASH_DELETE(hh, cache, entry);
+            free(entry->key);
+            free(entry->value);
+            free(entry);
+            break;
+        }
+    }    
+//if (gtotalwritereq == 1408504 || 1==1)
+if (gtotalwritereq == 1408504)
+WHERE
+}
+
+void print_lrucache_stat()
+{
+    struct CacheEntry *entry, *tmp_entry;
+	printf("BCACHE state: [ ");
+	HASH_ITER(hh, cache, entry, tmp_entry) {
+		printf("%s ", entry->key);
+	}
+	printf("]\n");
+}
+
+void free_lru_cache()
+{
+    struct CacheEntry *entry, *tmp_entry;
+	HASH_ITER(hh, cache, entry, tmp_entry) {
+    // prune the first entry (loop is based on insertion order so this deletes the oldest item)
+    	HASH_DELETE(hh, cache, entry);
+        free(entry->key);
+        free(entry->value);
+        free(entry);
+	}
+}
+
+#if 0
+int main()
+{
+	char *value;
+	add_to_cache("1", "sujesha");
+	add_to_cache("2", "susha");
+	add_to_cache("3", "usha");
+	value = find_in_cache("2");
+	if (value)
+		printf("found value = %s\n", value);
+	else
+		printf("value not found for key 2\n");
+	value = find_in_cache("4");
+	if (value)
+		printf("found value = %s\n", value);
+	else
+		printf("value not found for key 4\n");
+
+}
+#endif

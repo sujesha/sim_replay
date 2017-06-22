@@ -1,0 +1,17 @@
+#ifndef _CONTENTCACHE_H_
+#define _CONTENTCACHE_H_
+
+#include "serveio-utils.h"
+
+void contentcache_init(void);
+#if 1	
+void contentcache_add(__u8* dhashkey, __u8* content, unsigned int len,__u32 ioblk);
+__u8* contentcache_lookup(__u8* dhashkey, unsigned int len, __u32 iodedupID);
+#else
+void contentcache_add(__u8* dhashkey, __u8* content, unsigned int len);
+__u8* contentcache_lookup(__u8* dhashkey, unsigned int len);
+#endif
+int overwrite_in_contentcache(struct preq_spec *preql);
+void contentcache_exit();
+
+#endif /* _CONTENTCACHE_H_ */

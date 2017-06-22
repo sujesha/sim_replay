@@ -1,0 +1,252 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ANCHOR_JUMP	defs.h	52;"	d
+BLKSIZE	Makefile	/^BLKSIZE := 4096$/;"	m
+BLKSIZE	config.h	7;"	d
+CFLAGS	Makefile	/^CFLAGS  = -Wall -W -O2 -g$/;"	m
+CXX	Makefile	/^CXX := gcc$/;"	m
+DEBUGFLAG	Makefile	/^DEBUGFLAG =$/;"	m
+DEFAULT_BUFSIZE	main.c	23;"	d	file:
+DEFAULT_RABIN_MIN	main.c	24;"	d	file:
+Decode	md5c.c	/^static void Decode (UINT4 *output, unsigned char *input, unsigned int len)$/;"	f	file:
+ENABLE_HASHMAGIC	config.h	20;"	d
+ENABLE_HASHMAGIC	config.h	23;"	d
+ENABLE_HASHMAGIC	config.h	25;"	d
+ENABLE_SPIN_LOCKS	mbuffer.c	24;"	d	file:
+ERR_HERE	debug.h	27;"	d
+EXIT_TRACE	debug.h	14;"	d
+EXT	defs.h	80;"	d
+EXT_LEN	defs.h	81;"	d
+Encode	md5c.c	/^static void Encode (unsigned char *output, UINT4 *input, unsigned int len)$/;"	f	file:
+F	md5c.c	68;"	d	file:
+FALSE	defs.h	73;"	d
+FF	md5c.c	80;"	d	file:
+G	md5c.c	69;"	d	file:
+GG	md5c.c	85;"	d	file:
+H	md5c.c	70;"	d	file:
+HASHLEN	config.h	38;"	d
+HASHLEN_STR	config.h	39;"	d
+HERE_VOID_ERR	debug.h	20;"	d
+HH	md5c.c	90;"	d	file:
+HOSTNAME	Makefile	/^HOSTNAME := $(shell hostname)$/;"	m
+HOSTNAME	config.h	30;"	d
+I	md5c.c	71;"	d	file:
+II	md5c.c	95;"	d	file:
+INCS	Makefile	/^INCS    = -I. -I.. $/;"	m
+LOG_ERR	debug.h	8;"	d
+MAGIC_SIZE	config.h	44;"	d
+MAGIC_SIZE	config.h	46;"	d
+MAX	defs.h	61;"	d
+MAXBUF	defs.h	50;"	d
+MAXBUF_SEC	defs.h	51;"	d
+MAXCHUNKSIZE	Makefile	/^MAXCHUNKSIZE := 61440$/;"	m
+MAXCHUNKSIZE	config.h	15;"	d
+MAX_DATE	defs.h	22;"	d
+MBUFFER_CHECK_MAGIC	mbuffer.h	38;"	d
+MD5Final	md5c.c	/^void MD5Final (unsigned char digest[MD5_SIZE], MD5_CTX *context)$/;"	f
+MD5Human	md5c.c	/^void MD5Human(unsigned char digest[], char *buf)$/;"	f
+MD5Init	md5c.c	/^void MD5Init (MD5_CTX *context)$/;"	f
+MD5Transform	md5c.c	/^static void MD5Transform (UINT4 state[4], unsigned char block[64])$/;"	f	file:
+MD5Update	md5c.c	/^void MD5Update (MD5_CTX * context, unsigned char *input, unsigned int inputLen)$/;"	f
+MD5_CTX	md5c.h	/^} MD5_CTX;$/;"	t	typeref:struct:__anon1
+MD5_SIZE	md5c.h	29;"	d
+MD5_SIZE_STR	md5c.h	30;"	d
+MD5_memcpy	md5c.c	/^static void MD5_memcpy (POINTER output, POINTER input, unsigned int len)$/;"	f	file:
+MD5_memset	md5c.c	/^static void MD5_memset (POINTER output, int value, unsigned int len)$/;"	f	file:
+MIN	defs.h	65;"	d
+MINCHUNKSIZE	Makefile	/^MINCHUNKSIZE := 512$/;"	m
+MINCHUNKSIZE	config.h	11;"	d
+MaxSegment	rabin.h	/^	MaxSegment  = MAXCHUNKSIZE,$/;"	e	enum:__anon3
+MinSegment	rabin.h	/^	MinSegment  = MINCHUNKSIZE,$/;"	e	enum:__anon3
+NELEM	defs.h	57;"	d
+NOHASHMAGIC	Makefile	/^NOHASHMAGIC := 1$/;"	m
+NOHASHMAGIC	config.h	19;"	d
+NUMBER_OF_LOCKS	mbuffer.c	49;"	d	file:
+NWINDOW	rabin.h	/^	NWINDOW   = 32,$/;"	e	enum:__anon3
+O_LARGEFILE	defs.h	77;"	d
+PADDING	md5c.c	/^static unsigned char PADDING[64] = {$/;"	v	file:
+POINTER	md5c.h	/^typedef unsigned char *POINTER;$/;"	t
+PTHREAD_LOCK	mbuffer.c	30;"	d	file:
+PTHREAD_LOCK	mbuffer.c	36;"	d	file:
+PTHREAD_LOCK_DESTROY	mbuffer.c	29;"	d	file:
+PTHREAD_LOCK_DESTROY	mbuffer.c	35;"	d	file:
+PTHREAD_LOCK_INIT	mbuffer.c	28;"	d	file:
+PTHREAD_LOCK_INIT	mbuffer.c	34;"	d	file:
+PTHREAD_UNLOCK	mbuffer.c	31;"	d	file:
+PTHREAD_UNLOCK	mbuffer.c	37;"	d	file:
+ROTATE_LEFT	md5c.c	75;"	d	file:
+RabinMask	rabin.h	/^	RabinMask = 0xfff,  \/\/ must be less than <= 0x7fff $/;"	e	enum:__anon3
+RabinPrint	rabin.h	/^    RabinPrint = 0x0,$/;"	e	enum:__anon3
+S11	md5c.c	37;"	d	file:
+S12	md5c.c	38;"	d	file:
+S13	md5c.c	39;"	d	file:
+S14	md5c.c	40;"	d	file:
+S21	md5c.c	41;"	d	file:
+S22	md5c.c	42;"	d	file:
+S23	md5c.c	43;"	d	file:
+S24	md5c.c	44;"	d	file:
+S31	md5c.c	45;"	d	file:
+S32	md5c.c	46;"	d	file:
+S33	md5c.c	47;"	d	file:
+S34	md5c.c	48;"	d	file:
+S41	md5c.c	49;"	d	file:
+S42	md5c.c	50;"	d	file:
+S43	md5c.c	51;"	d	file:
+S44	md5c.c	52;"	d	file:
+SECT_LEN	main.c	25;"	d	file:
+SSIZE_MAX	mbuffer.h	31;"	d
+TRACE	debug.h	10;"	d
+TRUE	defs.h	69;"	d
+UINT2	md5c.h	/^typedef unsigned short int UINT2;$/;"	t
+UINT4	md5c.h	/^typedef unsigned long int UINT4;$/;"	t
+UNUSED	unused.h	5;"	d
+USED	rabin.h	10;"	d
+WHERE	debug.h	24;"	d
+XCFLAGS	Makefile	/^XCFLAGS = -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64$/;"	m
+_CONFIG_H_	config.h	2;"	d
+_DEBUG_H_	debug.h	2;"	d
+_DEFS_H_	defs.h	2;"	d
+_EXTRA_H_	extra.h	7;"	d
+_MBUFFER_H_	mbuffer.h	25;"	d
+_MD5C_H_	md5c.h	27;"	d
+_RABIN_H_	rabin.h	2;"	d
+_UNUSED_H_	unused.h	2;"	d
+addtoChunkList	extra.c	/^void addtoChunkList(chunk_id_t cNum)$/;"	f
+alloc_chunk_t	rabin.c	/^struct chunk_t* alloc_chunk_t(size_t size)$/;"	f
+alloc_chunk_t	temp/latest-rabin-provided.c	/^struct chunk_t* alloc_chunk_t(size_t size)$/;"	f
+alloc_chunk_t	temp/working-rabin.c	/^struct chunk_t* alloc_chunk_t(size_t size)$/;"	f
+alloc_mem	extra.c	/^unsigned char* alloc_mem(int len)$/;"	f
+buffer	md5c.h	/^  unsigned char buffer[64];                         \/* input buffer *\/$/;"	m	struct:__anon1
+buildInitialPrint	rabin.c	/^static uint32_t buildInitialPrint(mbuffer_t *m, size_t *iter)$/;"	f	file:
+buildInitialPrint	temp/latest-rabin-provided.c	/^static uint32_t buildInitialPrint(mbuffer_t *m, size_t *iter)$/;"	f	file:
+buildInitialPrint	temp/working-rabin.c	/^static uint32_t buildInitialPrint(mbuffer_t *m, size_t *iter)$/;"	f	file:
+byte	defs.h	/^typedef uint8_t  byte;$/;"	t
+cdata	extra.h	26;"	d
+cdata	rabin.h	30;"	d
+check_flag	mbuffer.h	/^  int check_flag;$/;"	m	struct:__anon2
+chunk_id_t	extra.h	/^typedef unsigned long chunk_id_t;$/;"	t
+chunk_realloc	temp/latest-rabin-provided.c	/^struct chunk_t* chunk_realloc(struct chunk_t *c, size_t offset)$/;"	f
+chunk_t	rabin.h	/^struct chunk_t$/;"	s
+chunkingInitDone	rabin.c	/^int chunkingInitDone;$/;"	v
+chunkingInitDone	temp/latest-rabin-provided.c	/^int chunkingInitDone;$/;"	v
+chunkingInitDone	temp/working-rabin.c	/^int chunkingInitDone;$/;"	v
+chunktype	main.c	/^char chunktype;$/;"	v
+count	md5c.h	/^  UINT4 count[2];        \/* number of bits, modulo 2^64 (lsb first) *\/$/;"	m	struct:__anon1
+csize	extra.h	30;"	d
+csize	rabin.h	34;"	d
+exitChunking	config.h	52;"	d
+exitRabin	rabin.c	/^void exitRabin(void)$/;"	f
+exitRabin	temp/latest-rabin-provided.c	/^void exitRabin(void)$/;"	f
+exitRabin	temp/working-rabin.c	/^void exitRabin(void)$/;"	f
+exit_gracefully	main.c	/^void exit_gracefully()$/;"	f
+fhashptr	main.c	/^FILE * fhashptr;$/;"	v
+filename	main.c	/^char filename[256];$/;"	v
+fpmkredtab	rabin.c	/^static void fpmkredtab(uint32_t irr, int s) $/;"	f	file:
+fpmkredtab	temp/latest-rabin-provided.c	/^static void fpmkredtab(uint32_t irr, int s) $/;"	f	file:
+fpmkredtab	temp/working-rabin.c	/^static void fpmkredtab(uint32_t irr, int s) $/;"	f	file:
+fpmkwinredtab	rabin.c	/^static void fpmkwinredtab(uint32_t irr $/;"	f	file:
+fpmkwinredtab	temp/latest-rabin-provided.c	/^static void fpmkwinredtab(uint32_t irr $/;"	f	file:
+fpmkwinredtab	temp/working-rabin.c	/^static void fpmkwinredtab(uint32_t irr $/;"	f	file:
+fpreduce	rabin.c	/^static uint32_t fpreduce(uint32_t x, uint32_t irr) $/;"	f	file:
+fpreduce	temp/latest-rabin-provided.c	/^static uint32_t fpreduce(uint32_t x, uint32_t irr) $/;"	f	file:
+fpreduce	temp/working-rabin.c	/^static uint32_t fpreduce(uint32_t x, uint32_t irr) $/;"	f	file:
+fpwinreduce	rabin.c	/^static uint32_t fpwinreduce(uint32_t irr, $/;"	f	file:
+fpwinreduce	temp/latest-rabin-provided.c	/^static uint32_t fpwinreduce(uint32_t irr, $/;"	f	file:
+fpwinreduce	temp/working-rabin.c	/^static uint32_t fpwinreduce(uint32_t irr, $/;"	f	file:
+freeRabin	rabin.c	/^void freeRabin(void)$/;"	f
+freeRabin	temp/latest-rabin-provided.c	/^void freeRabin(void)$/;"	f
+freeRabin	temp/working-rabin.c	/^void freeRabin(void)$/;"	f
+free_chunk_t	rabin.c	/^struct chunk_t* free_chunk_t(struct chunk_t *chunk)$/;"	f
+free_chunk_t	temp/latest-rabin-provided.c	/^struct chunk_t* free_chunk_t(struct chunk_t **c)$/;"	f
+free_chunk_t	temp/working-rabin.c	/^struct chunk_t* free_chunk_t(struct chunk_t *chunk)$/;"	f
+free_mem	extra.c	/^void free_mem(unsigned char* mem)$/;"	f
+getFreshRabinOffset	rabin.c	/^static size_t getFreshRabinOffset(mbuffer_t *m, __u16 *n, uint32_t *finalh, $/;"	f	file:
+getFreshRabinOffset	temp/latest-rabin-provided.c	/^static size_t getFreshRabinOffset(mbuffer_t *m, size_t *n, uint32_t *finalh$/;"	f	file:
+getFreshRabinOffset	temp/working-rabin.c	/^static size_t getFreshRabinOffset(mbuffer_t *m, size_t *n, uint32_t *finalh, $/;"	f	file:
+getHash	config.h	40;"	d
+getHashKey	extra.c	/^unsigned char* getHashKey(unsigned char* buf, int len)$/;"	f
+getMD5	md5c.c	/^void getMD5(unsigned char *buf, unsigned int len, unsigned char *dig)$/;"	f
+getNextChunkNum	extra.c	/^chunk_id_t getNextChunkNum(chunk_id_t * taken) $/;"	f
+get_timestamp	rabin.c	/^uint32_t get_timestamp()$/;"	f
+get_timestamp	temp/latest-rabin-provided.c	/^uint32_t get_timestamp()$/;"	f
+get_timestamp	temp/working-rabin.c	/^uint32_t get_timestamp()$/;"	f
+initChunking	config.h	50;"	d
+initRabin	rabin.c	/^void initRabin(void\/*int winlen*\/)$/;"	f
+initRabin	temp/latest-rabin-provided.c	/^void initRabin(void\/*int winlen*\/)$/;"	f
+initRabin	temp/working-rabin.c	/^void initRabin(void\/*int winlen*\/)$/;"	f
+int16	defs.h	/^typedef int16_t  int16;$/;"	t
+int32	defs.h	/^typedef int32_t  int32;$/;"	t
+int64	defs.h	/^typedef int64_t  int64;$/;"	t
+int8	defs.h	/^typedef int8_t   int8;$/;"	t
+intr_catcher	main.c	/^static inline void intr_catcher(int signal)$/;"	f	file:
+invokeChunking	config.h	51;"	d
+invokeRabin	rabin.c	/^int invokeRabin(struct chunk_t *chunk, int *len, size_t *bytes_left, $/;"	f
+invokeRabin	temp/latest-rabin-provided.c	/^int invokeRabin(struct chunk_t *chunk, int *len, size_t *bytes_left, $/;"	f
+invokeRabin	temp/working-rabin.c	/^int invokeRabin(struct chunk_t *chunk, int *len, size_t *bytes_left, $/;"	f
+irrpoly	rabin.c	/^uint32_t irrpoly; \/\/SSS: has 16 ones - from http:\/\/www.xmailserver.org\/rabin_impl.pdf$/;"	v
+irrpoly	temp/latest-rabin-provided.c	/^uint32_t irrpoly; \/\/SSS: has 16 ones - from http:\/\/www.xmailserver.org\/rabin_impl.pdf$/;"	v
+irrpoly	temp/working-rabin.c	/^uint32_t irrpoly; \/\/SSS: has 16 ones - from http:\/\/www.xmailserver.org\/rabin_impl.pdf$/;"	v
+likely	defs.h	85;"	d
+lock_hash	mbuffer.c	/^static inline int lock_hash(void *p) {$/;"	f	file:
+locks	mbuffer.c	/^pthread_lock_t *locks = NULL;$/;"	v
+main	main.c	/^int main(int argc, char* argv[])$/;"	f
+mbuf	extra.h	34;"	d
+mbuf	rabin.h	38;"	d
+mbuffer_clone	mbuffer.c	/^mbuffer_t *mbuffer_clone(mbuffer_t *m) {$/;"	f
+mbuffer_copy	mbuffer.c	/^mbuffer_t *mbuffer_copy(mbuffer_t *m) {$/;"	f
+mbuffer_create	mbuffer.c	/^int mbuffer_create(mbuffer_t *m, size_t size) {$/;"	f
+mbuffer_free	mbuffer.c	/^void mbuffer_free(mbuffer_t *m) {$/;"	f
+mbuffer_realloc	mbuffer.c	/^int mbuffer_realloc(mbuffer_t *m, size_t size) {$/;"	f
+mbuffer_split	mbuffer.c	/^int mbuffer_split(mbuffer_t *m1, mbuffer_t *m2, size_t split) {$/;"	f
+mbuffer_system_destroy	mbuffer.c	/^int mbuffer_system_destroy() {$/;"	f
+mbuffer_system_init	mbuffer.c	/^int mbuffer_system_init() {$/;"	f
+mbuffer_t	mbuffer.h	/^} mbuffer_t;$/;"	t	typeref:struct:__anon2
+mergeLeftovers	rabin.c	/^void mergeLeftovers(struct chunk_t **chunk, struct chunk_t **leftover,$/;"	f
+mergeLeftovers	temp/latest-rabin-provided.c	/^void mergeLeftovers(struct chunk_t **chunk, struct chunk_t **leftover,$/;"	f
+mergeLeftovers	temp/working-rabin.c	/^void mergeLeftovers(struct chunk_t **chunk, struct chunk_t **leftover,$/;"	f
+n	mbuffer.h	/^  __u16 n; \/\/size of the buffer in bytes$/;"	m	struct:__anon2
+nonzero_cnt	main.c	/^unsigned long nonzero_cnt;$/;"	v
+numChunks	rabin.c	/^unsigned long numChunks;	\/* Total number of non-zero chunks *\/$/;"	v
+numChunks	temp/working-rabin.c	/^unsigned long numChunks;	\/* Total number of non-zero chunks *\/$/;"	v
+obj	Makefile	/^obj := md5c.o mbuffer.o rabin.o extra.o main.o$/;"	m
+parseArguments	main.c	/^static int parseArguments(int argc, char* argv[])$/;"	f	file:
+printUsage	main.c	/^static int printUsage(void)$/;"	f	file:
+processBlock	extra.c	/^void processBlock(unsigned char *buf, sector_t blockID, \/\/void *chunkList, $/;"	f
+processChunk	extra.c	/^unsigned long processChunk(uint32_t *ptime, struct chunk_t *c, $/;"	f
+pthread_lock_t	mbuffer.c	/^typedef pthread_mutex_t pthread_lock_t;$/;"	t	file:
+pthread_lock_t	mbuffer.c	/^typedef pthread_spinlock_t pthread_lock_t;$/;"	t	file:
+ptr	mbuffer.h	/^  uint8_t *ptr; \/\/pointer to the buffer$/;"	m	struct:__anon2
+rabintab	rabin.c	/^uint32_t * rabintab;$/;"	v
+rabintab	temp/latest-rabin-provided.c	/^uint32_t * rabintab;$/;"	v
+rabintab	temp/working-rabin.c	/^uint32_t * rabintab;$/;"	v
+rabinwintab	rabin.c	/^uint32_t * rabinwintab;$/;"	v
+rabinwintab	temp/latest-rabin-provided.c	/^uint32_t * rabinwintab;$/;"	v
+rabinwintab	temp/working-rabin.c	/^uint32_t * rabinwintab;$/;"	v
+read_and_rabin	main.c	/^int read_and_rabin(char *filename)$/;"	f
+resumeChunking	main.c	/^void resumeChunking(unsigned char *buf, int len, unsigned long blockID)$/;"	f
+resumePrintBuilding	rabin.c	/^static size_t resumePrintBuilding(mbuffer_t *m, size_t n, \/*, int winlen*\/$/;"	f	file:
+resumePrintBuilding	temp/latest-rabin-provided.c	/^static size_t resumePrintBuilding(mbuffer_t *m, size_t n, \/*, int winlen*\/$/;"	f	file:
+resumePrintBuilding	temp/working-rabin.c	/^static size_t resumePrintBuilding(mbuffer_t *m, size_t n, \/*, int winlen*\/$/;"	f	file:
+sector_t	extra.h	/^typedef unsigned long sector_t;$/;"	t
+splitChunkBuffer	rabin.c	/^void splitChunkBuffer(struct chunk_t **chunk, $/;"	f
+splitChunkBuffer	temp/latest-rabin-provided.c	/^void splitChunkBuffer(struct chunk_t **chunk, $/;"	f
+splitChunkBuffer	temp/working-rabin.c	/^void splitChunkBuffer(struct chunk_t **chunk, $/;"	f
+state	md5c.h	/^  UINT4 state[4];                                   \/* state (ABCD) *\/$/;"	m	struct:__anon1
+u16int	defs.h	/^typedef uint16_t u16int;$/;"	t
+u32int	defs.h	/^typedef uint32_t u32int;$/;"	t
+u64int	defs.h	/^typedef uint64_t u64int;$/;"	t
+u_char	defs.h	/^typedef uint8_t  u_char;$/;"	t
+u_int	defs.h	/^typedef uint32_t u_int;$/;"	t
+u_int16	defs.h	/^typedef uint16_t u_int16;$/;"	t
+u_int32	defs.h	/^typedef uint32_t u_int32;$/;"	t
+u_int64	defs.h	/^typedef uint64_t u_int64;$/;"	t
+u_int8	defs.h	/^typedef byte     u_int8;$/;"	t
+uchar	defs.h	/^typedef uint8_t  uchar;$/;"	t
+uncompressed_data	rabin.h	/^  mbuffer_t uncompressed_data;$/;"	m	struct:chunk_t
+unlikely	defs.h	84;"	d
+zero_cnt	main.c	/^unsigned long zero_cnt;$/;"	v
+zeroarray	main.c	/^static char zeroarray[65537];$/;"	v	file:

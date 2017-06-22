@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+_SIMDISK_API_H_	simdisk-API.h	4;"	d
+disk_read_create	simdisk-API.c	/^int disk_read_create(char *vmname, __u32 blockID, $/;"	f
+disk_read_trap	simdisk-API.c	/^int disk_read_trap(char *vmname, __u32 blockID, $/;"	f
+disk_write_trap	simdisk-API.c	/^int disk_write_trap(char *vmname, __u32 blockID, unsigned char *md5string,$/;"	f
+diskoffset	simdisk-API.h	/^	int diskoffset;$/;"	m	struct:simdisk_blkidtab_t
+simdisk_blkid	simdisk-API.c	/^__u32 simdisk_blkid = 0;$/;"	v
+simdisk_blkidtab_t	simdisk-API.h	/^struct simdisk_blkidtab_t{$/;"	s
+simdisk_trap	simdisk-API.c	/^int simdisk_trap(char *vmname, __u32 blockID, unsigned char *simcontent,$/;"	f

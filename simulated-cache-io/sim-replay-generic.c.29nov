@@ -1,0 +1,694 @@
+#ifdef SIM_REPLAY
+//retaining above SYNCIO ifdef just to differentiate from ASYNCIO code, remove 
+// asyncio code later and these ifdefs can also go... FIXME
+
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <assert.h>
+#include <time.h>
+#include <sched.h>
+#include <sys/time.h>
+#include <fcntl.h>
+#include <libaio.h>
+#include <sys/prctl.h>
+#include "vmbunching_structs.h"
+#include "per-input-file.h"
+#include "debugg.h"
+#include "debug.h"
+#include "pdd_config.h"
+#include "replay-generic.h"
+#ifndef TESTVMREPLAY	/* will be defined only in pdd_testvmreplay */
+	#include "replay-plugins.h"	/* will be defined everywhere else */
+	#include "sync-disk-interface.h"
+#endif
+#include "sectorcache.h"
+#include "ioserveio.h"
+#include "serveio.h"
+#include "fserveio.h"
+#include "sync-replay-generic.h"
+#include "ioruntime.h"
+#include "fruntime.h"
+#include "pruntime.h"
+
+int cachesimflag = 0;	/* Simulating the sector-cache */
+int writebackflag = 0;
+int collectformat = 0;	/* MD5 hash present instead of BLKSIZE content */
+
+unsigned long gtotalreadreq = 0;    /* # Read requests in trace */
+unsigned long gtotalwritereq = 0;   /* # Write requests in trace */
+
+
+/* Extern'ed from replay-plugins.c */
+extern int preplayflag;
+extern int freplayflag;
+extern int sreplayflag;    /* default */
+extern int ioreplayflag;
+
+extern volatile int signal_done;    // Boolean: Signal'ed, need to quit
+extern int disksimflag;
+extern int runtimemap;
+
+extern char *ibase;      // Input base name
+extern char *ifile;
+extern char *idir;        // Input directory base
+extern char *idevnm;	//Input device name
+extern int cpus_to_use;        // Number of CPUs to use
+extern int def_iterations;      // Default number of iterations
+extern int verbose;         // Boolean: Output some extra info
+extern int write_enabled;       // Boolean: Enable writing
+extern int read_enabled;       // Boolean: Enable reading
+extern __u64 genesis;      // Earliest time seen
+__u64 rgenesis;          // Our start time
+size_t pgsize;           // System Page size
+//LIST_HEAD(input_devs);       // List of devices to handle
+//LIST_HEAD(input_files);      // List of input files to handle
+//LIST_HEAD(map_devs);     // List of device maps
+extern int no_stalls;       // Boolean: default disabled stalls
+extern int speedupfactor;	//Default: no speedup
+extern int find_records;        // Boolean: Find record files auto
+extern long total_submitted;
+extern __u64 disk_hits;
+extern __u64 disk_hits_r;
+extern __u64 disk_hits_w;
+
+extern int naios;         // Number of AIOs per thread
+extern int syncfd;
+extern int verbose;
+extern FILE * ftimeptr;
+inline __u64 gettime(void);
+
+#ifndef TESTVMREPLAY	/* will be defined only in pdd_testvmreplay */
+	void iocbs_map(struct thr_info *tip, struct iocb **list,
+                         struct io_pkt *pkts, int ntodo);
+#else
+	void iocbs_map(struct thr_info *tip, struct iocb **list,
+                         struct vm_pkt *pkts, int ntodo);
+#endif
+
+void reset_input_file(struct thr_info *tip);
+int nfree_current(struct thr_info *tip);
+
+void sim_replay(struct thr_info *tip, 
+                        struct io_pkt *pkts, int ntodo)
+{
+    int i;              
+    struct io_pkt *pkt; 
+#if defined (PDDREPLAY_DEBUG_SS) || defined(TESTVMREPLAY_DEBUG) || defined(SIMREPLAY_DEBUG_SS_DONE)   
+    fprintf(stdout, "In %s\n", __FUNCTION__);
+    assert(pkts != NULL);
+    assert(0 < ntodo);
+#endif 
+                
+    pthread_mutex_lock(&tip->mutex);
+    for (i = 0, pkt = pkts; i < ntodo; i++, pkt++) {
+        assert(pkt != NULL);
+        __u32 rw = pkt->rw;
+
+        if (verbose > 1)
+        {
+            fprintf(stdout, "\t%10u + %10lu %c%c\n",
+                pkt->ioblk,
+                (unsigned long)(pkt->nbytes >> 12),
+                rw ? 'R' : 'W',
+                (rw == 1 && pkt->rw == 0) ? '!' : ' ');
+            fprintf(tip->vfp, "\t%10u + %10lu %c%c\n",
+                pkt->ioblk,
+                (unsigned long)pkt->nbytes >> 12,
+                rw ? 'R' : 'W',
+                (rw == 1 && pkt->rw == 0) ? '!' : ' ');
+        }
+
+		/* Dont do actual disk read, we will just simulate it */
+		/* pkt->content should already contain the hash for the block
+		 * that was read/written here.
+		 */
+		continue;
+	}
+	pthread_mutex_unlock(&tip->mutex);
+}
+
+
+#ifndef TESTVMREPLAY	/* will be defined only in pdd_testvmreplay */
+/** map_n_process_bunch - Process a bunch of requests after mapping first
+ * @tip: Per-thread information
+ * @bunch: Bunch to map and process
+ */
+void sim_map_n_process_bunch(struct thr_info *tip, struct vm_bunch *bunch)
+{
+	__u64 vmp_iter=0;
+	struct io_pkt *iopl = NULL;
+	struct preq_spec *preql = NULL;
+	int tot_pkts = 0;
+
+#if defined(DEBUG_SS) || defined (PDDREPLAY_DEBUG_SS) || defined(SIMREPLAY_DEBUG_SS_DONE)
+    fprintf(stdout, "In %s\n", __FUNCTION__);
+    assert(0 < bunch->hdr.npkts && bunch->hdr.npkts <= MAP_BT_MAX_PKTS);
+#endif 
+
+	if (!no_stalls)
+	{
+#ifdef REPLAYDIRECT_TEST
+		unsigned long long amt = 18446744073709528226ULL;			
+		printf("try stalling %llu\n", amt);
+		stall(tip, amt);
+#else		
+		printf("try stalling %llu\n", bunch->hdr.time_stamp - genesis);
+		stall(tip, bunch->hdr.time_stamp - genesis);
+#endif
+	}
+	else
+		usleep(1000);
+
+	//while (!is_send_done(tip) && (vmp_iter < bunch->hdr.npkts)) 
+	while ((vmp_iter < bunch->hdr.npkts)) 
+	{
+#if defined(SIMREPLAY_DEBUG_SS_DONE)
+		fprintf(stdout, "%s for vmp_iter=%llu\n", __FUNCTION__, vmp_iter);
+#endif
+		int num_vop = 0, vop_iter = 0;
+		int /*ntodo = 0, */ num_disk = 0;	
+		unsigned long long stime=0, etime=0;
+#if defined(REPLAYDIRECT_TEST) || defined(SIMREPLAY_DEBUG_SS_DONE)
+//		int i = 0;
+		struct vm_pkt *pkt;
+#endif
+
+#if defined(SIMREPLAY_DEBUG_SS_DONE)
+		if (bunch->pkts[vmp_iter].rw)	/* Read request */
+			fprintf(stdout, "----------- READ REQUEST --------------\n");
+		else
+			fprintf(stdout, "----------- WRITE REQUEST -------------\n");
+#endif
+
+		/* If this is a read requests and read_enabled==0 or
+		 * if this is a write request and write_enabled==0, 
+		 * do nothing and continue
+		 */
+		if (((bunch->pkts[vmp_iter].rw && !read_enabled) || 
+			(!bunch->pkts[vmp_iter].rw && !write_enabled)))
+		{
+			if (bunch->pkts[vmp_iter].content)				
+				free(bunch->pkts[vmp_iter].content); //malloc in get_vmbunch()
+			total_submitted++;
+			vmp_iter++;
+			continue;
+		}
+
+		if (bunch->pkts[vmp_iter].rw)	/* Read request */
+			gtotalreadreq++;
+		else
+			gtotalwritereq++;
+		if (((gtotalreadreq+gtotalwritereq)) % 10000 == 0)
+		{
+			fprintf(stderr, ".");
+			fflush(stdout);
+		}
+
+#if defined(REPLAYDIRECT_TEST) || defined(SIMREPLAY_DEBUG_SS_DONE)
+		pkt = &bunch->pkts[vmp_iter];
+		fprintf(stdout, "vmname=%s, vblk=%u: pblk=[\n", pkt->vmname, pkt->block);
+#endif	
+		stime = gettime();	/* START P2V/DEDUP mapping lookup time */
+		/* Before sector-based base-cache, PROVIDED & CONFIDED perform
+		 * deduplication metadata lookup, whereas IODEDUP just follows STANDARD!
+		 */
+		if (preplayflag)
+			num_vop = preplay_map(tip, &preql, &bunch->pkts[vmp_iter]); //PROVIDED
+		else if (freplayflag)
+			num_vop = freplay_map(tip, &preql, &bunch->pkts[vmp_iter]); //CONFIDED
+		else if (sreplayflag)
+			num_vop = sreplay_map(tip, &preql, &bunch->pkts[vmp_iter]); //STANDARD
+		else if (ioreplayflag)
+			num_vop = sreplay_map(tip, &preql, &bunch->pkts[vmp_iter]); //STANDARD
+		if (num_vop < 0)
+			fatal(NULL, ERR_USERCALL, "Error in above map function");
+		etime = gettime();	/* END P2V/DEDUP mapping lookup time */;
+		fprintf(ftimeptr, "V2P/dedup-mapping-lookup time: %llu z%d %d rw(%d)\n",
+				 etime - stime, num_vop,
+                 bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+				 bunch->pkts[vmp_iter].rw);
+
+#if defined(REPLAYDIRECT_TEST) || defined(SIMREPLAY_DEBUG_SS_DONE)
+	    for (i = 0; i < num_vop; i++) 
+		{	
+			fprintf(stdout, "(%u,%u,%u) ", preql[i].start, preql[i].ioblk,
+									preql[i].end);
+		}
+		fprintf(stdout, "]\n");
+#endif	
+
+		/* In cache simulation mode, i.e. -c option, we assume that the requests
+		 * are being intercepted at a layer above the page cache, whereas in
+		 * the non-cache simulation mode, we assume that the page cache is
+		 * the underlying cache of this system itself, and hence an actual
+		 * disk replay would auto look it up, i.e. no simulation of cache
+		 */
+		if (cachesimflag && num_vop)
+		{
+			/* Look-up base-cache in cache simulation mode */
+			if (bunch->pkts[vmp_iter].rw)	/* Read request */
+			{
+				/* Look-up for each blk (for given request) into base-cache.
+				 * If the lookup succeeds, the "done" should be set for 
+				 * those blks and only the remaining need to be 
+				 * "fetched from disk". 
+				 */
+				int rc = 0;
+				stime = gettime();	/* START sector-lookup time */
+				rc = find_in_sectorcache(&preql, num_vop);
+				if (rc < 0)
+	                fatal(NULL, ERR_USERCALL, "Error in sectorcache_lookup\n");
+				etime = gettime();	/* END sector-lookup time */
+				fprintf(ftimeptr, "sector-lookup time: %llu z%d %d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+			}
+			else	/* Write request */
+			{
+				/* update the base-cache with new value */
+				/* if a new block is being written, corresponding block 
+				 * buffer will not be present in base-cache, hence may 
+				 * result in some eviction, else it will just be an update 
+				 * in cache (assume write-back cache)
+				 */
+				int rc = 0;
+				stime = gettime();	/* START sector-write time */
+				rc = overwrite_in_sectorcache(&preql, num_vop);
+                if (rc < 0)
+                    fatal(NULL, ERR_USERCALL, "Error in overwrite_in_sectorcache\n");
+				etime = gettime();	/* END sector-write time */
+				fprintf(ftimeptr, "sector-write-upon-write time: %llu z%d %d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+			}
+		}
+
+#if 0
+		Threading doesnt seem necessary ...............?
+		/* In write-back mode for sector-cache, we need to spawm a thread
+		 * to perform the actual write from cache to disk 
+		 */
+		if (writebackflag && !(bunch->pkts[vmp_iter].rw))
+		{
+			pthread_t cachetodisk_thread;
+			if (pthread_create(&cachetodisk_thread, NULL, cachetodisk_sub, 
+				bunch->pkts[vmp_iter])) {
+				fatal("pthread_create", ERR_SYSCALL, "cachetodisk_sub fail\n");
+				/* NOT REACHED */
+			}
+		}
+		else
+		{
+			/* cachetodisk_sub to be performed INLINE */
+			cachetodisk_sub((void*)bunch->pkts[vmp_iter]);
+		}
+#endif
+
+		if (ioreplayflag && num_vop)
+		{
+			/* The content-based cache simulated by default, so no special flag
+			 * in this case. Change this later if needed FIXME. */
+			int rc = 0;
+			if (!bunch->pkts[vmp_iter].rw)
+			{
+				stime = gettime();	/* START IODEDUP map invalidate time */
+				if (mappingTrimScanIO(&preql, num_vop))
+					fatal(NULL, ERR_USERCALL, "Error in mappingTrimScanIO\n");
+				etime = gettime();	/* END IODEDUP map invalidate time */
+				fprintf(ftimeptr, "iodedmap-invalidate time: %llu z%d %d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+			}
+			rc = ioreplay_map(&preql, num_vop);
+			if (rc < 0)
+				fatal(NULL, ERR_USERCALL, "Error in ioreplay_map\n");
+		}
+
+		/* Accessing disk for read/write requests */
+	    num_disk = preql_map(&preql, &iopl, num_vop);
+		if (num_disk < 0)
+			fatal(NULL, ERR_USERCALL, "Error in preql_map\n");
+#if defined(DEBUG_SS) || defined (PDD_REPLAY_DEBUG_SS_DONE)
+		if (!cachesimflag)
+			assert(num_disk == num_vop);
+		else
+			assert(num_disk <= num_vop);
+		fprintf(stdout, "num_vop = %d, vmp_iter =%llu\n",
+						num_vop, vmp_iter);
+#endif
+
+#if 0
+		ntodo = num_disk - vop_iter;
+       	assert(0 < ntodo);
+#endif
+
+		/* If we simulate the disk, no need to actually read from disk */
+		if (disksimflag && num_disk)
+			sim_replay(tip, iopl+vop_iter, num_disk);
+		else if (num_disk)	/* Actual read from disk required */
+		{
+			sync_replay(tip, iopl+vop_iter, num_disk);
+
+			/* copy the content from iopl to preql === hack, can fix later */
+			if (bunch->pkts[vmp_iter].rw)
+			{
+	    		struct io_pkt *pkt; 
+				int i, j=0;
+			    for (i = 0, pkt = iopl+vop_iter; i < num_disk; i++, pkt++) 
+				{
+					while ((preql+(j))->done)
+						j++;
+					if (!(preql+(j))->done)
+					{
+						assert((preql+(j))->content == NULL);
+						if (!collectformat)	
+						{
+							(preql+(j))->content = malloc(BLKSIZE);
+							memcpy((preql+(j))->content, pkt->content, BLKSIZE);
+						}
+						else /* Disk not simulated, but content is hex hash */
+						{
+							(preql+(j))->content = malloc(HASHLEN_STR);
+							memcpy((preql+(j))->content, pkt->content,HASHLEN_STR-1);
+							(preql+(j))->content[HASHLEN_STR-1] = '\0';
+						}
+						j++;
+					}
+				}
+			}
+		}
+
+#if defined(DEBUG_SS) || defined (PDDREPLAY_DEBUG_SS_DONE)
+		fprintf(stdout, "sync_map_n_process_bunch:total_submitted = %ld\n", total_submitted);
+#endif
+		tot_pkts += num_disk;
+		vop_iter += num_disk;
+
+		/* ARC-cache update to be done along with ioread_mapupdate().
+		 * In case, we are building mapping at runtime, then the disk blocks
+		 * that have been read from disk need to be deduplicated and mapping 
+		 * updated. So for all read requests with done==0, update their
+		 * mapping in the deduplication metadata. This would not be needed if
+		 * apriori mapping were used via scanning.
+		 * Similarly, do metadata updates for CONFIDED/PROVIDED.
+		 * Also, if we are simulating cache, then add content to cache if needed.
+		 * Note, map updates can be done as a lower priority thread, and not inline.
+		 */
+		if (bunch->pkts[vmp_iter].rw && runtimemap)	/* Read request */
+		{
+			int rc = 0;
+			stime = gettime();	/* START IODEDUP map-update for write time */
+			if (ioreplayflag)
+			{
+				rc = io_mapupdate(&preql, num_vop);		//IODEDUP
+				etime = gettime();	/* END IODEDUP map-update for read time */
+				fprintf(ftimeptr, "iodedmap-map-update-for-read time: %llu z%d "
+									"%d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+
+				/* Content cache update */
+				stime = gettime();	/* START IODEDUP content-cache update time */
+				if (ioread_contentcacheupdate(&preql, num_vop))
+					fatal(NULL, ERR_USERCALL, "err in ioread_contentcacheupdate\n");
+				etime = gettime();	/* END IODEDUP content-cache update time */
+				fprintf(ftimeptr, "content-cache-update-for-read time: %llu z%d "
+									"%d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+			}
+			else if (freplayflag) 							//CONFIDED
+			{
+				rc = f_mapupdate(&preql, &bunch->pkts[vmp_iter], num_vop);
+				etime = gettime();	/* END CONFIDED map-update for read time */
+				fprintf(ftimeptr, "confided-map-update-for-read time: %llu z%d "
+						"%d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+			}
+			else if (preplayflag)							//PROVIDED
+			{
+				rc = p_mapupdate(&preql, &bunch->pkts[vmp_iter], num_vop);		
+				etime = gettime();	/* END PROVIDED map-update for read time */
+				fprintf(ftimeptr, "provided-map-update-for-read time: %llu z%d "
+						"%d rw(%d)\n",
+					 etime - stime, num_vop,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+			}
+			if (rc < 0)
+				fatal(NULL, ERR_USERCALL, "Error in above mapupdate\n");
+		}
+		else if (!bunch->pkts[vmp_iter].rw)	/* Write request map update */
+		{
+			//FIXME: Do we need to set low priority for this thread here?
+			struct mapupdate_info mip; // = malloc(sizeof(struct mapupdate_info));
+			mip.preql = &preql;
+			mip.blkReq = &(bunch->pkts[vmp_iter]);
+			mip.numpkts = num_vop;
+			if (ioreplayflag)
+			{	
+			    if (pthread_create(&mip.upd_thread, NULL, io_mapupdate_sub, &mip)){
+        			fatal("pthread_create", ERR_SYSCALL,
+		            	"io_mapupdate_sub thread create failed\n");
+	        			/*NOTREACHED*/
+    			}
+			}
+			else if (freplayflag) 							//CONFIDED
+			{	
+			    if (pthread_create(&mip.upd_thread, NULL, f_mapupdate_sub, &mip)) {
+        			fatal("pthread_create", ERR_SYSCALL,
+		            	"f_mapupdate_sub thread create failed\n");
+	        			/*NOTREACHED*/
+    			}
+			}
+			else if (preplayflag)							//PROVIDED
+			{	
+			    if (pthread_create(&mip.upd_thread, NULL, p_mapupdate_sub, &mip)) {
+        			fatal("pthread_create", ERR_SYSCALL,
+		            	"p_mapupdate_sub thread create failed\n");
+	        			/*NOTREACHED*/
+    			}
+			}
+
+			if (ioreplayflag || freplayflag || preplayflag)
+			{
+	        	/* Wait for the map updating read-up thread to finish */
+		        if (pthread_join(mip.upd_thread, NULL))
+    	    	{
+    		        fatal("pthread_join", ERR_SYSCALL, "pthread map join failed\n");
+	        	}
+			}
+		}
+		
+		/* For all read blocks that were "fetched from disk" or from content cache
+		*  i.e. bcachefound = 0
+		 * perform cache add for the new content. 
+		 * Performing deduplication and updating metadata for runtimemap
+		 * was already done above.
+		 */
+		if (cachesimflag)
+		{
+			/* Look-up base-cache in cache simulation mode */
+			if (bunch->pkts[vmp_iter].rw)	/* Read request */
+			{
+				/* update the base-cache with new value */
+				/* if a new block is being added, corresponding block buffer will 
+				 * not be present in base-cache, hence may result in some eviction,
+				 */
+				int rc = 0;
+				stime = gettime();	/* START sector-write-upon-read time */
+				rc = overwrite_in_sectorcache(&preql, num_vop);
+				etime = gettime();	/* END sector-write-upon-read time */
+				fprintf(ftimeptr, "sector-write-upon-read time: %llu %d rw(%d)\n",
+					 etime - stime,
+    	             bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+					 bunch->pkts[vmp_iter].rw);
+                if (rc < 0)
+                    fatal(NULL, ERR_USERCALL, "Error in overwrite_in_sectorcache\n");
+			}
+		}
+
+#if 0
+        /* If we are NOT in writeback mode, or this is a READ request, 
+         * note the "response time" all the way till here because for all
+		 * read requests and for all write-through cache write requests, 
+		 * this does contribute to user-perceived response time.
+         */
+        if (!writebackflag || bunch->pkts[vmp_iter].rw)
+        {
+            etime = gettime();
+            fprintf(ftimeptr, "%llu z%d %d rw(%d)\n", etime - stime, num_vop,
+                                bunch->pkts[vmp_iter].nbytes/BLKSIZE,
+                                bunch->pkts[vmp_iter].rw);
+        }
+#endif
+
+		total_submitted++;
+		if ((total_submitted & 0x1FFF) == 0)
+		{
+			fprintf(stdout, ".");	//to show progress after 131072 entries
+			fflush(stdout);
+		}
+
+		if (bunch->pkts[vmp_iter].content)				
+			free(bunch->pkts[vmp_iter].content); //malloc in get_vmbunch()
+		if (preql)
+		{
+//			if (num_disk || !bunch->pkts[vmp_iter].rw)
+				for (vop_iter=0; vop_iter<num_vop; vop_iter++)
+				{
+					assert((preql+(vop_iter))->content != NULL);
+					free((preql+(vop_iter))->content);
+				}
+			free(preql);	preql = NULL;	/* Work over, free it */
+		}
+		if (iopl)
+		{
+			for (vop_iter=0; vop_iter<num_disk; vop_iter++)
+			{
+				assert((iopl+(vop_iter))->content != NULL);
+				free((iopl+(vop_iter))->content);
+			}
+			free(iopl);	iopl = NULL;	/* Work over, free it */
+		}
+
+		vmp_iter++;
+	}
+}
+#else	/* will be true only in testvmreplay */
+/**
+ * process_bunch - Process a bunch of requests
+ * @tip: Per-thread information
+ * @bunch: Bunch to process
+ */
+//FIXME: this is incomplete ==== it is async version still, not sync
+void sync_process_bunch(struct thr_info *tip, struct vm_bunch *bunch)
+{
+    __u32 i = 0;
+    struct iocb *list[bunch->hdr.npkts];
+    fprintf(stdout, "In %s: this is incomplete ==== it is async version still, not sync\n", __FUNCTION__);
+
+#if defined(TESTVMREPLAY_DEBUG)
+    fprintf(stdout, "In %s\n", __FUNCTION__);
+#endif
+    assert(0 < bunch->hdr.npkts && bunch->hdr.npkts <= BT_MAX_PKTS);
+    while (!is_send_done(tip) && (i < bunch->hdr.npkts)) {
+#if defined(TESTVMREPLAY_DEBUG)
+    	fprintf(stdout, "In while loop in %s\n", __FUNCTION__);
+#endif
+        long ndone;
+        int ntodo = min(nfree_current(tip), bunch->hdr.npkts - i);
+
+        assert(0 < ntodo && ntodo <= naios);
+        iocbs_map(tip, list, &bunch->pkts[i], ntodo);
+        if (!no_stalls)
+            stall(tip, bunch->hdr.time_stamp - genesis);
+		else
+			usleep(1000*10);
+
+        if (ntodo) {
+            if (verbose > 1)
+            {
+                fprintf(stdout, "submit(%d)\n", ntodo);
+                fprintf(tip->vfp, "submit(%d)\n", ntodo);
+            }
+            ndone = io_submit(tip->ctx, ntodo, list);
+            if (ndone != (long)ntodo) {
+                fatal("io_submit", ERR_SYSCALL,
+                    "io_submit(%d:%ld) failed (%s)\n",
+                    ntodo, ndone,
+                    strerror(labs(ndone)));
+                /*NOTREACHED*/
+            }
+
+            pthread_mutex_lock(&tip->mutex);
+            tip->naios_out += ndone;
+            assert(tip->naios_out <= naios);
+            if (tip->reap_wait) {
+                tip->reap_wait = 0;
+                pthread_cond_signal(&tip->cond);
+            }
+            pthread_mutex_unlock(&tip->mutex);
+
+            i += ndone;
+#ifdef PRO_STATS
+			total_submitted += ndone;
+			fprintf(stdout, "xxxtal_submitted = %ld\n", total_submitted);
+#endif
+            assert(i <= bunch->hdr.npkts);
+        }
+    }
+}
+#endif	/* process_bunch only present in testvmreplay */
+
+/**
+ * replay_sub - Worker thread to submit AIOs that are being replayed
+ */
+void *sim_replay_sub(void *arg)
+{
+    char path[MAXPATHLEN];
+	struct vm_bunch *bunch = calloc(1, sizeof(struct vm_bunch));
+
+    struct thr_info *tip = arg;
+#if defined (PDDREPLAY_DEBUG_SS) || defined(SIMREPLAY_DEBUG_SS_DONE)
+	fprintf(stdout, "In %s\n", __FUNCTION__);
+#endif
+
+	if (!disksimflag)
+	{
+	    sprintf(path, "/dev/%s", idevnm);
+		tip->ofd = open_sync_device((char*)path);
+#if defined(TESTVMREPLAY_DEBUG) || defined (PDDREPLAY_DEBUG_SS)  || defined(SIMREPLAY_DEBUG_SS)
+		fprintf(stdout, "Device is %s\n", path);
+#endif
+	}
+
+    //pin_to_cpu(tip);
+	prctl(PR_SET_NAME,"simreplay",0,0,0);
+    set_replay_ready();
+#if defined(SIMREPLAY_DEBUG_SS)
+	fprintf(stdout, "is_send_done(tip)=%d, iterations=%d\n", 
+					is_send_done(tip), tip->iterations);
+#endif
+    while (tip->iterations--) {
+        wait_iter_start();
+        if (verbose > 1)
+		{
+            fprintf(stdout, "\n=== %d ===\n", tip->iterations);
+            fprintf(tip->vfp, "\n=== %d ===\n", tip->iterations);
+		}
+        while (!is_send_done(tip) && next_bunch(tip, bunch))
+		{
+#ifndef TESTVMREPLAY	/* will be defined only in pdd_testvmreplay */
+            sim_map_n_process_bunch(tip, bunch);
+#else
+			sync_process_bunch(tip, bunch);
+#endif
+		}
+        set_iter_done();
+        reset_input_file(tip);
+    }
+	fprintf(stdout, "outside while loop\n");
+    tip->send_done = 1;
+    set_replay_done();
+#ifdef PRO_STATS
+	fprintf(stdout, "sync_replay_sub:total_submitted = %ld\n", total_submitted);
+#endif
+
+	if (!disksimflag)
+		close(tip->ofd);	
+	free(bunch);
+    return NULL;
+}
+
+#endif /* SYNCIO */

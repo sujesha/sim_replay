@@ -1,0 +1,80 @@
+IODEDUP read path (runtime)
+==========================
+V2P/dedup-mapping-lookup
+sector-lookup-success
+
+V2P/dedup-mapping-lookup
+sector-lookup-fail
+ioded-mapping-lookup-fail
+content-cache-update-for-read
+iodedmap-map-update-for-read (Mar21: unreliable in older accesstime-files!)
+	iodedmap-map-update-component-get-hash
+	iodedmap-map-update-component-hashtab-search-success
+	iodedmap-map-update-component-updateblk
+sector-write-upon-read
+
+V2P/dedup-mapping-lookup
+sector-lookup
+sector-lookup-fail
+ioded-mapping-lookup-fail
+content-cache-update-for-read
+iodedmap-map-update-for-read (Mar21: unreliable in older accesstime-files!)
+	iodedmap-map-update-component-get-hash
+	iodedmap-map-update-component-hashtab-search-fail
+	iodedmap-map-update-component-hashtab-insert
+	iodedmap-map-update-component-new-dedup
+	iodedmap-map-updateblk-component-vector32_set
+sector-write-upon-read
+
+CONFIDED read path (runtime)
+============================
+V2P/dedup-mapping-lookup
+sector-lookup-success
+
+V2P/dedup-mapping-lookup
+sector-lookup-fail
+confided-map-update-for-read (Mar21: unreliable in older accesstime-files!)
+sector-write-upon-read
+
+VANILLA read path (runtime)
+===========================
+V2P/dedup-mapping-lookup
+sector-lookup-success
+
+V2P/dedup-mapping-lookup
+sector-lookup-fail
+sector-write-upon-read
+
+IODEDUP write path (runtime)
+===========================
+V2P/dedup-mapping-lookup
+sector-write-upon-write
+iodedmap-invalidate
+ioded-content-write
+iodedup-map-update-for-write
+	iodedmap-map-update-component-get-hash
+	iodedmap-map-update-component-hashtab-search-success
+	iodedmap-map-update-component-updateblk
+
+V2P/dedup-mapping-lookup
+sector-write-upon-write
+iodedmap-invalidate
+ioded-content-write
+iodedup-map-update-for-write
+	iodedmap-map-update-component-get-hash
+	iodedmap-map-update-component-hashtab-search-fail
+	iodedmap-map-update-component-hashtab-insert
+	iodedmap-map-update-component-new-dedup
+	iodedmap-map-updateblk-component-vector32_set
+
+CONFIDED write path (runtime)
+=============================
+V2P/dedup-mapping-lookup
+sector-write-upon-write
+confided-invalidate
+confided-map-update-for-write
+
+VANILLA write path (runtime)
+============================
+V2P/dedup-mapping-lookup
+sector-write-upon-write

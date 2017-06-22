@@ -1,0 +1,20 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+_SYNC_REPLAY_GENERIC_H_	sync-replay-generic.h	2;"	d
+find_records	sync-replay-generic.c	/^int find_records = 0;        \/\/ Boolean: Find record files auto$/;"	v
+genesis	sync-replay-generic.c	/^__u64 genesis = ~0;      \/\/ Earliest time seen$/;"	v
+no_stalls	sync-replay-generic.c	/^int no_stalls = 1;       \/\/ Boolean: default disabled stalls$/;"	v
+pgsize	sync-replay-generic.c	/^size_t pgsize;           \/\/ System Page size$/;"	v
+rgenesis	sync-replay-generic.c	/^__u64 rgenesis;          \/\/ Our start time$/;"	v
+speedupfactor	sync-replay-generic.c	/^int speedupfactor = 1;	\/\/Default: no speedup$/;"	v
+sync_disk_exit	sync-replay-generic.c	/^void sync_disk_exit()$/;"	f
+sync_disk_init	sync-replay-generic.c	/^int sync_disk_init()$/;"	f
+sync_map_n_process_bunch	sync-replay-generic.c	/^void sync_map_n_process_bunch(struct thr_info *tip, struct vm_bunch *bunch)$/;"	f
+sync_process_bunch	sync-replay-generic.c	/^void sync_process_bunch(struct thr_info *tip, struct vm_bunch *bunch)$/;"	f
+sync_replay	sync-replay-generic.c	/^void sync_replay(struct thr_info *tip, $/;"	f
+sync_replay_sub	sync-replay-generic.c	/^void *sync_replay_sub(void *arg)$/;"	f
+total_submitted	sync-replay-generic.c	/^long total_submitted = 0;$/;"	v

@@ -1,0 +1,237 @@
+/*
+ * Implementation of the hash table type --- adapted to userspace.
+ *
+ * Author: Sujesha Sudevalayam
+ *
+ * Credit: Stephen Smalley, <sds@epoch.ncsc.mil>
+ * security/selinux/ss/hashtab.c of linux-2.6.35.13
+ */
+#include <stdlib.h>
+#include <stdio.h>
+#include <asm/types.h>
+#include <errno.h>
+#include "pdd_config.h"
+#include "md5.h"
+#include "uhashtab.h"
+
+struct hashtab *hashtab_create(__u32 (*hash_value)(struct hashtab *h, 
+	const void *key), 
+	int (*keycmp)(struct hashtab *h, const void *key1, const void *key2),
+		       __u32 size)
+{
+	struct hashtab *p;
+	__u32 i;
+
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Proceed for malloc in hashtab_create().\n");
+#endif
+	p = (struct hashtab*)malloc(sizeof(struct hashtab));
+	if (p == NULL)
+	return p;
+
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Noting hashtab size.\n");
+#endif
+	p->size = size;
+	p->nel = 0;
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Noting hash_value function.\n");
+#endif
+	p->hash_value = hash_value;
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Noting keycmp function.\n");
+#endif
+	p->keycmp = keycmp;
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Doing malloc for htable, size = %u.\n", size);
+#endif
+	p->htable = (struct hashtab_node **) malloc(size * sizeof(struct hashtab_node*));
+	if (p->htable == NULL) {
+       	fprintf(stdout, "malloc for htable unsuccessful.\n");
+	free(p);
+	return NULL;
+	}
+#ifdef DEBUG_SS
+       	fprintf(stdout, "malloc for htable done.\n");
+#endif
+
+	for (i = 0; i < size; i++)
+	{
+#ifdef DEBUG_SS
+	       	fprintf(stdout, "Initializing elements of htable to NULL.\n");
+#endif
+	p->htable[i] = NULL;
+	}
+
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Will return p.\n");
+#endif
+	return p;
+}
+
+int hashtab_insert(struct hashtab *h, unsigned char *key, void *datum)
+{
+	__u32 hvalue;
+	struct hashtab_node *prev, *cur, *newnode;
+#if defined(RECREATE_DEBUG_SS) || defined(PDDREPLAY_DEBUG_SS) || defined(PROCHUNKING_DEDUP_DEBUG_SS)
+	fprintf(stdout, "In %s\n", __FUNCTION__);
+#endif
+
+	if (!h || h->nel == HASHTAB_MAX_NODES)
+	return -EINVAL;
+
+	hvalue = h->hash_value(h, key);
+	prev = NULL;
+	cur = h->htable[hvalue];
+	while (cur && h->keycmp(h, key, cur->key) > 0) {
+		prev = cur;
+		cur = cur->next;
+	}
+	if (cur && (h->keycmp(h, key, cur->key) == 0))
+	{
+		char humankey[33];
+		MD5Human(cur->key, humankey);
+		printf("-EEXISTs cur->key %s\n", humankey);
+		MD5Human(key, humankey);
+		printf("-EEXISTs key %s\n", humankey);
+		return -EEXIST;
+	}
+
+	newnode = malloc(sizeof(*newnode));
+	if (newnode == NULL)
+	return -ENOMEM;
+	newnode->key = key;
+	newnode->datum = datum;
+	if (prev) {
+	newnode->next = prev->next;
+	prev->next = newnode;
+	} else {
+	newnode->next = h->htable[hvalue];
+	h->htable[hvalue] = newnode;
+	}
+
+	h->nel++;
+	return 0;
+}
+
+void *hashtab_search(struct hashtab *h, unsigned char *key)
+{
+	__u32 hvalue;
+	struct hashtab_node *cur;
+
+	if (!h || !key)
+	return NULL;
+#if defined(DEBUG_SS) || defined(PROCHUNKING_DEDUP_DEBUG_SS)
+       	fprintf(stdout, "Non-null key in hashtab_search().\n");
+#endif
+	
+	hvalue = h->hash_value(h, key);
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Got the hvalue = %u in hashtab_search().\n", hvalue);
+#endif
+	if (!h->htable)
+	{
+       	fprintf(stdout, "h->htable is NULL!!! Fix lblk_init().\n");
+	}
+	cur = h->htable[hvalue];
+#ifdef DEBUG_SS
+       	fprintf(stdout, "Got cur in hashtab_search().\n");
+#endif
+	while (cur && h->keycmp(h, key, cur->key) > 0)
+	{
+#ifdef DEBUG_SS
+	       	fprintf(stdout, "Searching in hashtab bucket.\n");
+#endif
+	cur = cur->next;
+	}
+
+	if (cur == NULL || (h->keycmp(h, key, cur->key) != 0))
+	{
+#if defined(DEBUG_SS) || defined(PROCHUNKING_DEDUP_DEBUG_SS)
+	       	fprintf(stdout, "Search element not found. Return NULL.\n");
+#endif
+	return NULL;
+	}
+#if defined(DEBUG_SS) || defined(PROCHUNKING_DEDUP_DEBUG_SS)
+       	fprintf(stdout, "Got pointer cur->datum.\n");
+#endif
+	return cur->datum;
+}
+
+void hashtab_destroy(struct hashtab *h)
+{
+	__u32 i;
+	struct hashtab_node *cur, *temp;
+
+	if (!h)
+	return;
+
+	for (i = 0; i < h->size; i++) {
+	cur = h->htable[i];
+	while (cur) {
+		temp = cur;
+		cur = cur->next;
+		free(temp->datum); //potential memory leak otherwise
+		free(temp);
+	}
+	h->htable[i] = NULL;
+	}
+
+	free(h->htable);
+	h->htable = NULL;
+
+	free(h);
+}
+
+int hashtab_map(struct hashtab *h,
+	int (*apply)(void *k, void *d, void *args),
+	void *args)
+{
+	__u32 i;
+	int ret;
+	struct hashtab_node *cur;
+
+	if (!h)
+	return 0;
+
+	for (i = 0; i < h->size; i++) {
+	cur = h->htable[i];
+	while (cur) {
+		ret = apply(cur->key, cur->datum, args);
+		if (ret)
+		return ret;
+		cur = cur->next;
+	}
+	}
+	return 0;
+}
+
+#if 0
+void hashtab_stat(struct hashtab *h, struct hashtab_info *info)
+{
+	__u32 i, chain_len, slots_used, max_chain_len;
+	struct hashtab_node *cur;
+
+	slots_used = 0;
+	max_chain_len = 0;
+	for (slots_used = max_chain_len = i = 0; i < h->size; i++) {
+	cur = h->htable[i];
+	if (cur) {
+		slots_used++;
+		chain_len = 0;
+		while (cur) {
+		chain_len++;
+		cur = cur->next;
+		}		
+			cur = cur->next;
+		//free(temp);
+	}
+	h->htable[i] = NULL;
+	}
+
+//	free(h->htable);
+//	h->htable = NULL;
+
+ //       free(h);
+}
+#endif

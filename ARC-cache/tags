@@ -1,0 +1,62 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAX	arc.c	8;"	d	file:
+MIN	arc.c	9;"	d	file:
+__ARC_H__	arc.h	3;"	d
+__arc	arc.h	/^struct __arc {$/;"	s
+__arc_add	arc.c	/^struct __arc_object *__arc_add(struct __arc *cache, const void *dhashkey,$/;"	f
+__arc_balance	arc.c	/^static void __arc_balance(struct __arc *cache, unsigned long size)$/;"	f	file:
+__arc_create	arc.c	/^struct __arc *__arc_create(struct __arc_ops *ops, __u32 c)$/;"	f
+__arc_destroy	arc.c	/^void __arc_destroy(struct __arc *cache)$/;"	f
+__arc_hash	arc.h	/^struct __arc_hash {$/;"	s
+__arc_hash_fini	arc.c	/^static void __arc_hash_fini(struct __arc *cache)$/;"	f	file:
+__arc_hash_init	arc.c	/^static void __arc_hash_init(struct __arc *cache)$/;"	f	file:
+__arc_hash_insert	arc.c	/^static void __arc_hash_insert(struct __arc *cache, const void *key, $/;"	f	file:
+__arc_hash_lookup	arc.c	/^static struct __arc_object *__arc_hash_lookup(struct __arc *cache, $/;"	f	file:
+__arc_list	arc.h	/^struct __arc_list {$/;"	s
+__arc_list_each	arc.h	20;"	d
+__arc_list_each_prev	arc.h	23;"	d
+__arc_list_entry	arc.h	17;"	d
+__arc_list_first	arc.h	/^__arc_list_first( struct __arc_list * head )$/;"	f
+__arc_list_init	arc.h	/^__arc_list_init( struct __arc_list * head )$/;"	f
+__arc_list_insert	arc.h	/^__arc_list_insert(struct __arc_list *list, struct __arc_list *prev, struct __arc_list *next)$/;"	f
+__arc_list_prepend	arc.h	/^__arc_list_prepend(struct __arc_list *head, struct __arc_list *list)$/;"	f
+__arc_list_remove	arc.h	/^__arc_list_remove(struct __arc_list *head)$/;"	f
+__arc_list_splice	arc.h	/^__arc_list_splice(struct __arc_list *prev, struct __arc_list *next)$/;"	f
+__arc_lookup	arc.c	/^struct __arc_object *__arc_lookup(struct __arc *cache, $/;"	f
+__arc_move	arc.c	/^static struct __arc_object *__arc_move(struct __arc *cache, struct __arc_object *obj, struct __arc_state *state, const void *content, __u32 ioblk)$/;"	f	file:
+__arc_object	arc.h	/^struct __arc_object {$/;"	s
+__arc_object_init	arc.c	/^void __arc_object_init(struct __arc_object *obj, unsigned long size)$/;"	f
+__arc_ops	arc.h	/^struct __arc_ops {$/;"	s
+__arc_state	arc.h	/^struct __arc_state {$/;"	s
+__arc_state_lru	arc.c	/^static struct __arc_object *__arc_state_lru(struct __arc_state *state)$/;"	f	file:
+bucket	arc.h	/^    struct __arc_list *bucket;$/;"	m	struct:__arc_hash	typeref:struct:__arc_hash::__arc_list
+c	arc.h	/^    __u32 c, p;$/;"	m	struct:__arc
+ccache_already_had_flag	arc.c	/^unsigned char ccache_already_had_flag = 0; \/\/only for counting self-hits\/miss$/;"	v
+ccache_already_had_obj_ioblkID	arc.c	/^__u32 ccache_already_had_obj_ioblkID = 0;$/;"	v
+cmp	arc.h	/^    int (*cmp) (struct __arc_object *obj, const void *key);	\/\/__cop_compare$/;"	m	struct:__arc_ops
+create	arc.h	/^    struct __arc_object *(*create) (const void *key, const void *content, $/;"	m	struct:__arc_ops	typeref:struct:__arc_ops::create
+destroy	arc.h	/^    void (*destroy) (struct __arc_object *obj);$/;"	m	struct:__arc_ops
+evict	arc.h	/^    void (*evict) (struct __arc_object *obj);	\/\/__cop_evict$/;"	m	struct:__arc_ops
+fetch	arc.h	/^    int (*fetch) (struct __arc_object *obj, const void *content,$/;"	m	struct:__arc_ops
+hash	arc.h	/^    __u32 (*hash) (const void *key);$/;"	m	struct:__arc_ops
+hash	arc.h	/^    struct __arc_hash hash;$/;"	m	struct:__arc	typeref:struct:__arc::__arc_hash
+hash	arc.h	/^    struct __arc_list head, hash;$/;"	m	struct:__arc_object	typeref:struct:__arc_object::
+head	arc.h	/^    struct __arc_list head, hash;$/;"	m	struct:__arc_object	typeref:struct:__arc_object::__arc_list
+head	arc.h	/^    struct __arc_list head;$/;"	m	struct:__arc_state	typeref:struct:__arc_state::__arc_list
+mfu	arc.h	/^    struct __arc_state mrug, mru, mfu, mfug;$/;"	m	struct:__arc	typeref:struct:__arc::
+mfug	arc.h	/^    struct __arc_state mrug, mru, mfu, mfug;$/;"	m	struct:__arc	typeref:struct:__arc::
+mru	arc.h	/^    struct __arc_state mrug, mru, mfu, mfug;$/;"	m	struct:__arc	typeref:struct:__arc::
+mrug	arc.h	/^    struct __arc_state mrug, mru, mfu, mfug;$/;"	m	struct:__arc	typeref:struct:__arc::__arc_state
+next	arc.h	/^    struct __arc_list *prev, *next;$/;"	m	struct:__arc_list	typeref:struct:__arc_list::
+ops	arc.h	/^    struct __arc_ops *ops;$/;"	m	struct:__arc	typeref:struct:__arc::__arc_ops
+p	arc.h	/^    __u32 c, p;$/;"	m	struct:__arc
+prev	arc.h	/^    struct __arc_list *prev, *next;$/;"	m	struct:__arc_list	typeref:struct:__arc_list::__arc_list
+size	arc.h	/^    unsigned long size;$/;"	m	struct:__arc_hash
+size	arc.h	/^    unsigned long size;$/;"	m	struct:__arc_object
+size	arc.h	/^    unsigned long size;$/;"	m	struct:__arc_state
+state	arc.h	/^    struct __arc_state *state;$/;"	m	struct:__arc_object	typeref:struct:__arc_object::__arc_state

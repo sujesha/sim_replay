@@ -1,0 +1,26 @@
+==> accesstime-O1024-o200-webvm-iodedup-ioreplay_rw.txt <==
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+CCACHE-size = 200 (MB)
+buffer cache: hits=10551911, misses=3742247
+content metadata: hits=2426568, misses=316045
+content cache: hits=256144, misses=8103359
+content cache: dedup hits=256137, nondedup hits=7
+disk hits=13664171
+disk hits read=2486469, writes=11177702
+
+==> accesstime-O1024-webvm-iodedup-freplay_rw.txt <==
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+confided metadata: hits=2800411, misses=316045
+fcollisions=0, fcollisionstp=3237260, fzeros=0
+buffer cache: hits=13615156, misses=679002
+disk hits=11590027
+disk hits read=412325, writes=11177702
+
+==> accesstime-O1024-webvm-iodedup-sreplay_rw.txt <==
+#READ=3116456, #WRITE=11177702
+RAM-size = 1024 (MB)
+buffer cache: hits=12303451, misses=1990707
+disk hits=12823046
+disk hits read=1645344, writes=11177702

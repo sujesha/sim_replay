@@ -1,0 +1,6 @@
+
+
+buffer cache: hits=33036, misses=147687
+content cache: hits=7934, misses=0
+disk hits=635168	(includes misses and writes)
+

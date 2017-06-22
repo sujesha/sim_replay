@@ -1,0 +1,8 @@
+This is the provided module. Contains the following:-
+1. mapping tables and relevant APIs --- maps.c
+2. data structures for chunks and their access routines --- chunktab.c
+3. data structures for virt-blocks and their access routines --- vblktab.c
+4. rabin chunking routines --- rabin.c
+5. MD5 hashing routines --- md5c.c
+6. receive read/write requests and serving them --- serveio.c
+7. disk interface --- disk-interface.c

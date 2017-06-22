@@ -1,0 +1,52 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC  = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS  = -Wall -W -O2 -g$/;"	m
+INCS	Makefile	/^INCS    = -I.$/;"	m
+LIBS	Makefile	/^LIBS    = -laio -lrt -lpthread$/;"	m
+PROGS	Makefile	/^PROGS   = asyncio$/;"	m
+XCFLAGS	Makefile	/^XCFLAGS = -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64$/;"	m
+_IOCBS_H_	iocbs.h	2;"	d
+add_input_dev	unused-input-devices.c	/^static void add_input_dev(char *devnm)$/;"	f	file:
+async_map_n_process_bunch	async-replay-generic.c	/^void async_map_n_process_bunch(struct thr_info *tip, struct vm_bunch *bunch)$/;"	f
+async_process_bunch	async-replay-generic.c	/^void async_process_bunch(struct thr_info *tip, struct vm_bunch *bunch)$/;"	f
+async_replay_sub	async-replay-generic.c	/^void *async_replay_sub(void *arg)$/;"	f
+close_async_device	async-replay-generic.c	/^void close_async_device(int dp)$/;"	f
+find_input_devs	unused-input-devices.c	/^static void find_input_devs(char *idir)$/;"	f	file:
+find_records	async-replay-generic.c	/^int find_records = 0;        \/\/ Boolean: Find record files auto$/;"	v
+genesis	async-replay-generic.c	/^__u64 genesis = ~0;      \/\/ Earliest time seen$/;"	v
+head	iocbs.h	/^    struct list_head head;$/;"	m	struct:iocb_pkt	typeref:struct:iocb_pkt::list_head
+iocb	iocbs.h	/^    struct iocb iocb;$/;"	m	struct:iocb_pkt	typeref:struct:iocb_pkt::iocb
+iocb_init	iocbs.c	/^void iocb_init(struct thr_info *tip, struct iocb_pkt *iocbp)$/;"	f
+iocb_pkt	iocbs.h	/^struct iocb_pkt {$/;"	s
+iocb_setup	iocbs.c	/^void iocb_setup(struct iocb_pkt *iocbp, int rw, size_t n, __u8 *content, $/;"	f
+iocbs_map	iocbs.c	/^void iocbs_map(struct thr_info *tip, struct iocb **list,$/;"	f
+is_reap_done	reclaim-generic.c	/^static inline int is_reap_done(struct thr_info *tip)$/;"	f	file:
+map_dev	unused-device-mappings.c	/^static char *map_dev(char *from_dev)$/;"	f	file:
+n_reclaims_done	reclaim-generic.c	/^static volatile int n_reclaims_done = 0;$/;"	v	file:
+naios	iocbs.c	/^int naios = 512;         \/\/ Number of AIOs per thread$/;"	v
+nbytes	iocbs.h	/^    size_t nbytes;$/;"	m	struct:iocb_pkt
+nfiles	async-replay-generic.c	/^int nfiles = 0;          \/\/ Number of files to handle$/;"	v
+nfree_current	iocbs.c	/^int nfree_current(struct thr_info *tip)$/;"	f
+no_stalls	async-replay-generic.c	/^int no_stalls = 1;       \/\/ Boolean: default disabled stalls$/;"	v
+open_async_device	async-replay-generic.c	/^int open_async_device(char* path)$/;"	f
+pgsize	async-replay-generic.c	/^size_t pgsize;           \/\/ System Page size$/;"	v
+read_map_devs	unused-device-mappings.c	/^static void read_map_devs(char *file_name)$/;"	f	file:
+reap_wait_aios	reclaim-generic.c	/^static int reap_wait_aios(struct thr_info *tip)$/;"	f	file:
+reclaim_done_cond	reclaim-generic.c	/^static pthread_cond_t reclaim_done_cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+reclaim_done_mutex	reclaim-generic.c	/^static pthread_mutex_t reclaim_done_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+reclaim_ios	reclaim-generic.c	/^static void reclaim_ios(struct thr_info *tip, long naios_out)$/;"	f	file:
+release_map_devs	unused-device-mappings.c	/^static void release_map_devs(void)$/;"	f	file:
+rem_input_dev	unused-input-devices.c	/^static void rem_input_dev(struct dev_info *dip)$/;"	f	file:
+replay_rec	reclaim-generic.c	/^void *replay_rec(void *arg)$/;"	f
+rgenesis	async-replay-generic.c	/^__u64 rgenesis;          \/\/ Our start time$/;"	v
+set_reclaim_done	reclaim-generic.c	/^inline void set_reclaim_done(void)$/;"	f
+speedupfactor	async-replay-generic.c	/^int speedupfactor = 1;	\/\/Default: no speedup$/;"	v
+tip	iocbs.h	/^    struct thr_info *tip;$/;"	m	struct:iocb_pkt	typeref:struct:iocb_pkt::thr_info
+total_reclaimed	reclaim-generic.c	/^long total_reclaimed = 0;$/;"	v
+total_submitted	async-replay-generic.c	/^long total_submitted = 0;$/;"	v
+wait_reclaims_done	reclaim-generic.c	/^inline void wait_reclaims_done(void)$/;"	f

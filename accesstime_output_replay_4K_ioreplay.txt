@@ -1,0 +1,29 @@
+V2P/dedup-mapping-lookup time: 14375 z1 1 rw(1)
+sector-lookup-fail time: 3581 0
+ioded-mapping-lookup-fail time: 260 1 rw(1)
+content-cache-update-for-read time: 7713 0
+iodedmap-map-update-component-get-hash time: 585
+iodedmap-map-update-component-hashtab-search-fail time: 555
+iodedmap-map-update-component-new-dedup time: 407
+iodedmap-map-update-component-hashtab-insert time: 272
+iodedmap-map-updateblk-component-vector32_set time: 223
+iodedmap-map-updateblk-component-vector32_set time: 4618213
+iodedmap-map-update-component-updateblk time: 4627401
+iodedmap-map-update-for-read time: 4638381 0
+sector-write-upon-read/write time: 2088 0
+V2P/dedup-mapping-lookup time: 6104 z1 1 rw(1)
+sector-lookup-fail time: 818 0
+ioded-mapping-lookup-success time: 1612 1 rw(1)
+ioded-content-lookup-success time: 845 1 rw(1)
+iodedmap-map-update-for-read time: 85 0
+sector-write-upon-read/write time: 453 0
+iodedmap-map-updateblk-component-vector32_set time: 217
+#READ=2, #WRITE=0
+RAM-size = 1024 (MB)
+CCACHE-size = 200 (MB)
+buffer cache: hits=0, misses=2
+content metadata: hits=1, misses=1
+content cache: hits=1, misses=0
+content cache: dedup hits=0, nondedup hits=1
+disk hits=1
+disk hits read=1, writes=0

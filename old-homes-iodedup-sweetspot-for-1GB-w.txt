@@ -1,0 +1,22 @@
+
+
+-----------------------------------------------------------
+
+
+==> accesstime_output_replay_4K_freplay_w.txt <==
+Note that read_enable was NOT set now.
+#READ=0, #WRITE=17110222
+RAM-size = 1024 (MB)
+confided metadata: hits=0, misses=0
+fcollisions=0, fcollisionstp=5110408, fzeros=0
+buffer cache: hits=11539776, misses=5570446
+disk hits=17110222
+disk hits read=0, writes=17110222
+
+==> accesstime_output_replay_4K_sreplay_w.txt <==
+Note that read_enable was NOT set now.
+#READ=0, #WRITE=17110222
+RAM-size = 1024 (MB)
+buffer cache: hits=11539776, misses=5570446
+disk hits=17110222
+disk hits read=0, writes=17110222

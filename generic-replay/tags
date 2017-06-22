@@ -1,0 +1,124 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DISKSIM_INITMAP_COLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	72;"	d
+DISKSIM_INITMAP_COLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	71;"	d
+DISKSIM_INITMAP_NOCOLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	74;"	d
+DISKSIM_INITMAP_NOCOLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	73;"	d
+DISKSIM_RUNTIMEMAP_COLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	39;"	d
+DISKSIM_RUNTIMEMAP_COLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	37;"	d
+DISKSIM_RUNTIMEMAP_NOCOLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	41;"	d
+DISKSIM_RUNTIMEMAP_NOCOLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	40;"	d
+DISKSIM_SCANNINGTRACE_COLLECTFORMAT	replay-defines.h	54;"	d
+DISKSIM_SCANNINGTRACE_COLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	57;"	d
+DISKSIM_SCANNINGTRACE_COLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	56;"	d
+DISKSIM_SCANNINGTRACE_NOCOLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	61;"	d
+DISKSIM_SCANNINGTRACE_NOCOLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	60;"	d
+NS_TICKS	replay-generic.c	332;"	d	file:
+REALDISK_INITMAP_COLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	113;"	d
+REALDISK_INITMAP_COLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	112;"	d
+REALDISK_INITMAP_NOCOLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	115;"	d
+REALDISK_INITMAP_NOCOLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	114;"	d
+REALDISK_RUNTIMEMAP_COLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	100;"	d
+REALDISK_RUNTIMEMAP_COLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	99;"	d
+REALDISK_RUNTIMEMAP_NOCOLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	102;"	d
+REALDISK_RUNTIMEMAP_NOCOLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	101;"	d
+REALDISK_SCANNING_COLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	87;"	d
+REALDISK_SCANNING_COLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	86;"	d
+REALDISK_SCANNING_NOCOLLECTFORMAT_PIOEVENTSREPLAY	replay-defines.h	91;"	d
+REALDISK_SCANNING_NOCOLLECTFORMAT_VMBUNCHREPLAY	replay-defines.h	88;"	d
+_MULTI_THREADED	per-input-file.c	3;"	d	file:
+_PER_INPUT_FILE_H_	per-input-file.h	2;"	d
+_REPLAY_GENERIC_H_	replay-generic.h	2;"	d
+_REPLAY_PLUGINS_H_	replay-plugins.h	2;"	d
+_REQUEST_GENERIC_H_	request-generic.h	2;"	d
+__set_cv	replay-generic.c	/^inline void __set_cv(pthread_mutex_t *pmp, pthread_cond_t *pcp,$/;"	f
+__wait_cv	replay-generic.c	/^inline void __wait_cv(pthread_mutex_t *pmp, pthread_cond_t *pcp,$/;"	f
+add_input_file	per-input-file.c	/^void add_input_file(char *file_name)$/;"	f
+blkReq	replay-plugins.h	/^	struct vm_pkt *blkReq;$/;"	m	struct:mapupdate_info	typeref:struct:mapupdate_info::vm_pkt
+buf_alloc	per-input-file.c	/^void *buf_alloc(__u16 nbytes)$/;"	f
+cond	per-input-file.h	/^    pthread_cond_t cond;$/;"	m	struct:thr_info
+ctx	per-input-file.h	/^    io_context_t ctx;$/;"	m	struct:thr_info
+file_name	per-input-file.h	/^    char *file_name;$/;"	m	struct:thr_info
+free_iocbs	per-input-file.h	/^    struct slist_head head, free_iocbs, used_iocbs;$/;"	m	struct:thr_info	typeref:struct:thr_info::
+freplay_map	replay-plugins.c	/^int freplay_map(struct thr_info *tip, struct preq_spec **preql, $/;"	f
+freplayflag	replay-plugins.c	/^int freplayflag = 0;$/;"	v
+getNBytes	request-generic.c	/^inline u32int getNBytes(struct vm_pkt *blkReq)$/;"	f
+getNumBlocks	request-generic.c	/^inline __u32 getNumBlocks(struct vm_pkt *blkReq)$/;"	f
+getVirtBlkID	request-generic.c	/^__u32 getVirtBlkID(struct vm_pkt *blkReq)$/;"	f
+getVolNum	request-generic.c	/^__u16 getVolNum(struct vm_pkt *blkReq)$/;"	f
+get_ncpus	cpu-routines.c	/^void get_ncpus(void)$/;"	f
+get_vmbunch	replay-generic.c	/^__u64 get_vmbunch(struct thr_info *tip, struct vm_bunch *bunch, __u64 count)$/;"	f
+gettime	replay-generic.c	/^inline __u64 gettime(void)$/;"	f
+head	per-input-file.h	/^    struct slist_head head, free_iocbs, used_iocbs;$/;"	m	struct:thr_info	typeref:struct:thr_info::slist_head
+head	per-input-file.h	/^    struct slist_head head;$/;"	m	struct:thr_info	typeref:struct:thr_info::slist_head
+ifd	per-input-file.h	/^    int ifd, ofd, iterations;$/;"	m	struct:thr_info
+ioreplay_map	replay-plugins.c	/^int ioreplay_map(struct preq_spec **preql, int vop_iter)$/;"	f
+ioreplayflag	replay-plugins.c	/^int ioreplayflag = 0;$/;"	v
+is_send_done	replay-generic.c	/^inline int is_send_done(struct thr_info *tip)$/;"	f
+iter_done_cond	replay-generic.c	/^static pthread_cond_t iter_done_cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+iter_done_mutex	replay-generic.c	/^static pthread_mutex_t iter_done_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+iter_start	replay-generic.c	/^static volatile int iter_start = 0;$/;"	v	file:
+iter_start_cond	replay-generic.c	/^static pthread_cond_t iter_start_cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+iter_start_mutex	replay-generic.c	/^static pthread_mutex_t iter_start_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+iterations	per-input-file.h	/^    int ifd, ofd, iterations;$/;"	m	struct:thr_info
+mapupdate_info	replay-plugins.h	/^struct mapupdate_info {$/;"	s
+mutex	per-input-file.h	/^    pthread_mutex_t mutex;$/;"	m	struct:thr_info
+n_iters_done	replay-generic.c	/^static volatile int n_iters_done = 0;$/;"	v	file:
+n_replays_done	replay-generic.c	/^static volatile int n_replays_done = 0;$/;"	v	file:
+n_replays_ready	replay-generic.c	/^static volatile int n_replays_ready = 0;$/;"	v	file:
+naios_free	per-input-file.h	/^    volatile long naios_out, naios_free;$/;"	m	struct:thr_info
+naios_out	per-input-file.h	/^    volatile long naios_out, naios_free;$/;"	m	struct:thr_info
+ncpus	cpu-routines.c	/^int ncpus = 0;           \/\/ Number of CPUs in the system$/;"	v
+next_bunch	replay-generic.c	/^int next_bunch(struct thr_info *tip, struct vm_bunch *bunch)$/;"	f
+next_io_tip	replay-plugins.c	/^int next_io_tip(struct thr_info *tip, struct vmreq_spec *spec)$/;"	f
+ofd	per-input-file.h	/^    int ifd, ofd, iterations;$/;"	m	struct:thr_info
+pdd_replay_init	replay-plugins.c	/^void pdd_replay_init()$/;"	f
+preplay_map	replay-plugins.c	/^int preplay_map(struct thr_info *tip, struct preq_spec **preql, $/;"	f
+preplayflag	replay-plugins.c	/^int preplayflag = 0;$/;"	v
+preql	replay-plugins.h	/^	struct preq_spec **preql;$/;"	m	struct:mapupdate_info	typeref:struct:mapupdate_info::preq_spec
+preql_map	replay-plugins.c	/^int preql_map(struct preq_spec **preql, struct io_pkt **iopl, int vop_iter,$/;"	f
+reap_done	per-input-file.h	/^    volatile int send_wait, reap_wait, send_done, reap_done;$/;"	m	struct:thr_info
+reap_wait	per-input-file.h	/^    volatile int send_wait, reap_wait, send_done, reap_done;$/;"	m	struct:thr_info
+rec_thread	per-input-file.h	/^    pthread_t sub_thread, rec_thread;$/;"	m	struct:thr_info
+rem_input_file	per-input-file.c	/^void rem_input_file(struct thr_info *tip)$/;"	f
+rem_input_files	per-input-file.c	/^void rem_input_files(void)$/;"	f
+replay_done_cond	replay-generic.c	/^static pthread_cond_t replay_done_cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+replay_done_mutex	replay-generic.c	/^static pthread_mutex_t replay_done_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+replay_ready_cond	replay-generic.c	/^static pthread_cond_t replay_ready_cond = PTHREAD_COND_INITIALIZER;$/;"	v	file:
+replay_ready_mutex	replay-generic.c	/^static pthread_mutex_t replay_ready_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+reset_input_file	per-input-file.c	/^void reset_input_file(struct thr_info *tip)$/;"	f
+retrieveBuf	request-generic.c	/^int retrieveBuf(unsigned char **buf, struct vm_pkt *blkReq)$/;"	f
+send_done	per-input-file.h	/^    volatile int send_wait, reap_wait, send_done, reap_done;$/;"	m	struct:thr_info
+send_done	per-input-file.h	/^    volatile int send_wait, send_done;$/;"	m	struct:thr_info
+send_wait	per-input-file.h	/^    volatile int send_wait, reap_wait, send_done, reap_done;$/;"	m	struct:thr_info
+send_wait	per-input-file.h	/^    volatile int send_wait, send_done;$/;"	m	struct:thr_info
+set_iter_done	replay-generic.c	/^inline void set_iter_done(void)$/;"	f
+set_replay_done	replay-generic.c	/^inline void set_replay_done(void)$/;"	f
+set_replay_ready	replay-generic.c	/^inline void set_replay_ready(void)$/;"	f
+sreplay_map	replay-plugins.c	/^int sreplay_map(struct thr_info *tip, struct preq_spec **preql, $/;"	f
+sreplayflag	replay-plugins.c	/^int sreplayflag = 1;	\/* default *\/$/;"	v
+stall	replay-generic.c	/^void stall(struct thr_info *tip, unsigned long long oc)$/;"	f
+start_iter	replay-generic.c	/^inline void start_iter(void)$/;"	f
+sub_thread	per-input-file.h	/^    pthread_t sub_thread, rec_thread;$/;"	m	struct:thr_info
+sub_thread	per-input-file.h	/^    pthread_t sub_thread;$/;"	m	struct:thr_info
+thr_info	per-input-file.h	/^struct thr_info {$/;"	s
+tip_init	per-input-file.c	/^void tip_init(struct thr_info *tip)$/;"	f
+tip_release	per-input-file.c	/^void tip_release(struct thr_info *tip)$/;"	f
+touch_memory	per-input-file.c	/^inline void touch_memory(__u8 *buf, __u16 bsize)$/;"	f
+ts2ns	replay-generic.c	/^inline __u64 ts2ns(struct timespec *ts)$/;"	f
+tv2ns	replay-generic.c	/^inline __u64 tv2ns(struct timeval *tp)$/;"	f
+upd_thread	replay-plugins.h	/^	pthread_t upd_thread;$/;"	m	struct:mapupdate_info
+used_iocbs	per-input-file.h	/^    struct slist_head head, free_iocbs, used_iocbs;$/;"	m	struct:thr_info	typeref:struct:thr_info::
+vblkIDMatch	request-generic.c	/^int vblkIDMatch(__u16 newvolID,__u32 newblkID, __u16 volID, __u32 vBlkID)$/;"	f
+verify_preplayflags	replay-plugins.c	/^int verify_preplayflags()$/;"	f
+verify_replayflags	replay-plugins.c	/^int verify_replayflags()$/;"	f
+vfp	per-input-file.h	/^    FILE *vfp;$/;"	m	struct:thr_info
+vop_iter	replay-plugins.h	/^	int vop_iter;$/;"	m	struct:mapupdate_info
+wait_iter_start	replay-generic.c	/^inline void wait_iter_start(void)$/;"	f
+wait_iters_done	replay-generic.c	/^inline void wait_iters_done(void)$/;"	f
+wait_replays_done	replay-generic.c	/^inline void wait_replays_done(void)$/;"	f
+wait_replays_ready	replay-generic.c	/^inline void wait_replays_ready(void)$/;"	f

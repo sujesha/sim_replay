@@ -1,0 +1,25 @@
+
+
+
+
+
+
+------------------------------------------------------
+
+
+Repeat with -e flag if writes are to be done.
+#READ=0, #WRITE=11177702
+RAM-size = 1024 (MB)
+confided metadata: hits=0, misses=0
+fcollisions=0, fcollisionstp=3054636, fzeros=0
+buffer cache: hits=10307564, misses=870138
+disk hits=11177702
+disk hits read=0, writes=11177702
+
+==> accesstime_output_replay_4K_sreplay_w.txt <==
+Repeat with -e flag if writes are to be done.
+#READ=0, #WRITE=11177702
+RAM-size = 1024 (MB)
+buffer cache: hits=10307564, misses=870138
+disk hits=11177702
+disk hits read=0, writes=11177702

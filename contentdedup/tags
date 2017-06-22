@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CONTENTTAB_SIZE	contentdedup-API.c	21;"	d	file:
+_CONTENTDEDUPTAB_H_	contentdeduptab.h	16;"	d
+_CONTENTDEDUP_API_H_	contentdedup-API.h	6;"	d
+cache_delete_trap	contentdedup-API.c	/^int cache_delete_trap(unsigned char *key)$/;"	f
+cache_insert_trap	contentdedup-API.c	/^int cache_insert_trap(unsigned char *key)$/;"	f
+content_datum	contentdedup-API.h	/^typedef contentdeduptab_t content_datum;$/;"	t
+contentdedupcmp	contentdeduptab.c	/^static int contentdedupcmp(struct hashtab *h, const void *key1, const void *key2)$/;"	f	file:
+contentdeduphash	contentdeduptab.c	/^__u32 contentdeduphash(struct hashtab *h, const void *key)$/;"	f
+contentdeduptab	contentdeduptab.c	/^struct contentdeduptab contentdeduptab;$/;"	v	typeref:struct:contentdeduptab
+contentdeduptab	contentdeduptab.h	/^struct contentdeduptab{$/;"	s
+contentdeduptab_alive	contentdedup-API.c	/^int contentdeduptab_alive = 0;	\/* contentdedup space been created or not *\/$/;"	v
+contentdeduptab_alive	contentdeduptab.c	/^static int contentdeduptab_alive;$/;"	v	file:
+contentdeduptab_by_did	contentdedup-API.c	/^vector32 * contentdeduptab_by_did = NULL;$/;"	v
+contentdeduptab_exit	contentdeduptab.c	/^void contentdeduptab_exit(struct contentdeduptab *l)$/;"	f
+contentdeduptab_init	contentdeduptab.c	/^int contentdeduptab_init(struct contentdeduptab *c, unsigned int s)$/;"	f
+contentdeduptab_t	contentdedup-API.h	/^struct contentdeduptab_t{$/;"	s
+create_contentdeduptab_space	contentdedup-API.c	/^void create_contentdeduptab_space(void)$/;"	f
+free_contentdeduptab	contentdedup-API.c	/^void free_contentdeduptab(void)$/;"	f
+md5hashkey	contentdedup-API.h	/^    unsigned char md5hashkey[HASHLEN + MAGIC_SIZE];$/;"	m	struct:contentdeduptab_t
+numcopies	contentdedup-API.h	/^	__u32 numcopies;$/;"	m	struct:contentdeduptab_t
+table	contentdeduptab.h	/^	struct hashtab *table;  \/* hash table (keyed on a string) *\/$/;"	m	struct:contentdeduptab	typeref:struct:contentdeduptab::hashtab
+total_items	contentdeduptab.c	/^__u32 total_items = 0;$/;"	v
+unique_items	contentdeduptab.c	/^__u32 unique_items = 0;$/;"	v
